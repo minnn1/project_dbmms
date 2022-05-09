@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ITshopDBModelStoreContainer" CdmEntityContainer="ITshopDBEntities">
+    <EntitySetMapping Name="Claims">
+      <EntityTypeMapping TypeName="ITshopDBModel.Claim">
+        <MappingFragment StoreEntitySet="Claims">
+          <ScalarProperty Name="claimID" ColumnName="claimID" />
+          <ScalarProperty Name="memberID" ColumnName="memberID" />
+          <ScalarProperty Name="receiptID" ColumnName="receiptID" />
+          <ScalarProperty Name="claimPname" ColumnName="claimPname" />
+          <ScalarProperty Name="claimDetails" ColumnName="claimDetails" />
+          <ScalarProperty Name="claimDate" ColumnName="claimDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ITshopDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="jobpositionID" ColumnName="jobpositionID" />
+          <ScalarProperty Name="employeeFName" ColumnName="employeeFName" />
+          <ScalarProperty Name="employeeLName" ColumnName="employeeLName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="ITshopDBModel.Expens">
+        <MappingFragment StoreEntitySet="Expenses">
+          <ScalarProperty Name="expensesID" ColumnName="expensesID" />
+          <ScalarProperty Name="purchaseorderID" ColumnName="purchaseorderID" />
+          <ScalarProperty Name="expensesName" ColumnName="expensesName" />
+          <ScalarProperty Name="expensesTotalprice" ColumnName="expensesTotalprice" />
+          <ScalarProperty Name="expensesDate" ColumnName="expensesDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incomes">
+      <EntityTypeMapping TypeName="ITshopDBModel.Income">
+        <MappingFragment StoreEntitySet="Income">
+          <ScalarProperty Name="incomeID" ColumnName="incomeID" />
+          <ScalarProperty Name="invoiceID" ColumnName="invoiceID" />
+          <ScalarProperty Name="incomeName" ColumnName="incomeName" />
+          <ScalarProperty Name="incomeTotalprice" ColumnName="incomeTotalprice" />
+          <ScalarProperty Name="incomeDate" ColumnName="incomeDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="ITshopDBModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="invoiceID" ColumnName="invoiceID" />
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="memberID" ColumnName="memberID" />
+          <ScalarProperty Name="invoicePname" ColumnName="invoicePname" />
+          <ScalarProperty Name="invoiceQTY" ColumnName="invoiceQTY" />
+          <ScalarProperty Name="invoicePrice" ColumnName="invoicePrice" />
+          <ScalarProperty Name="invoiceTotalPrice" ColumnName="invoiceTotalPrice" />
+          <ScalarProperty Name="invoiceDate" ColumnName="invoiceDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobPositions">
+      <EntityTypeMapping TypeName="ITshopDBModel.JobPosition">
+        <MappingFragment StoreEntitySet="JobPosition">
+          <ScalarProperty Name="jobpositionID" ColumnName="jobpositionID" />
+          <ScalarProperty Name="jobpositionName" ColumnName="jobpositionName" />
+          <ScalarProperty Name="jobpositionPass" ColumnName="jobpositionPass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="ITshopDBModel.Member">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="memberID" ColumnName="memberID" />
+          <ScalarProperty Name="memberFname" ColumnName="memberFname" />
+          <ScalarProperty Name="memberLname" ColumnName="memberLname" />
+          <ScalarProperty Name="memberPhone" ColumnName="memberPhone" />
+          <ScalarProperty Name="memberNohouse" ColumnName="memberNohouse" />
+          <ScalarProperty Name="memberRoad" ColumnName="memberRoad" />
+          <ScalarProperty Name="memberDistrict" ColumnName="memberDistrict" />
+          <ScalarProperty Name="memberSubdistrict" ColumnName="memberSubdistrict" />
+          <ScalarProperty Name="memberProvince" ColumnName="memberProvince" />
+          <ScalarProperty Name="memberPost" ColumnName="memberPost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ITshopDBModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="productcategoryID" ColumnName="productcategoryID" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="productPrice" ColumnName="productPrice" />
+          <ScalarProperty Name="productInventory" ColumnName="productInventory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="ITshopDBModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="productcategoryID" ColumnName="productcategoryID" />
+          <ScalarProperty Name="productcategoryName" ColumnName="productcategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrders">
+      <EntityTypeMapping TypeName="ITshopDBModel.PurchaseOrder">
+        <MappingFragment StoreEntitySet="PurchaseOrder">
+          <ScalarProperty Name="purchaseorderID" ColumnName="purchaseorderID" />
+          <ScalarProperty Name="purchaserequisitionID" ColumnName="purchaserequisitionID" />
+          <ScalarProperty Name="purchaseorderName" ColumnName="purchaseorderName" />
+          <ScalarProperty Name="purchaseorderQTY" ColumnName="purchaseorderQTY" />
+          <ScalarProperty Name="purchaseorderPrice" ColumnName="purchaseorderPrice" />
+          <ScalarProperty Name="purchaseorderDate" ColumnName="purchaseorderDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseRequisitions">
+      <EntityTypeMapping TypeName="ITshopDBModel.PurchaseRequisition">
+        <MappingFragment StoreEntitySet="PurchaseRequisition">
+          <ScalarProperty Name="purchaserequisitionID" ColumnName="purchaserequisitionID" />
+          <ScalarProperty Name="employeeID" ColumnName="employeeID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="purchaserequisitionName" ColumnName="purchaserequisitionName" />
+          <ScalarProperty Name="PurchaserequisitionQTY" ColumnName="PurchaserequisitionQTY" />
+          <ScalarProperty Name="purchaserequisitionPrice" ColumnName="purchaserequisitionPrice" />
+          <ScalarProperty Name="purchaserequisitionDate" ColumnName="purchaserequisitionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Receipts">
+      <EntityTypeMapping TypeName="ITshopDBModel.Receipt">
+        <MappingFragment StoreEntitySet="Receipt">
+          <ScalarProperty Name="receiptID" ColumnName="receiptID" />
+          <ScalarProperty Name="invoiceID" ColumnName="invoiceID" />
+          <ScalarProperty Name="receiptPname" ColumnName="receiptPname" />
+          <ScalarProperty Name="receiptQTY" ColumnName="receiptQTY" />
+          <ScalarProperty Name="receiptPrice" ColumnName="receiptPrice" />
+          <ScalarProperty Name="receiptTotalPrice" ColumnName="receiptTotalPrice" />
+          <ScalarProperty Name="receiptDate" ColumnName="receiptDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ITshopDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

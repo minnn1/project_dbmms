@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITshopDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Claim">
+    <Key>
+      <PropertyRef Name="claimID" />
+    </Key>
+    <Property Name="claimID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberID" Type="Int32" />
+    <Property Name="receiptID" Type="Int32" />
+    <Property Name="claimPname" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="claimDetails" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="claimDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Member" Relationship="Self.FK_Claims_Members" FromRole="Claims" ToRole="Members" />
+    <NavigationProperty Name="Receipt" Relationship="Self.FK_Claims_Receipt" FromRole="Claims" ToRole="Receipt" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="employeeID" />
+    </Key>
+    <Property Name="employeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobpositionID" Type="Int32" />
+    <Property Name="employeeFName" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="employeeLName" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="JobPosition" Relationship="Self.FK_Employee_JobPosition" FromRole="Employee" ToRole="JobPosition" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoice_Employee" FromRole="Employee" ToRole="Invoice" />
+    <NavigationProperty Name="PurchaseRequisitions" Relationship="Self.FK_PurchaseRequisition_Employee" FromRole="Employee" ToRole="PurchaseRequisition" />
+  </EntityType>
+  <EntityType Name="Expens">
+    <Key>
+      <PropertyRef Name="expensesID" />
+    </Key>
+    <Property Name="expensesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="purchaseorderID" Type="Int32" />
+    <Property Name="expensesName" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="expensesTotalprice" Type="Double" />
+    <Property Name="expensesDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_Expenses_PurchaseOrder" FromRole="Expenses" ToRole="PurchaseOrder" />
+  </EntityType>
+  <EntityType Name="Income">
+    <Key>
+      <PropertyRef Name="incomeID" />
+    </Key>
+    <Property Name="incomeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="invoiceID" Type="Int32" />
+    <Property Name="incomeName" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="incomeTotalprice" Type="Double" />
+    <Property Name="incomeDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Invoice" Relationship="Self.FK_Income_Invoice" FromRole="Income" ToRole="Invoice" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="invoiceID" />
+    </Key>
+    <Property Name="invoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" />
+    <Property Name="productID" Type="Int32" />
+    <Property Name="memberID" Type="Int32" />
+    <Property Name="invoicePname" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="invoiceQTY" Type="Int32" />
+    <Property Name="invoicePrice" Type="Double" />
+    <Property Name="invoiceTotalPrice" Type="Double" />
+    <Property Name="invoiceDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_Invoice_Employee" FromRole="Invoice" ToRole="Employee" />
+    <NavigationProperty Name="Incomes" Relationship="Self.FK_Income_Invoice" FromRole="Invoice" ToRole="Income" />
+    <NavigationProperty Name="Member" Relationship="Self.FK_Invoice_Members" FromRole="Invoice" ToRole="Members" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Invoice_Product" FromRole="Invoice" ToRole="Product" />
+    <NavigationProperty Name="Receipts" Relationship="Self.FK_Receipt_Invoice" FromRole="Invoice" ToRole="Receipt" />
+  </EntityType>
+  <EntityType Name="JobPosition">
+    <Key>
+      <PropertyRef Name="jobpositionID" />
+    </Key>
+    <Property Name="jobpositionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobpositionName" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="jobpositionPass" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_JobPosition" FromRole="JobPosition" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="memberID" />
+    </Key>
+    <Property Name="memberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberFname" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="memberLname" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="memberPhone" Type="Int32" />
+    <Property Name="memberNohouse" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="memberRoad" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="memberDistrict" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="memberSubdistrict" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="memberProvince" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="memberPost" Type="Int32" />
+    <NavigationProperty Name="Claims" Relationship="Self.FK_Claims_Members" FromRole="Members" ToRole="Claims" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoice_Members" FromRole="Members" ToRole="Invoice" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productcategoryID" Type="Int32" />
+    <Property Name="productName" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="productPrice" Type="Double" />
+    <Property Name="productInventory" Type="Int32" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoice_Product" FromRole="Product" ToRole="Invoice" />
+    <NavigationProperty Name="ProductCategory" Relationship="Self.FK_Product_ProductCategory" FromRole="Product" ToRole="ProductCategory" />
+    <NavigationProperty Name="PurchaseRequisitions" Relationship="Self.FK_PurchaseRequisition_Product" FromRole="Product" ToRole="PurchaseRequisition" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="productcategoryID" />
+    </Key>
+    <Property Name="productcategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productcategoryName" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Product_ProductCategory" FromRole="ProductCategory" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="PurchaseOrder">
+    <Key>
+      <PropertyRef Name="purchaseorderID" />
+    </Key>
+    <Property Name="purchaseorderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="purchaserequisitionID" Type="Int32" />
+    <Property Name="purchaseorderName" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="purchaseorderQTY" Type="Int32" />
+    <Property Name="purchaseorderPrice" Type="Double" />
+    <Property Name="purchaseorderDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Expenses" Relationship="Self.FK_Expenses_PurchaseOrder" FromRole="PurchaseOrder" ToRole="Expenses" />
+    <NavigationProperty Name="PurchaseRequisition" Relationship="Self.FK_PurchaseOrder_PurchaseRequisition" FromRole="PurchaseOrder" ToRole="PurchaseRequisition" />
+  </EntityType>
+  <EntityType Name="PurchaseRequisition">
+    <Key>
+      <PropertyRef Name="purchaserequisitionID" />
+    </Key>
+    <Property Name="purchaserequisitionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employeeID" Type="Int32" />
+    <Property Name="productID" Type="Int32" />
+    <Property Name="purchaserequisitionName" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PurchaserequisitionQTY" Type="Int32" />
+    <Property Name="purchaserequisitionPrice" Type="Double" />
+    <Property Name="purchaserequisitionDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_PurchaseRequisition_Employee" FromRole="PurchaseRequisition" ToRole="Employee" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_PurchaseRequisition_Product" FromRole="PurchaseRequisition" ToRole="Product" />
+    <NavigationProperty Name="PurchaseOrder" Relationship="Self.FK_PurchaseOrder_PurchaseRequisition" FromRole="PurchaseRequisition" ToRole="PurchaseOrder" />
+  </EntityType>
+  <EntityType Name="Receipt">
+    <Key>
+      <PropertyRef Name="receiptID" />
+    </Key>
+    <Property Name="receiptID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="invoiceID" Type="Int32" />
+    <Property Name="receiptPname" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="receiptQTY" Type="Int32" />
+    <Property Name="receiptPrice" Type="Double" />
+    <Property Name="receiptTotalPrice" Type="Double" />
+    <Property Name="receiptDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Claims" Relationship="Self.FK_Claims_Receipt" FromRole="Receipt" ToRole="Claims" />
+    <NavigationProperty Name="Invoice" Relationship="Self.FK_Receipt_Invoice" FromRole="Receipt" ToRole="Invoice" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Claims_Members">
+    <End Role="Members" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="Claims" Type="Self.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="memberID" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="memberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_Receipt">
+    <End Role="Receipt" Type="Self.Receipt" Multiplicity="0..1" />
+    <End Role="Claims" Type="Self.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receipt">
+        <PropertyRef Name="receiptID" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="receiptID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_JobPosition">
+    <End Role="JobPosition" Type="Self.JobPosition" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobPosition">
+        <PropertyRef Name="jobpositionID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="jobpositionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="employeeID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseRequisition_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="PurchaseRequisition" Type="Self.PurchaseRequisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="employeeID" />
+      </Principal>
+      <Dependent Role="PurchaseRequisition">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expenses_PurchaseOrder">
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
+    <End Role="Expenses" Type="Self.Expens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseOrder">
+        <PropertyRef Name="purchaseorderID" />
+      </Principal>
+      <Dependent Role="Expenses">
+        <PropertyRef Name="purchaseorderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Income_Invoice">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="0..1" />
+    <End Role="Income" Type="Self.Income" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="invoiceID" />
+      </Principal>
+      <Dependent Role="Income">
+        <PropertyRef Name="invoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Members">
+    <End Role="Members" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="memberID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="memberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Receipt_Invoice">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="0..1" />
+    <End Role="Receipt" Type="Self.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="invoiceID" />
+      </Principal>
+      <Dependent Role="Receipt">
+        <PropertyRef Name="invoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductCategory">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="productcategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="productcategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseRequisition_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="PurchaseRequisition" Type="Self.PurchaseRequisition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="PurchaseRequisition">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseOrder_PurchaseRequisition">
+    <End Role="PurchaseRequisition" Type="Self.PurchaseRequisition" Multiplicity="1" />
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseRequisition">
+        <PropertyRef Name="purchaserequisitionID" />
+      </Principal>
+      <Dependent Role="PurchaseOrder">
+        <PropertyRef Name="purchaseorderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ITshopDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Claims" EntityType="Self.Claim" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Expenses" EntityType="Self.Expens" />
+    <EntitySet Name="Incomes" EntityType="Self.Income" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+    <EntitySet Name="JobPositions" EntityType="Self.JobPosition" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductCategories" EntityType="Self.ProductCategory" />
+    <EntitySet Name="PurchaseOrders" EntityType="Self.PurchaseOrder" />
+    <EntitySet Name="PurchaseRequisitions" EntityType="Self.PurchaseRequisition" />
+    <EntitySet Name="Receipts" EntityType="Self.Receipt" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Claims_Members" Association="Self.FK_Claims_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_Receipt" Association="Self.FK_Claims_Receipt">
+      <End Role="Receipt" EntitySet="Receipts" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_JobPosition" Association="Self.FK_Employee_JobPosition">
+      <End Role="JobPosition" EntitySet="JobPositions" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Employee" Association="Self.FK_Invoice_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Invoice" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseRequisition_Employee" Association="Self.FK_PurchaseRequisition_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="PurchaseRequisition" EntitySet="PurchaseRequisitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expenses_PurchaseOrder" Association="Self.FK_Expenses_PurchaseOrder">
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+      <End Role="Expenses" EntitySet="Expenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Income_Invoice" Association="Self.FK_Income_Invoice">
+      <End Role="Invoice" EntitySet="Invoices" />
+      <End Role="Income" EntitySet="Incomes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Members" Association="Self.FK_Invoice_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="Invoice" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Product" Association="Self.FK_Invoice_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Invoice" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Receipt_Invoice" Association="Self.FK_Receipt_Invoice">
+      <End Role="Invoice" EntitySet="Invoices" />
+      <End Role="Receipt" EntitySet="Receipts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductCategory" Association="Self.FK_Product_ProductCategory">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseRequisition_Product" Association="Self.FK_PurchaseRequisition_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="PurchaseRequisition" EntitySet="PurchaseRequisitions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseOrder_PurchaseRequisition" Association="Self.FK_PurchaseOrder_PurchaseRequisition">
+      <End Role="PurchaseRequisition" EntitySet="PurchaseRequisitions" />
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

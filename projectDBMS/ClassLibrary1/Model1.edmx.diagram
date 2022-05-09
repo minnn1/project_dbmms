@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7d4582562e7342dcafb366d08e983d3c" Name="Diagram1">
+        <EntityTypeShape EntityType="ITshopDBModel.Claim" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.Employee" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.Expens" Width="1.5" PointX="10.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.Income" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.Invoice" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.JobPosition" Width="1.5" PointX="1.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.Member" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.Product" Width="1.5" PointX="3.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.ProductCategory" Width="1.5" PointX="1.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.PurchaseOrder" Width="1.5" PointX="8.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.PurchaseRequisition" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.Receipt" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITshopDBModel.sysdiagram" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ITshopDBModel.FK_Claims_Members" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Claims_Receipt" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Employee_JobPosition" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Invoice_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_PurchaseRequisition_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Expenses_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Income_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Invoice_Members" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Invoice_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Receipt_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_Product_ProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_PurchaseRequisition_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="ITshopDBModel.FK_PurchaseOrder_PurchaseRequisition" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
