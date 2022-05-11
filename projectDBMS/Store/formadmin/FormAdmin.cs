@@ -47,5 +47,10 @@ namespace Store
             openChildForm(new FormMember());
 
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormCategory());
+        }
     }
 }

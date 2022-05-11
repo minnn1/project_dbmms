@@ -24,32 +24,20 @@ namespace Store
 
         private void FormProduct_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'iTshopDBDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.iTshopDBDataSet.Product);
+            using (ITshopDBEntities db = new ITshopDBEntities())
+            {
+                productBindingSource.DataSource = db.Products.ToList();
+                productCategoryBindingSource.DataSource = db.ProductCategories.ToList();
+            }
+
 
         }
-        private void LoadProduct()
-        {
-            SqlConnection conn = new SqlConnection(strConn);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Product", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(ds, "Product");
-            productDataGridView.DataSource = ds.Tables["Product"];
 
-        }
-        private void productBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.productBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.iTshopDBDataSet);
-            this.productTableAdapter.Fill(this.iTshopDBDataSet.Product);
-
-
-        }
-        private void productDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
     }
 }

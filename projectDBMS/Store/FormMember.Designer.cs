@@ -242,7 +242,7 @@
             // memberIDLabel
             // 
             memberIDLabel.AutoSize = true;
-            memberIDLabel.Location = new System.Drawing.Point(41, 81);
+            memberIDLabel.Location = new System.Drawing.Point(32, 79);
             memberIDLabel.Name = "memberIDLabel";
             memberIDLabel.Size = new System.Drawing.Size(159, 32);
             memberIDLabel.TabIndex = 1;
@@ -251,7 +251,7 @@
             // memberIDTextBox
             // 
             this.memberIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberID", true));
-            this.memberIDTextBox.Location = new System.Drawing.Point(313, 78);
+            this.memberIDTextBox.Location = new System.Drawing.Point(304, 76);
             this.memberIDTextBox.Name = "memberIDTextBox";
             this.memberIDTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberIDTextBox.TabIndex = 2;
@@ -259,7 +259,7 @@
             // memberFnameLabel
             // 
             memberFnameLabel.AutoSize = true;
-            memberFnameLabel.Location = new System.Drawing.Point(41, 126);
+            memberFnameLabel.Location = new System.Drawing.Point(32, 124);
             memberFnameLabel.Name = "memberFnameLabel";
             memberFnameLabel.Size = new System.Drawing.Size(220, 32);
             memberFnameLabel.TabIndex = 3;
@@ -268,7 +268,7 @@
             // memberFnameTextBox
             // 
             this.memberFnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberFname", true));
-            this.memberFnameTextBox.Location = new System.Drawing.Point(313, 123);
+            this.memberFnameTextBox.Location = new System.Drawing.Point(304, 121);
             this.memberFnameTextBox.Name = "memberFnameTextBox";
             this.memberFnameTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberFnameTextBox.TabIndex = 4;
@@ -276,7 +276,7 @@
             // memberLnameLabel
             // 
             memberLnameLabel.AutoSize = true;
-            memberLnameLabel.Location = new System.Drawing.Point(41, 171);
+            memberLnameLabel.Location = new System.Drawing.Point(32, 169);
             memberLnameLabel.Name = "memberLnameLabel";
             memberLnameLabel.Size = new System.Drawing.Size(219, 32);
             memberLnameLabel.TabIndex = 5;
@@ -285,7 +285,7 @@
             // memberLnameTextBox
             // 
             this.memberLnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberLname", true));
-            this.memberLnameTextBox.Location = new System.Drawing.Point(313, 168);
+            this.memberLnameTextBox.Location = new System.Drawing.Point(304, 166);
             this.memberLnameTextBox.Name = "memberLnameTextBox";
             this.memberLnameTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberLnameTextBox.TabIndex = 6;
@@ -293,7 +293,7 @@
             // memberPhoneLabel
             // 
             memberPhoneLabel.AutoSize = true;
-            memberPhoneLabel.Location = new System.Drawing.Point(41, 216);
+            memberPhoneLabel.Location = new System.Drawing.Point(32, 214);
             memberPhoneLabel.Name = "memberPhoneLabel";
             memberPhoneLabel.Size = new System.Drawing.Size(215, 32);
             memberPhoneLabel.TabIndex = 7;
@@ -302,7 +302,7 @@
             // memberPhoneTextBox
             // 
             this.memberPhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberPhone", true));
-            this.memberPhoneTextBox.Location = new System.Drawing.Point(313, 213);
+            this.memberPhoneTextBox.Location = new System.Drawing.Point(304, 211);
             this.memberPhoneTextBox.Name = "memberPhoneTextBox";
             this.memberPhoneTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberPhoneTextBox.TabIndex = 8;
@@ -310,7 +310,7 @@
             // memberNohouseLabel
             // 
             memberNohouseLabel.AutoSize = true;
-            memberNohouseLabel.Location = new System.Drawing.Point(41, 261);
+            memberNohouseLabel.Location = new System.Drawing.Point(32, 259);
             memberNohouseLabel.Name = "memberNohouseLabel";
             memberNohouseLabel.Size = new System.Drawing.Size(246, 32);
             memberNohouseLabel.TabIndex = 9;
@@ -319,7 +319,7 @@
             // memberNohouseTextBox
             // 
             this.memberNohouseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberNohouse", true));
-            this.memberNohouseTextBox.Location = new System.Drawing.Point(313, 258);
+            this.memberNohouseTextBox.Location = new System.Drawing.Point(304, 256);
             this.memberNohouseTextBox.Name = "memberNohouseTextBox";
             this.memberNohouseTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberNohouseTextBox.TabIndex = 10;
@@ -327,7 +327,7 @@
             // memberRoadLabel
             // 
             memberRoadLabel.AutoSize = true;
-            memberRoadLabel.Location = new System.Drawing.Point(41, 306);
+            memberRoadLabel.Location = new System.Drawing.Point(32, 304);
             memberRoadLabel.Name = "memberRoadLabel";
             memberRoadLabel.Size = new System.Drawing.Size(200, 32);
             memberRoadLabel.TabIndex = 11;
@@ -336,7 +336,7 @@
             // memberRoadTextBox
             // 
             this.memberRoadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberRoad", true));
-            this.memberRoadTextBox.Location = new System.Drawing.Point(313, 303);
+            this.memberRoadTextBox.Location = new System.Drawing.Point(304, 301);
             this.memberRoadTextBox.Name = "memberRoadTextBox";
             this.memberRoadTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberRoadTextBox.TabIndex = 12;
@@ -344,7 +344,7 @@
             // memberDistrictLabel
             // 
             memberDistrictLabel.AutoSize = true;
-            memberDistrictLabel.Location = new System.Drawing.Point(41, 351);
+            memberDistrictLabel.Location = new System.Drawing.Point(32, 349);
             memberDistrictLabel.Name = "memberDistrictLabel";
             memberDistrictLabel.Size = new System.Drawing.Size(219, 32);
             memberDistrictLabel.TabIndex = 13;
@@ -353,7 +353,7 @@
             // memberDistrictTextBox
             // 
             this.memberDistrictTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberDistrict", true));
-            this.memberDistrictTextBox.Location = new System.Drawing.Point(313, 348);
+            this.memberDistrictTextBox.Location = new System.Drawing.Point(304, 346);
             this.memberDistrictTextBox.Name = "memberDistrictTextBox";
             this.memberDistrictTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberDistrictTextBox.TabIndex = 14;
@@ -361,7 +361,7 @@
             // memberSubdistrictLabel
             // 
             memberSubdistrictLabel.AutoSize = true;
-            memberSubdistrictLabel.Location = new System.Drawing.Point(41, 396);
+            memberSubdistrictLabel.Location = new System.Drawing.Point(32, 394);
             memberSubdistrictLabel.Name = "memberSubdistrictLabel";
             memberSubdistrictLabel.Size = new System.Drawing.Size(266, 32);
             memberSubdistrictLabel.TabIndex = 15;
@@ -370,7 +370,7 @@
             // memberSubdistrictTextBox
             // 
             this.memberSubdistrictTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberSubdistrict", true));
-            this.memberSubdistrictTextBox.Location = new System.Drawing.Point(313, 393);
+            this.memberSubdistrictTextBox.Location = new System.Drawing.Point(304, 391);
             this.memberSubdistrictTextBox.Name = "memberSubdistrictTextBox";
             this.memberSubdistrictTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberSubdistrictTextBox.TabIndex = 16;
@@ -378,7 +378,7 @@
             // memberProvinceLabel
             // 
             memberProvinceLabel.AutoSize = true;
-            memberProvinceLabel.Location = new System.Drawing.Point(41, 441);
+            memberProvinceLabel.Location = new System.Drawing.Point(32, 439);
             memberProvinceLabel.Name = "memberProvinceLabel";
             memberProvinceLabel.Size = new System.Drawing.Size(243, 32);
             memberProvinceLabel.TabIndex = 17;
@@ -387,7 +387,7 @@
             // memberProvinceTextBox
             // 
             this.memberProvinceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberProvince", true));
-            this.memberProvinceTextBox.Location = new System.Drawing.Point(313, 438);
+            this.memberProvinceTextBox.Location = new System.Drawing.Point(304, 436);
             this.memberProvinceTextBox.Name = "memberProvinceTextBox";
             this.memberProvinceTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberProvinceTextBox.TabIndex = 18;
@@ -395,7 +395,7 @@
             // memberPostLabel
             // 
             memberPostLabel.AutoSize = true;
-            memberPostLabel.Location = new System.Drawing.Point(41, 486);
+            memberPostLabel.Location = new System.Drawing.Point(32, 484);
             memberPostLabel.Name = "memberPostLabel";
             memberPostLabel.Size = new System.Drawing.Size(189, 32);
             memberPostLabel.TabIndex = 19;
@@ -404,7 +404,7 @@
             // memberPostTextBox
             // 
             this.memberPostTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.membersBindingSource, "memberPost", true));
-            this.memberPostTextBox.Location = new System.Drawing.Point(313, 483);
+            this.memberPostTextBox.Location = new System.Drawing.Point(304, 481);
             this.memberPostTextBox.Name = "memberPostTextBox";
             this.memberPostTextBox.Size = new System.Drawing.Size(100, 39);
             this.memberPostTextBox.TabIndex = 20;
