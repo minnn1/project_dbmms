@@ -12,3 +12,4 @@ C:\Users\มิน\Desktop\Projects\projectDBMS\Store\obj\Debug\Store.pdb
 C:\Users\มิน\Desktop\Projects\projectDBMS\Store\obj\Debug\Store.FormAdmin.resources
 C:\Users\มิน\Desktop\Projects\projectDBMS\Store\obj\Debug\Store.FormEmployee.resources
 C:\Users\มิน\Desktop\Projects\projectDBMS\Store\obj\Debug\Store.FormProduct.resources
+C:\Users\มิน\Desktop\Projects\projectDBMS\Store\obj\Debug\Store.FormMember.resources

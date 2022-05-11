@@ -37,11 +37,12 @@
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel10 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel9 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel11 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel12 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel13 = new System.Windows.Forms.ToolStripLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -140,17 +141,17 @@
             this.toolStripLabel8.Size = new System.Drawing.Size(110, 28);
             this.toolStripLabel8.Text = "ใบขอซื้อสินค้า";
             // 
-            // toolStripLabel9
-            // 
-            this.toolStripLabel9.Name = "toolStripLabel9";
-            this.toolStripLabel9.Size = new System.Drawing.Size(103, 28);
-            this.toolStripLabel9.Text = "ใบเคลมสินค้า";
-            // 
             // toolStripLabel10
             // 
             this.toolStripLabel10.Name = "toolStripLabel10";
             this.toolStripLabel10.Size = new System.Drawing.Size(106, 28);
             this.toolStripLabel10.Text = "ใบสั่งซื้อสินค้า";
+            // 
+            // toolStripLabel9
+            // 
+            this.toolStripLabel9.Name = "toolStripLabel9";
+            this.toolStripLabel9.Size = new System.Drawing.Size(103, 28);
+            this.toolStripLabel9.Text = "ใบเคลมสินค้า";
             // 
             // toolStripLabel11
             // 
@@ -169,6 +170,14 @@
             this.toolStripLabel13.Name = "toolStripLabel13";
             this.toolStripLabel13.Size = new System.Drawing.Size(97, 28);
             this.toolStripLabel13.Text = "พิมพ์รายงาน";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 33);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1924, 687);
+            this.panel1.TabIndex = 1;
             // 
             // toolStripButton1
             // 
@@ -198,6 +207,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -285,9 +295,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 720);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.toolStrip1.ResumeLayout(false);
@@ -325,5 +336,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel12;
         private System.Windows.Forms.ToolStripButton toolStripButton12;
         private System.Windows.Forms.ToolStripLabel toolStripLabel13;
+        private System.Windows.Forms.Panel panel1;
     }
 }

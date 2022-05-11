@@ -18,8 +18,8 @@ namespace Store
         {
             InitializeComponent();
         }
-
-        private void ButtonLogin_Click(object sender, EventArgs e)
+            
+            private void ButtonLogin_Click(object sender, EventArgs e)
         {
             //เชื่อมdatabase
             SqlConnection con = new SqlConnection("Data Source=LAPTOP-1SPFNIPG;Initial Catalog=ITshopDB;Integrated Security=True");

@@ -16,17 +16,36 @@ namespace Store
         {
             InitializeComponent();
         }
+        private Form activeForm = null;
 
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            FormEmployee formEmployee = new FormEmployee();
-            formEmployee.Show();
+            openChildForm(new FormEmployee());
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            FormProduct formProduct = new FormProduct();
-            formProduct.Show();
+            openChildForm(new FormProduct());
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormMember());
+
         }
     }
 }
