@@ -18,10 +18,20 @@ namespace Store
         }
 
         private void productCategoryBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.productCategoryBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.iTshopDBDataSet);
+        {   //เเสดงเเจ้งเตือนเมื่อมีปัญหา
+            try
+            {
+                this.Validate();
+                this.productCategoryBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.iTshopDBDataSet);
+            }
+            catch (Exception)
+            {
+
+                //โชว์ข้อมความปัญหา
+                MessageBox.Show("กรอกข้อมูลไม่ถูกต้อง", "พบข้อผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
 
         }
 

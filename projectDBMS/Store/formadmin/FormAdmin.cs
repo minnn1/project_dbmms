@@ -52,5 +52,16 @@ namespace Store
         {
             openChildForm(new FormCategory());
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormOrder());
+        }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+        }
     }
 }

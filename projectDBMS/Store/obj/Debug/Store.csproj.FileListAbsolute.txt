@@ -26,7 +26,6 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\St
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormEmployee.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormLogin.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormMember.resources
-C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormProduct.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.Properties.Resources.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.csproj.GenerateResource.cache
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.csproj.CoreCompileInputs.cache
@@ -34,3 +33,5 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\St
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.exe
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.pdb
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormCategory.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormProduct.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormOrder.resources

@@ -55,14 +55,13 @@
             this.employeeIDTextBox = new System.Windows.Forms.TextBox();
             this.employeeLNameTextBox = new System.Windows.Forms.TextBox();
             this.employeeFNameTextBox = new System.Windows.Forms.TextBox();
-            this.jobpositionIDTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.jobPositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jobPositionDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.jobpositionIDTextBox = new System.Windows.Forms.TextBox();
             employeeIDLabel = new System.Windows.Forms.Label();
             employeeLNameLabel = new System.Windows.Forms.Label();
             employeeFNameLabel = new System.Windows.Forms.Label();
@@ -311,16 +310,6 @@
             this.employeeFNameTextBox.Size = new System.Drawing.Size(256, 39);
             this.employeeFNameTextBox.TabIndex = 6;
             // 
-            // jobpositionIDTextBox
-            // 
-            this.jobpositionIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "jobpositionID", true));
-            this.jobpositionIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.jobpositionIDTextBox.Location = new System.Drawing.Point(374, 171);
-            this.jobpositionIDTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.jobpositionIDTextBox.Name = "jobpositionIDTextBox";
-            this.jobpositionIDTextBox.Size = new System.Drawing.Size(256, 39);
-            this.jobpositionIDTextBox.TabIndex = 4;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -331,8 +320,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1106, 221);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // jobPositionBindingSource
@@ -345,13 +336,12 @@
             this.jobPositionDataGridView.AllowUserToAddRows = false;
             this.jobPositionDataGridView.AllowUserToDeleteRows = false;
             this.jobPositionDataGridView.AutoGenerateColumns = false;
-            this.jobPositionDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.jobPositionDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.jobPositionDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.jobPositionDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.jobPositionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.jobPositionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
+            this.dataGridViewTextBoxColumn2});
             this.jobPositionDataGridView.DataSource = this.jobPositionBindingSource;
             this.jobPositionDataGridView.Location = new System.Drawing.Point(654, 84);
             this.jobPositionDataGridView.Margin = new System.Windows.Forms.Padding(5);
@@ -359,6 +349,7 @@
             this.jobPositionDataGridView.ReadOnly = true;
             this.jobPositionDataGridView.RowHeadersWidth = 62;
             this.jobPositionDataGridView.RowTemplate.Height = 28;
+            this.jobPositionDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.jobPositionDataGridView.Size = new System.Drawing.Size(537, 294);
             this.jobPositionDataGridView.TabIndex = 15;
             // 
@@ -369,7 +360,6 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 216;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -378,16 +368,6 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 264;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "jobpositionPass";
-            this.dataGridViewTextBoxColumn3.HeaderText = "jobpositionPass";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 252;
             // 
             // label1
             // 
@@ -398,6 +378,16 @@
             this.label1.Size = new System.Drawing.Size(416, 66);
             this.label1.TabIndex = 16;
             this.label1.Text = "เพิ่มข้อมูลพนักงาน";
+            // 
+            // jobpositionIDTextBox
+            // 
+            this.jobpositionIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "jobpositionID", true));
+            this.jobpositionIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.jobpositionIDTextBox.Location = new System.Drawing.Point(374, 171);
+            this.jobpositionIDTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.jobpositionIDTextBox.Name = "jobpositionIDTextBox";
+            this.jobpositionIDTextBox.Size = new System.Drawing.Size(256, 39);
+            this.jobpositionIDTextBox.TabIndex = 4;
             // 
             // FormEmployee
             // 
@@ -420,7 +410,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormEmployee";
-            this.Text = "FormEmployee";
+            this.Text = "ห";
             this.Load += new System.EventHandler(this.FormEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iTshopDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
@@ -457,14 +447,13 @@
         private System.Windows.Forms.TextBox employeeIDTextBox;
         private System.Windows.Forms.TextBox employeeLNameTextBox;
         private System.Windows.Forms.TextBox employeeFNameTextBox;
-        private System.Windows.Forms.TextBox jobpositionIDTextBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ITshopDBDataSetTableAdapters.JobPositionTableAdapter jobPositionTableAdapter;
         private System.Windows.Forms.BindingSource jobPositionBindingSource;
         private System.Windows.Forms.DataGridView jobPositionDataGridView;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox jobpositionIDTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Label label1;
     }
 }
