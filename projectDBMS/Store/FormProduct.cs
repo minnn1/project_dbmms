@@ -20,7 +20,7 @@ namespace Store
         }
         public string constr = (@"Data Source=LAPTOP-1SPFNIPG;Initial Catalog=ITshopDB;Integrated Security=True");
         public void load_category()
-            {
+        {
 
             SqlConnection con = new SqlConnection(constr);
             string sql_select = "SELECT productcategoryID,productcategoryName FROM ProductCategory";
@@ -35,7 +35,7 @@ namespace Store
             productcategorycombobox.ValueMember = "productcategoryID";
             con.Open();
         }
-  
+
         private void FormProduct_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'iTshopDBDataSet.Product' table. You can move, or remove it, as needed.
@@ -57,7 +57,7 @@ namespace Store
             if (con.State == ConnectionState.Closed)
             {
                 con.Open();
-                string sql_select = "select ProductCategory.productcategoryName,Product.productName,Product.productPrice,Product.productInventory  fROM Product INNER JOIN ProductCategory on Product.productcategoryID = ProductCategory.productcategoryID order by productcategoryName";
+                string sql_select = "select Product.productID,ProductCategory.productcategoryName,Product.productName,Product.productPrice,Product.productInventory  fROM Product INNER JOIN ProductCategory on Product.productcategoryID = ProductCategory.productcategoryID order by productcategoryName";
                 SqlCommand cmd_select = new SqlCommand(sql_select, con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd_select);
                 DataTable dt = new DataTable();
@@ -67,19 +67,21 @@ namespace Store
                 dataGridView1.DataSource = dt;
 
             }
-            
-         }
-         public void delete_data()
-        {   
+
+        }
+        public void delete_data()
+        {
             SqlConnection con = new SqlConnection(constr);
             //delete
             //string sql_insert = "INSERT INTO Product(productcategoryID,productName,productPrice,productInventory) VALUES (@productcategoryID,@productName,@productPrice,@productInventory)";
-            string sql_delete = "DELETE FROM Product WHERE productID = @productID";
-            SqlCommand cmd = new SqlCommand(sql_delete, con);
+
             if (con.State == ConnectionState.Closed)
             {
                 con.Open();
-                //delete
+                string sql_delete = "DELETE FROM Product WHERE productID = @productID";
+                SqlCommand cmd = new SqlCommand(sql_delete, con);
+                cmd.Parameters.AddWithValue("@productID", id);
+                cmd.ExecuteNonQuery();
 
 
             }
@@ -98,11 +100,11 @@ namespace Store
                 cmd.Parameters.AddWithValue("@productPrice", productPriceTextBox.Text);
                 cmd.Parameters.AddWithValue("@productInventory", productInventoryTextBox.Text);
                 cmd.ExecuteNonQuery();
-               
+
             }
-            
+
         }
-        
+
         private void btninsert_Click(object sender, EventArgs e)
         {
             insert_data();
@@ -114,15 +116,20 @@ namespace Store
         private void btndelete_Click(object sender, EventArgs e)
         {
             delete_data();
-        }
+            load_data_datagrid();
+            clear_data();
+            
 
+        }
+        public int id;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             //เมื่อคลิกที่cell จะนำข้อมูลไปเเสดงที่ combobox เเละ  texbox
-           // productcategorycombobox.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            productNameTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            productPriceTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            productInventoryTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            // productcategorycombobox.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            productNameTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            productPriceTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            productInventoryTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             btninsert.Enabled = false;
             btndelete.Enabled = true;
             btnedit.Enabled = true;
@@ -137,6 +144,59 @@ namespace Store
             btnedit.Enabled = false;
             clear_data();
             load_category();
+        }
+        public void edit_data()
+        {
+            SqlConnection con = new SqlConnection(constr);
+           
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+                string sql_update = "UPDATE Product SET  productName = @productName,productPrice = @productPrice,productInventory = @productInventory WHERE productID = @productID";
+                SqlCommand cmd = new SqlCommand(sql_update, con);
+                cmd.Parameters.AddWithValue("@productName", productNameTextBox.Text);
+                cmd.Parameters.AddWithValue("@productPrice", productPriceTextBox.Text);
+                cmd.Parameters.AddWithValue("@productInventory", productInventoryTextBox.Text);
+                cmd.Parameters.AddWithValue("@productID", id);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            edit_data();
+            clear_data();
+            load_data_datagrid();
+            load_category();
+        }
+
+        public void search_data()
+        {
+            SqlConnection con = new SqlConnection(constr);
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+                string sql_search = "select Product.productID,ProductCategory.productcategoryName,Product.productName,Product.productPrice,Product.productInventory  fROM Product INNER JOIN ProductCategory on Product.productcategoryID = ProductCategory.productcategoryID where productName like '" + textBox1.Text + "%'";
+                SqlCommand cmd_search = new SqlCommand(sql_search, con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd_search);
+                DataTable dt = new DataTable();
+                dt.Clear();
+                da.Fill(dt);
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = dt;
+                
+            }
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            
+            load_data_datagrid();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            search_data();
         }
     }
 }

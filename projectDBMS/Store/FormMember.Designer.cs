@@ -71,6 +71,7 @@
             this.memberLnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             memberFnameLabel = new System.Windows.Forms.Label();
             memberLnameLabel = new System.Windows.Forms.Label();
             memberPhoneLabel = new System.Windows.Forms.Label();
@@ -456,11 +457,20 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "เพิ่มข้อมูลสมาชิก";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(454, 457);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(623, 39);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // FormMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 720);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(memberFnameLabel);
@@ -533,5 +543,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn memberLnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn memberPhoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

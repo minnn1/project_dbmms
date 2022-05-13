@@ -63,5 +63,10 @@ namespace Store
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormReceipt());
+        }
     }
 }

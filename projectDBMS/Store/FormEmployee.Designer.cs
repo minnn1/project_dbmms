@@ -58,10 +58,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.jobPositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jobPositionDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.jobpositionIDTextBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             employeeIDLabel = new System.Windows.Forms.Label();
             employeeLNameLabel = new System.Windows.Forms.Label();
             employeeFNameLabel = new System.Windows.Forms.Label();
@@ -79,45 +80,45 @@
             // 
             employeeIDLabel.AutoSize = true;
             employeeIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            employeeIDLabel.Location = new System.Drawing.Point(44, 96);
+            employeeIDLabel.Location = new System.Drawing.Point(88, 86);
             employeeIDLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             employeeIDLabel.Name = "employeeIDLabel";
-            employeeIDLabel.Size = new System.Drawing.Size(180, 32);
+            employeeIDLabel.Size = new System.Drawing.Size(151, 32);
             employeeIDLabel.TabIndex = 1;
-            employeeIDLabel.Text = "employee ID:";
+            employeeIDLabel.Text = "รหัสพนักงาน";
             // 
             // employeeLNameLabel
             // 
             employeeLNameLabel.AutoSize = true;
             employeeLNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            employeeLNameLabel.Location = new System.Drawing.Point(44, 346);
+            employeeLNameLabel.Location = new System.Drawing.Point(136, 335);
             employeeLNameLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             employeeLNameLabel.Name = "employeeLNameLabel";
-            employeeLNameLabel.Size = new System.Drawing.Size(244, 32);
+            employeeLNameLabel.Size = new System.Drawing.Size(103, 32);
             employeeLNameLabel.TabIndex = 7;
-            employeeLNameLabel.Text = "employee LName:";
+            employeeLNameLabel.Text = "นามสกุล";
             // 
             // employeeFNameLabel
             // 
             employeeFNameLabel.AutoSize = true;
             employeeFNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            employeeFNameLabel.Location = new System.Drawing.Point(44, 259);
+            employeeFNameLabel.Location = new System.Drawing.Point(193, 252);
             employeeFNameLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             employeeFNameLabel.Name = "employeeFNameLabel";
-            employeeFNameLabel.Size = new System.Drawing.Size(245, 32);
+            employeeFNameLabel.Size = new System.Drawing.Size(46, 32);
             employeeFNameLabel.TabIndex = 5;
-            employeeFNameLabel.Text = "employee FName:";
+            employeeFNameLabel.Text = "ชื่อ";
             // 
             // jobpositionIDLabel
             // 
             jobpositionIDLabel.AutoSize = true;
             jobpositionIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            jobpositionIDLabel.Location = new System.Drawing.Point(44, 178);
+            jobpositionIDLabel.Location = new System.Drawing.Point(94, 169);
             jobpositionIDLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             jobpositionIDLabel.Name = "jobpositionIDLabel";
-            jobpositionIDLabel.Size = new System.Drawing.Size(195, 32);
+            jobpositionIDLabel.Size = new System.Drawing.Size(145, 32);
             jobpositionIDLabel.TabIndex = 3;
-            jobpositionIDLabel.Text = "jobposition ID:";
+            jobpositionIDLabel.Text = "ตำเเหน่งงาน";
             // 
             // iTshopDBDataSet
             // 
@@ -182,7 +183,7 @@
             this.employeeBindingNavigator.Name = "employeeBindingNavigator";
             this.employeeBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
             this.employeeBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employeeBindingNavigator.Size = new System.Drawing.Size(1644, 33);
+            this.employeeBindingNavigator.Size = new System.Drawing.Size(1644, 38);
             this.employeeBindingNavigator.TabIndex = 0;
             this.employeeBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -192,7 +193,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -238,6 +239,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -284,7 +286,7 @@
             // 
             this.employeeIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "employeeID", true));
             this.employeeIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.employeeIDTextBox.Location = new System.Drawing.Point(374, 90);
+            this.employeeIDTextBox.Location = new System.Drawing.Point(262, 84);
             this.employeeIDTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.employeeIDTextBox.Name = "employeeIDTextBox";
             this.employeeIDTextBox.Size = new System.Drawing.Size(256, 39);
@@ -294,7 +296,7 @@
             // 
             this.employeeLNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "employeeLName", true));
             this.employeeLNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.employeeLNameTextBox.Location = new System.Drawing.Point(374, 339);
+            this.employeeLNameTextBox.Location = new System.Drawing.Point(262, 333);
             this.employeeLNameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.employeeLNameTextBox.Name = "employeeLNameTextBox";
             this.employeeLNameTextBox.Size = new System.Drawing.Size(256, 39);
@@ -304,7 +306,7 @@
             // 
             this.employeeFNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "employeeFName", true));
             this.employeeFNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.employeeFNameTextBox.Location = new System.Drawing.Point(374, 253);
+            this.employeeFNameTextBox.Location = new System.Drawing.Point(262, 247);
             this.employeeFNameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.employeeFNameTextBox.Name = "employeeFNameTextBox";
             this.employeeFNameTextBox.Size = new System.Drawing.Size(256, 39);
@@ -343,31 +345,16 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.jobPositionDataGridView.DataSource = this.jobPositionBindingSource;
-            this.jobPositionDataGridView.Location = new System.Drawing.Point(654, 84);
+            this.jobPositionDataGridView.Location = new System.Drawing.Point(599, 84);
             this.jobPositionDataGridView.Margin = new System.Windows.Forms.Padding(5);
             this.jobPositionDataGridView.Name = "jobPositionDataGridView";
             this.jobPositionDataGridView.ReadOnly = true;
             this.jobPositionDataGridView.RowHeadersWidth = 62;
             this.jobPositionDataGridView.RowTemplate.Height = 28;
             this.jobPositionDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.jobPositionDataGridView.Size = new System.Drawing.Size(537, 294);
+            this.jobPositionDataGridView.Size = new System.Drawing.Size(537, 242);
             this.jobPositionDataGridView.TabIndex = 15;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "jobpositionID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "jobpositionID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "jobpositionName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "jobpositionName";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.jobPositionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.jobPositionDataGridView_CellClick);
             // 
             // label1
             // 
@@ -383,11 +370,34 @@
             // 
             this.jobpositionIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "jobpositionID", true));
             this.jobpositionIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.jobpositionIDTextBox.Location = new System.Drawing.Point(374, 171);
+            this.jobpositionIDTextBox.Location = new System.Drawing.Point(262, 165);
             this.jobpositionIDTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.jobpositionIDTextBox.Name = "jobpositionIDTextBox";
             this.jobpositionIDTextBox.Size = new System.Drawing.Size(256, 39);
             this.jobpositionIDTextBox.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(599, 340);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(547, 39);
+            this.textBox1.TabIndex = 21;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "jobpositionID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสตำเเหน่งงาน";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "jobpositionName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ตำเเหน่งงาน";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // FormEmployee
             // 
@@ -395,6 +405,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1644, 652);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.jobPositionDataGridView);
             this.Controls.Add(this.dataGridView1);
@@ -453,6 +464,7 @@
         private System.Windows.Forms.DataGridView jobPositionDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox jobpositionIDTextBox;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }

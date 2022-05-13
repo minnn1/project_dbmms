@@ -43,13 +43,16 @@
             this.iTshopDBDataSet = new Store.ITshopDBDataSet();
             this.productTableAdapter = new Store.ITshopDBDataSetTableAdapters.ProductTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnedit = new System.Windows.Forms.Button();
+            this.btnnew = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnedit = new System.Windows.Forms.Button();
-            this.btnnew = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             productcategoryIDLabel = new System.Windows.Forms.Label();
             productNameLabel = new System.Windows.Forms.Label();
             productPriceLabel = new System.Windows.Forms.Label();
@@ -172,6 +175,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
             this.Column2,
             this.Column1,
             this.Column3,
@@ -184,6 +188,53 @@
             this.dataGridView1.Size = new System.Drawing.Size(928, 268);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // btnedit
+            // 
+            this.btnedit.Enabled = false;
+            this.btnedit.Location = new System.Drawing.Point(621, 174);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.Size = new System.Drawing.Size(199, 63);
+            this.btnedit.TabIndex = 17;
+            this.btnedit.Text = "เเก้ไขสินค้า";
+            this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
+            // 
+            // btnnew
+            // 
+            this.btnnew.Location = new System.Drawing.Point(826, 90);
+            this.btnnew.Name = "btnnew";
+            this.btnnew.Size = new System.Drawing.Size(157, 63);
+            this.btnnew.TabIndex = 18;
+            this.btnnew.Text = "เพิ่มสินค้าใหม่";
+            this.btnnew.UseVisualStyleBackColor = true;
+            this.btnnew.Visible = false;
+            this.btnnew.Click += new System.EventHandler(this.btnnew_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(392, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(499, 66);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "เพิ่มข้อมูลสินค้า";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(618, 252);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(365, 39);
+            this.textBox1.TabIndex = 21;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "productID";
+            this.Column5.HeaderText = "รหัสสินค้า";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
             // 
             // Column2
             // 
@@ -213,42 +264,23 @@
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             // 
-            // btnedit
+            // btnSearch
             // 
-            this.btnedit.Enabled = false;
-            this.btnedit.Location = new System.Drawing.Point(621, 174);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(199, 63);
-            this.btnedit.TabIndex = 17;
-            this.btnedit.Text = "เเก้ไขสินค้า";
-            this.btnedit.UseVisualStyleBackColor = true;
-            // 
-            // btnnew
-            // 
-            this.btnnew.Location = new System.Drawing.Point(826, 90);
-            this.btnnew.Name = "btnnew";
-            this.btnnew.Size = new System.Drawing.Size(157, 63);
-            this.btnnew.TabIndex = 18;
-            this.btnnew.Text = "เพิ่มสินค้าใหม่";
-            this.btnnew.UseVisualStyleBackColor = true;
-            this.btnnew.Visible = false;
-            this.btnnew.Click += new System.EventHandler(this.btnnew_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(392, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(499, 66);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "เพิ่มข้อมูลสินค้า";
+            this.btnSearch.Location = new System.Drawing.Point(989, 252);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(168, 39);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Text = "ค้นหาทั้งหมด";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // FormProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 811);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnnew);
             this.Controls.Add(this.btnedit);
@@ -287,12 +319,15 @@
         private System.Windows.Forms.BindingSource productBindingSource;
         private ITshopDBDataSetTableAdapters.ProductTableAdapter productTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnedit;
+        private System.Windows.Forms.Button btnnew;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Button btnedit;
-        private System.Windows.Forms.Button btnnew;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

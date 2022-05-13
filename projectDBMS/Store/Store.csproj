@@ -94,6 +94,12 @@
     <Compile Include="FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceipt.Designer.cs">
+      <DependentUpon>FormReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="formuser\FormAccountant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReceipt.resx">
+      <DependentUpon>FormReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

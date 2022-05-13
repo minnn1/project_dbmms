@@ -52,10 +52,11 @@
             this.productcategoryIDTextBox = new System.Windows.Forms.TextBox();
             this.productcategoryNameTextBox = new System.Windows.Forms.TextBox();
             this.productCategoryDataGridView = new System.Windows.Forms.DataGridView();
-            this.productCategoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCategoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             productcategoryIDLabel = new System.Windows.Forms.Label();
             productcategoryNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iTshopDBDataSet)).BeginInit();
@@ -279,20 +280,6 @@
             this.productCategoryDataGridView.Size = new System.Drawing.Size(1026, 352);
             this.productCategoryDataGridView.TabIndex = 5;
             // 
-            // productCategoryBindingSource1
-            // 
-            this.productCategoryBindingSource1.DataSource = typeof(Store.ProductCategory);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.Location = new System.Drawing.Point(539, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(499, 66);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "เพิ่มข้อมูลประเภทสินค้า";
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "productcategoryID";
@@ -308,11 +295,33 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
+            // productCategoryBindingSource1
+            // 
+            this.productCategoryBindingSource1.DataSource = typeof(Store.ProductCategory);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(539, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(499, 66);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "เพิ่มข้อมูลประเภทสินค้า";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(564, 154);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(474, 39);
+            this.textBox1.TabIndex = 21;
+            // 
             // FormCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 766);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.productCategoryDataGridView);
             this.Controls.Add(productcategoryIDLabel);
@@ -363,5 +372,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

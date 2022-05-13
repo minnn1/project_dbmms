@@ -92,8 +92,14 @@ namespace Store
             employeeLNameTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
 
         }
+
+        private void jobPositionDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            jobpositionIDTextBox.Text = jobPositionDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+        }
         //when cell click , show data relation  in datagridview1
-        
+
 
     }
 }

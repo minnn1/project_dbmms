@@ -33,5 +33,23 @@ namespace Store
             this.tableAdapterManager.UpdateAll(this.iTshopDBDataSet);
 
         }
+        public string constr = (@"Data Source=LAPTOP-1SPFNIPG;Initial Catalog=ITshopDB;Integrated Security=True");
+
+        public void serch_data()
+        {
+            SqlConnection con = new SqlConnection(constr);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Members where memberFname like '" + textBox1.Text + "%'", con);
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            serch_data();
+        }
     }
 }

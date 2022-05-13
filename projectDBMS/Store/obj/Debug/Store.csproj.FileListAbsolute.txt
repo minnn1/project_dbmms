@@ -35,3 +35,4 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\St
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormCategory.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormProduct.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormOrder.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store\obj\Debug\Store.FormReceipt.resources
