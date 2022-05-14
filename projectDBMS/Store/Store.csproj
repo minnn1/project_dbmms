@@ -153,6 +153,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ITshopDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ITshopDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ITshopDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,6 +238,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ITshopDBDataSet1.xsc">
+      <DependentUpon>ITshopDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ITshopDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ITshopDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ITshopDBDataSet1.xss">
+      <DependentUpon>ITshopDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

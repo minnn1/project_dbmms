@@ -84,7 +84,7 @@
             this.dataGridEmp = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invoiceQTYTextBox1 = new System.Windows.Forms.NumericUpDown();
+            this.invoiceQTYTextBox1 = new System.Windows.Forms.TextBox();
             invoiceIDLabel = new System.Windows.Forms.Label();
             employeeIDLabel = new System.Windows.Forms.Label();
             productIDLabel = new System.Windows.Forms.Label();
@@ -102,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagirdMember)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceQTYTextBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // invoiceIDLabel
@@ -606,11 +605,12 @@
             // 
             // invoiceQTYTextBox1
             // 
-            this.invoiceQTYTextBox1.Location = new System.Drawing.Point(286, 276);
+            this.invoiceQTYTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoiceBindingSource, "invoiceQTY", true));
+            this.invoiceQTYTextBox1.Location = new System.Drawing.Point(286, 273);
             this.invoiceQTYTextBox1.Name = "invoiceQTYTextBox1";
-            this.invoiceQTYTextBox1.Size = new System.Drawing.Size(200, 39);
-            this.invoiceQTYTextBox1.TabIndex = 23;
-            this.invoiceQTYTextBox1.ValueChanged += new System.EventHandler(this.invoiceQTYTextBox1_ValueChanged);
+            this.invoiceQTYTextBox1.Size = new System.Drawing.Size(190, 39);
+            this.invoiceQTYTextBox1.TabIndex = 24;
+            this.invoiceQTYTextBox1.TextChanged += new System.EventHandler(this.invoiceQTYTextBox1_TextChanged);
             // 
             // FormOrder
             // 
@@ -654,7 +654,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagirdMember)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceQTYTextBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,6 +706,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn invoiceDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.NumericUpDown invoiceQTYTextBox1;
+        private System.Windows.Forms.TextBox invoiceQTYTextBox1;
     }
 }

@@ -35,7 +35,7 @@ namespace Store
                 SqlConnection con = new SqlConnection(constr);
                 string sql_insertqty = "INSERT INTO Invoice(invoiceQTY) VALUES (@invoiceQty)";
                 SqlCommand cmd = new SqlCommand(sql_insertqty, con);
-                cmd.Parameters.AddWithValue("@invoiceQTY", Convert.ToInt32(invoiceQTYTextBox1.Value));
+                cmd.Parameters.AddWithValue("@invoiceQTY", Convert.ToInt32(invoiceQTYTextBox1.Text));
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -146,22 +146,7 @@ namespace Store
             con.Close();
         }
 
-        private void invoiceQTYTextBox1_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
 
-                int total = Convert.ToInt16(invoicePriceTextBox.Text) * Convert.ToInt16(invoiceQTYTextBox1.Value);
-                invoiceTotalPriceTextBox.Text = total.ToString();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ไม่สามารถคำนวนได้") ;
-            }
-            
-
-        }
         public void dataGridEmp_load()
         {
             SqlConnection con = new SqlConnection(constr);
@@ -183,6 +168,12 @@ namespace Store
         private void button1_Click(object sender, EventArgs e)
         {
             insert_data();
+        }
+
+        private void invoiceQTYTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            int total = Convert.ToInt16(invoicePriceTextBox.Text) * Convert.ToInt16(invoiceQTYTextBox1.Text);
+            invoiceTotalPriceTextBox.Text = total.ToString();
         }
     }
 }
