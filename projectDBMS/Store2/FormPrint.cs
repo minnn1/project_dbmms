@@ -9,6 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using Ecl = Microsoft.Office.Interop.Excel;
+using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
+using System.Threading;
+using System.Globalization;
+using System.Net;
+using System.Net.Mail;
+using System.Reflection.Emit;
+using GemBox.Spreadsheet;
+using GemBox.Spreadsheet.WinFormsUtilities;
+using GemBox.Pdf;
+using GemBox.Pdf.Content;
+using System.Printing;
 
 namespace Store2
 {
@@ -16,13 +31,72 @@ namespace Store2
     {
         public FormPrint()
         {
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
             InitializeComponent();
         }
         public string constring = @"Data Source=LAPTOP-1SPFNIPG;Initial Catalog=ITshopDB2;Integrated Security=True";
-    
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF (*.pdf)|*.pdf|";
+            saveFileDialog.FilterIndex = 1;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {//pdf
+                PdfDocument document = PdfDocument.Load("Print.pdf");
+                var pdfPage = document.Pages[0];
+
+                // From DataGridView to ExcelFile.
+                DataGridViewConverter.ImportFromDataGridView(
+                    document,
+                    this.dataGridView1,
+                    new ImportFromDataGridViewOptions() { ColumnHeaders = true });
+
+                document.Save(saveFileDialog.FileName);
+            }
+        }
+
         private void buttonExport_Click(object sender, EventArgs e)
         {
-   
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter =
+                "XLS (*.xls)|*.xls|" +
+                "XLT (*.xlt)|*.xlt|" +
+                "XLSX (*.xlsx)|*.xlsx|" +
+                "XLSM (*.xlsm)|*.xlsm|" +
+                "XLTX (*.xltx)|*.xltx|" +
+                "XLTM (*.xltm)|*.xltm|" +
+                "ODS (*.ods)|*.ods|" +
+                "OTS (*.ots)|*.ots|" +
+                "CSV (*.csv)|*.csv|" +
+                "TSV (*.tsv)|*.tsv|" +
+                "HTML (*.html)|*.html|" +
+                "MHTML (.mhtml)|*.mhtml|" +
+                "PDF (*.pdf)|*.pdf|" +
+                "XPS (*.xps)|*.xps|" +
+                "BMP (*.bmp)|*.bmp|" +
+                "GIF (*.gif)|*.gif|" +
+                "JPEG (*.jpg)|*.jpg|" +
+                "PNG (*.png)|*.png|" +
+                "TIFF (*.tif)|*.tif|" +
+                "WMP (*.wdp)|*.wdp";
+
+            saveFileDialog.FilterIndex = 3;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var workbook = new ExcelFile();
+                var worksheet = workbook.Worksheets.Add("Sheet1");
+
+                // From DataGridView to ExcelFile.
+                DataGridViewConverter.ImportFromDataGridView(
+                    worksheet,
+                    this.dataGridView1,
+                    new ImportFromDataGridViewOptions() { ColumnHeaders = true });
+
+                workbook.Save(saveFileDialog.FileName);
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {   //เมื่อกดปุ่มนี้จะโหลดข้อมูลที่เรากรอกไว้ในtextbox เข้าไปในdatagridview
@@ -116,3 +190,4 @@ namespace Store2
         }
     }
 }
+///////////////////////////////////////////////////////////////

@@ -40,27 +40,27 @@
             this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.receiptTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.ReceiptTableAdapter();
             this.tableAdapterManager = new Store2.ITshopDB2DataSetTableAdapters.TableAdapterManager();
+            this.invoiceTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.InvoiceTableAdapter();
             this.receiptBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.receiptBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.fK_Invoice_idTextBox = new System.Windows.Forms.TextBox();
             this.receiptPnameTextBox = new System.Windows.Forms.TextBox();
             this.receiptQTYTextBox = new System.Windows.Forms.TextBox();
             this.receiptPriceTextBox = new System.Windows.Forms.TextBox();
             this.receiptTotalPriceTextBox = new System.Windows.Forms.TextBox();
             this.receiptDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.receiptBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.invoiceTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.InvoiceTableAdapter();
             this.invoiceDataGridView = new System.Windows.Forms.DataGridView();
             this.receiptDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +90,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.invoiceDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fK_Invoice_idLabel
+            // 
+            fK_Invoice_idLabel.AutoSize = true;
+            fK_Invoice_idLabel.Location = new System.Drawing.Point(12, 110);
+            fK_Invoice_idLabel.Name = "fK_Invoice_idLabel";
+            fK_Invoice_idLabel.Size = new System.Drawing.Size(153, 32);
+            fK_Invoice_idLabel.TabIndex = 3;
+            fK_Invoice_idLabel.Text = "รหัสชำระเงิน";
+            // 
+            // receiptPnameLabel
+            // 
+            receiptPnameLabel.AutoSize = true;
+            receiptPnameLabel.Location = new System.Drawing.Point(12, 155);
+            receiptPnameLabel.Name = "receiptPnameLabel";
+            receiptPnameLabel.Size = new System.Drawing.Size(155, 32);
+            receiptPnameLabel.TabIndex = 5;
+            receiptPnameLabel.Text = "รายการสินค้า";
+            // 
+            // receiptQTYLabel
+            // 
+            receiptQTYLabel.AutoSize = true;
+            receiptQTYLabel.Location = new System.Drawing.Point(12, 200);
+            receiptQTYLabel.Name = "receiptQTYLabel";
+            receiptQTYLabel.Size = new System.Drawing.Size(148, 32);
+            receiptQTYLabel.TabIndex = 7;
+            receiptQTYLabel.Text = "จำนวนสินค้า";
+            // 
+            // receiptPriceLabel
+            // 
+            receiptPriceLabel.AutoSize = true;
+            receiptPriceLabel.Location = new System.Drawing.Point(12, 245);
+            receiptPriceLabel.Name = "receiptPriceLabel";
+            receiptPriceLabel.Size = new System.Drawing.Size(128, 32);
+            receiptPriceLabel.TabIndex = 9;
+            receiptPriceLabel.Text = "ราคาสินค้า";
+            // 
+            // receiptTotalPriceLabel
+            // 
+            receiptTotalPriceLabel.AutoSize = true;
+            receiptTotalPriceLabel.Location = new System.Drawing.Point(12, 290);
+            receiptTotalPriceLabel.Name = "receiptTotalPriceLabel";
+            receiptTotalPriceLabel.Size = new System.Drawing.Size(112, 32);
+            receiptTotalPriceLabel.TabIndex = 11;
+            receiptTotalPriceLabel.Text = "ราคารวม";
+            // 
+            // receiptDateLabel
+            // 
+            receiptDateLabel.AutoSize = true;
+            receiptDateLabel.Location = new System.Drawing.Point(12, 336);
+            receiptDateLabel.Name = "receiptDateLabel";
+            receiptDateLabel.Size = new System.Drawing.Size(185, 32);
+            receiptDateLabel.TabIndex = 13;
+            receiptDateLabel.Text = "วันที่ออกใบเสร็จ";
             // 
             // iTshopDB2DataSet
             // 
@@ -122,6 +176,10 @@
             this.tableAdapterManager.ReceiptTableAdapter = this.receiptTableAdapter;
             this.tableAdapterManager.UpdateOrder = Store2.ITshopDB2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // invoiceTableAdapter
+            // 
+            this.invoiceTableAdapter.ClearBeforeFill = true;
+            // 
             // receiptBindingNavigator
             // 
             this.receiptBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -149,142 +207,9 @@
             this.receiptBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.receiptBindingNavigator.Name = "receiptBindingNavigator";
             this.receiptBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.receiptBindingNavigator.Size = new System.Drawing.Size(1422, 33);
+            this.receiptBindingNavigator.Size = new System.Drawing.Size(1422, 38);
             this.receiptBindingNavigator.TabIndex = 0;
             this.receiptBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
-            // 
-            // fK_Invoice_idLabel
-            // 
-            fK_Invoice_idLabel.AutoSize = true;
-            fK_Invoice_idLabel.Location = new System.Drawing.Point(12, 110);
-            fK_Invoice_idLabel.Name = "fK_Invoice_idLabel";
-            fK_Invoice_idLabel.Size = new System.Drawing.Size(185, 32);
-            fK_Invoice_idLabel.TabIndex = 3;
-            fK_Invoice_idLabel.Text = "FK Invoice id:";
-            // 
-            // fK_Invoice_idTextBox
-            // 
-            this.fK_Invoice_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "FK_Invoice_id", true));
-            this.fK_Invoice_idTextBox.Location = new System.Drawing.Point(269, 107);
-            this.fK_Invoice_idTextBox.Name = "fK_Invoice_idTextBox";
-            this.fK_Invoice_idTextBox.Size = new System.Drawing.Size(200, 39);
-            this.fK_Invoice_idTextBox.TabIndex = 4;
-            // 
-            // receiptPnameLabel
-            // 
-            receiptPnameLabel.AutoSize = true;
-            receiptPnameLabel.Location = new System.Drawing.Point(12, 155);
-            receiptPnameLabel.Name = "receiptPnameLabel";
-            receiptPnameLabel.Size = new System.Drawing.Size(205, 32);
-            receiptPnameLabel.TabIndex = 5;
-            receiptPnameLabel.Text = "receipt Pname:";
-            // 
-            // receiptPnameTextBox
-            // 
-            this.receiptPnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptPname", true));
-            this.receiptPnameTextBox.Location = new System.Drawing.Point(269, 152);
-            this.receiptPnameTextBox.Name = "receiptPnameTextBox";
-            this.receiptPnameTextBox.Size = new System.Drawing.Size(200, 39);
-            this.receiptPnameTextBox.TabIndex = 6;
-            // 
-            // receiptQTYLabel
-            // 
-            receiptQTYLabel.AutoSize = true;
-            receiptQTYLabel.Location = new System.Drawing.Point(12, 200);
-            receiptQTYLabel.Name = "receiptQTYLabel";
-            receiptQTYLabel.Size = new System.Drawing.Size(173, 32);
-            receiptQTYLabel.TabIndex = 7;
-            receiptQTYLabel.Text = "receipt QTY:";
-            // 
-            // receiptQTYTextBox
-            // 
-            this.receiptQTYTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptQTY", true));
-            this.receiptQTYTextBox.Location = new System.Drawing.Point(269, 197);
-            this.receiptQTYTextBox.Name = "receiptQTYTextBox";
-            this.receiptQTYTextBox.Size = new System.Drawing.Size(200, 39);
-            this.receiptQTYTextBox.TabIndex = 8;
-            // 
-            // receiptPriceLabel
-            // 
-            receiptPriceLabel.AutoSize = true;
-            receiptPriceLabel.Location = new System.Drawing.Point(12, 245);
-            receiptPriceLabel.Name = "receiptPriceLabel";
-            receiptPriceLabel.Size = new System.Drawing.Size(180, 32);
-            receiptPriceLabel.TabIndex = 9;
-            receiptPriceLabel.Text = "receipt Price:";
-            // 
-            // receiptPriceTextBox
-            // 
-            this.receiptPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptPrice", true));
-            this.receiptPriceTextBox.Location = new System.Drawing.Point(269, 242);
-            this.receiptPriceTextBox.Name = "receiptPriceTextBox";
-            this.receiptPriceTextBox.Size = new System.Drawing.Size(200, 39);
-            this.receiptPriceTextBox.TabIndex = 10;
-            // 
-            // receiptTotalPriceLabel
-            // 
-            receiptTotalPriceLabel.AutoSize = true;
-            receiptTotalPriceLabel.Location = new System.Drawing.Point(12, 290);
-            receiptTotalPriceLabel.Name = "receiptTotalPriceLabel";
-            receiptTotalPriceLabel.Size = new System.Drawing.Size(251, 32);
-            receiptTotalPriceLabel.TabIndex = 11;
-            receiptTotalPriceLabel.Text = "receipt Total Price:";
-            // 
-            // receiptTotalPriceTextBox
-            // 
-            this.receiptTotalPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptTotalPrice", true));
-            this.receiptTotalPriceTextBox.Location = new System.Drawing.Point(269, 287);
-            this.receiptTotalPriceTextBox.Name = "receiptTotalPriceTextBox";
-            this.receiptTotalPriceTextBox.Size = new System.Drawing.Size(200, 39);
-            this.receiptTotalPriceTextBox.TabIndex = 12;
-            // 
-            // receiptDateLabel
-            // 
-            receiptDateLabel.AutoSize = true;
-            receiptDateLabel.Location = new System.Drawing.Point(12, 336);
-            receiptDateLabel.Name = "receiptDateLabel";
-            receiptDateLabel.Size = new System.Drawing.Size(175, 32);
-            receiptDateLabel.TabIndex = 13;
-            receiptDateLabel.Text = "receipt Date:";
-            // 
-            // receiptDateDateTimePicker
-            // 
-            this.receiptDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.receiptBindingSource, "receiptDate", true));
-            this.receiptDateDateTimePicker.Location = new System.Drawing.Point(269, 332);
-            this.receiptDateDateTimePicker.Name = "receiptDateDateTimePicker";
-            this.receiptDateDateTimePicker.Size = new System.Drawing.Size(200, 39);
-            this.receiptDateDateTimePicker.TabIndex = 14;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -292,8 +217,15 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -322,6 +254,26 @@
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Leelawadee UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -340,6 +292,11 @@
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
             // receiptBindingNavigatorSaveItem
             // 
             this.receiptBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -349,14 +306,58 @@
             this.receiptBindingNavigatorSaveItem.Text = "Save Data";
             this.receiptBindingNavigatorSaveItem.Click += new System.EventHandler(this.receiptBindingNavigatorSaveItem_Click);
             // 
+            // fK_Invoice_idTextBox
+            // 
+            this.fK_Invoice_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "FK_Invoice_id", true));
+            this.fK_Invoice_idTextBox.Location = new System.Drawing.Point(269, 107);
+            this.fK_Invoice_idTextBox.Name = "fK_Invoice_idTextBox";
+            this.fK_Invoice_idTextBox.Size = new System.Drawing.Size(200, 39);
+            this.fK_Invoice_idTextBox.TabIndex = 4;
+            // 
+            // receiptPnameTextBox
+            // 
+            this.receiptPnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptPname", true));
+            this.receiptPnameTextBox.Location = new System.Drawing.Point(269, 152);
+            this.receiptPnameTextBox.Name = "receiptPnameTextBox";
+            this.receiptPnameTextBox.Size = new System.Drawing.Size(200, 39);
+            this.receiptPnameTextBox.TabIndex = 6;
+            // 
+            // receiptQTYTextBox
+            // 
+            this.receiptQTYTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptQTY", true));
+            this.receiptQTYTextBox.Location = new System.Drawing.Point(269, 197);
+            this.receiptQTYTextBox.Name = "receiptQTYTextBox";
+            this.receiptQTYTextBox.Size = new System.Drawing.Size(200, 39);
+            this.receiptQTYTextBox.TabIndex = 8;
+            // 
+            // receiptPriceTextBox
+            // 
+            this.receiptPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptPrice", true));
+            this.receiptPriceTextBox.Location = new System.Drawing.Point(269, 242);
+            this.receiptPriceTextBox.Name = "receiptPriceTextBox";
+            this.receiptPriceTextBox.Size = new System.Drawing.Size(200, 39);
+            this.receiptPriceTextBox.TabIndex = 10;
+            // 
+            // receiptTotalPriceTextBox
+            // 
+            this.receiptTotalPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptTotalPrice", true));
+            this.receiptTotalPriceTextBox.Location = new System.Drawing.Point(269, 287);
+            this.receiptTotalPriceTextBox.Name = "receiptTotalPriceTextBox";
+            this.receiptTotalPriceTextBox.Size = new System.Drawing.Size(200, 39);
+            this.receiptTotalPriceTextBox.TabIndex = 12;
+            // 
+            // receiptDateDateTimePicker
+            // 
+            this.receiptDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.receiptBindingSource, "receiptDate", true));
+            this.receiptDateDateTimePicker.Location = new System.Drawing.Point(269, 332);
+            this.receiptDateDateTimePicker.Name = "receiptDateDateTimePicker";
+            this.receiptDateDateTimePicker.Size = new System.Drawing.Size(200, 39);
+            this.receiptDateDateTimePicker.TabIndex = 14;
+            // 
             // invoiceBindingSource
             // 
             this.invoiceBindingSource.DataMember = "Invoice";
             this.invoiceBindingSource.DataSource = this.iTshopDB2DataSet;
-            // 
-            // invoiceTableAdapter
-            // 
-            this.invoiceTableAdapter.ClearBeforeFill = true;
             // 
             // invoiceDataGridView
             // 
@@ -401,7 +402,7 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "PK_Receipt_id";
-            this.dataGridViewTextBoxColumn10.HeaderText = "PK_Receipt_id";
+            this.dataGridViewTextBoxColumn10.HeaderText = "รหัสใบเสร็จ";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
@@ -410,7 +411,7 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "FK_Invoice_id";
-            this.dataGridViewTextBoxColumn11.HeaderText = "FK_Invoice_id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "รหัสชำระเงิน";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.Width = 150;
@@ -418,7 +419,7 @@
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "receiptPname";
-            this.dataGridViewTextBoxColumn12.HeaderText = "receiptPname";
+            this.dataGridViewTextBoxColumn12.HeaderText = "ชื่อสินค้า";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 150;
@@ -426,7 +427,7 @@
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "receiptQTY";
-            this.dataGridViewTextBoxColumn13.HeaderText = "receiptQTY";
+            this.dataGridViewTextBoxColumn13.HeaderText = "จำนวนสินค้า";
             this.dataGridViewTextBoxColumn13.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.Width = 150;
@@ -434,7 +435,7 @@
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "receiptPrice";
-            this.dataGridViewTextBoxColumn14.HeaderText = "receiptPrice";
+            this.dataGridViewTextBoxColumn14.HeaderText = "ราคาสินค้า";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.Width = 150;
@@ -442,7 +443,7 @@
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "receiptTotalPrice";
-            this.dataGridViewTextBoxColumn15.HeaderText = "receiptTotalPrice";
+            this.dataGridViewTextBoxColumn15.HeaderText = "ราคารวม";
             this.dataGridViewTextBoxColumn15.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             this.dataGridViewTextBoxColumn15.Width = 150;
@@ -450,7 +451,7 @@
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "receiptDate";
-            this.dataGridViewTextBoxColumn16.HeaderText = "receiptDate";
+            this.dataGridViewTextBoxColumn16.HeaderText = "วันที่ออกใบเสร็จ";
             this.dataGridViewTextBoxColumn16.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             this.dataGridViewTextBoxColumn16.Width = 150;
@@ -458,7 +459,7 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Invoice_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PK_Invoice_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสชำระเงิน";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -467,7 +468,7 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "invoicePname";
-            this.dataGridViewTextBoxColumn4.HeaderText = "invoicePname";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ชื่อสินค้า";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 150;
@@ -475,7 +476,7 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "invoiceQTY";
-            this.dataGridViewTextBoxColumn5.HeaderText = "invoiceQTY";
+            this.dataGridViewTextBoxColumn5.HeaderText = "จำนวนสินค้า";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 150;
@@ -483,7 +484,7 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "invoicePrice";
-            this.dataGridViewTextBoxColumn6.HeaderText = "invoicePrice";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ราคาสินค้า";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 150;
@@ -491,7 +492,7 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "invoiceTotalPrice";
-            this.dataGridViewTextBoxColumn7.HeaderText = "invoiceTotalPrice";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ราคารวม";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 150;
@@ -499,7 +500,7 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "invoiceDate";
-            this.dataGridViewTextBoxColumn8.HeaderText = "invoiceDate";
+            this.dataGridViewTextBoxColumn8.HeaderText = "วันที่ชำระ";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 150;
@@ -525,7 +526,7 @@
             this.Controls.Add(this.receiptDateDateTimePicker);
             this.Controls.Add(this.receiptBindingNavigator);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormReceipt";
             this.Text = "FormReceipt";
             this.Load += new System.EventHandler(this.FormReceipt_Load);
@@ -571,6 +572,12 @@
         private System.Windows.Forms.BindingSource invoiceBindingSource;
         private System.Windows.Forms.DataGridView invoiceDataGridView;
         private System.Windows.Forms.DataGridView receiptDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
@@ -578,11 +585,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
