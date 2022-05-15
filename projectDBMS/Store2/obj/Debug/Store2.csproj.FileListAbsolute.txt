@@ -17,3 +17,4 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\S
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormOrder.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormReceipt.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormPurchaseRequisition.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormPrint.resources

@@ -65,5 +65,10 @@ namespace Store2
         {
             openChildForm(new FormPurchaseRequisition());
         }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormPrint());
+        }
     }
 }
