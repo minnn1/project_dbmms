@@ -174,7 +174,7 @@ namespace Store2
                 if (conn.State == ConnectionState.Closed)
                 {
                     conn.Open();
-                    string sql = "SELECT Employee.PK_Employee_id,Employee.employeeFName FROM Employee";
+                    string sql = "SELECT Employee.PK_Employee_id,Employee.employeeFName FROM Employee WHERE Employee.FK_JobPosition_id=2";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
