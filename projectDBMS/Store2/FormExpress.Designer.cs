@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormExpress));
             System.Windows.Forms.Label pK_Income_idLabel;
             System.Windows.Forms.Label fK_Invoice_idLabel;
             System.Windows.Forms.Label incomeNameLabel;
             System.Windows.Forms.Label incomeTotalpriceLabel;
             System.Windows.Forms.Label incomeDateLabel;
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormExpress));
             this.iTshopDB2DataSet = new Store2.ITshopDB2DataSet();
             this.expensesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expensesTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.ExpensesTableAdapter();
@@ -55,11 +55,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.expensesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.expensesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pK_Expenses_idTextBox = new System.Windows.Forms.TextBox();
             this.fK_PurchaseOrder_idTextBox = new System.Windows.Forms.TextBox();
             this.expensesNameTextBox = new System.Windows.Forms.TextBox();
@@ -76,6 +71,11 @@
             this.txtboxOutputIncome = new System.Windows.Forms.TextBox();
             this.buttonQuery = new System.Windows.Forms.Button();
             this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             pK_Income_idLabel = new System.Windows.Forms.Label();
             fK_Invoice_idLabel = new System.Windows.Forms.Label();
             incomeNameLabel = new System.Windows.Forms.Label();
@@ -90,6 +90,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pK_Income_idLabel
+            // 
+            pK_Income_idLabel.AutoSize = true;
+            pK_Income_idLabel.Location = new System.Drawing.Point(44, 45);
+            pK_Income_idLabel.Name = "pK_Income_idLabel";
+            pK_Income_idLabel.Size = new System.Drawing.Size(140, 32);
+            pK_Income_idLabel.TabIndex = 21;
+            pK_Income_idLabel.Text = "รหัสรายจ่าย";
+            // 
+            // fK_Invoice_idLabel
+            // 
+            fK_Invoice_idLabel.AutoSize = true;
+            fK_Invoice_idLabel.Location = new System.Drawing.Point(37, 91);
+            fK_Invoice_idLabel.Name = "fK_Invoice_idLabel";
+            fK_Invoice_idLabel.Size = new System.Drawing.Size(147, 32);
+            fK_Invoice_idLabel.TabIndex = 17;
+            fK_Invoice_idLabel.Text = "รหัสใบสั่งซื้อ";
+            // 
+            // incomeNameLabel
+            // 
+            incomeNameLabel.AutoSize = true;
+            incomeNameLabel.Location = new System.Drawing.Point(57, 136);
+            incomeNameLabel.Name = "incomeNameLabel";
+            incomeNameLabel.Size = new System.Drawing.Size(127, 32);
+            incomeNameLabel.TabIndex = 18;
+            incomeNameLabel.Text = "ชื่อรายการ";
+            // 
+            // incomeTotalpriceLabel
+            // 
+            incomeTotalpriceLabel.AutoSize = true;
+            incomeTotalpriceLabel.Location = new System.Drawing.Point(72, 238);
+            incomeTotalpriceLabel.Name = "incomeTotalpriceLabel";
+            incomeTotalpriceLabel.Size = new System.Drawing.Size(112, 32);
+            incomeTotalpriceLabel.TabIndex = 19;
+            incomeTotalpriceLabel.Text = "ราคารวม";
+            // 
+            // incomeDateLabel
+            // 
+            incomeDateLabel.AutoSize = true;
+            incomeDateLabel.Location = new System.Drawing.Point(64, 301);
+            incomeDateLabel.Name = "incomeDateLabel";
+            incomeDateLabel.Size = new System.Drawing.Size(120, 32);
+            incomeDateLabel.TabIndex = 20;
+            incomeDateLabel.Text = "วันที่สั่งซื้อ";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(57, 189);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(127, 32);
+            label1.TabIndex = 24;
+            label1.Text = "ราคาสั่งซื้อ";
             // 
             // iTshopDB2DataSet
             // 
@@ -153,7 +207,7 @@
             this.expensesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.expensesBindingNavigator.Name = "expensesBindingNavigator";
             this.expensesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.expensesBindingNavigator.Size = new System.Drawing.Size(1422, 38);
+            this.expensesBindingNavigator.Size = new System.Drawing.Size(1422, 33);
             this.expensesBindingNavigator.TabIndex = 0;
             this.expensesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -163,13 +217,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -179,7 +233,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -188,7 +242,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -197,19 +251,18 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -218,7 +271,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -226,7 +279,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -235,20 +288,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // expensesBindingNavigatorSaveItem
             // 
             this.expensesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.expensesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("expensesBindingNavigatorSaveItem.Image")));
             this.expensesBindingNavigatorSaveItem.Name = "expensesBindingNavigatorSaveItem";
-            this.expensesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
+            this.expensesBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.expensesBindingNavigatorSaveItem.Text = "Save Data";
             this.expensesBindingNavigatorSaveItem.Click += new System.EventHandler(this.expensesBindingNavigatorSaveItem_Click);
             // 
@@ -269,47 +322,6 @@
             this.expensesDataGridView.RowTemplate.Height = 28;
             this.expensesDataGridView.Size = new System.Drawing.Size(577, 257);
             this.expensesDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Expenses_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PK_Expenses_id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FK_PurchaseOrder_id";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FK_PurchaseOrder_id";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "expensesName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "expensesName";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "expensesTotalprice";
-            this.dataGridViewTextBoxColumn4.HeaderText = "expensesTotalprice";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "expensesDate";
-            this.dataGridViewTextBoxColumn5.HeaderText = "expensesDate";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
             // pK_Expenses_idTextBox
             // 
@@ -377,51 +389,6 @@
             this.purchaseOrderDataGridView.TabIndex = 12;
             this.purchaseOrderDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.purchaseOrderDataGridView_CellClick);
             // 
-            // pK_Income_idLabel
-            // 
-            pK_Income_idLabel.AutoSize = true;
-            pK_Income_idLabel.Location = new System.Drawing.Point(44, 45);
-            pK_Income_idLabel.Name = "pK_Income_idLabel";
-            pK_Income_idLabel.Size = new System.Drawing.Size(140, 32);
-            pK_Income_idLabel.TabIndex = 21;
-            pK_Income_idLabel.Text = "รหัสรายจ่าย";
-            // 
-            // fK_Invoice_idLabel
-            // 
-            fK_Invoice_idLabel.AutoSize = true;
-            fK_Invoice_idLabel.Location = new System.Drawing.Point(37, 91);
-            fK_Invoice_idLabel.Name = "fK_Invoice_idLabel";
-            fK_Invoice_idLabel.Size = new System.Drawing.Size(147, 32);
-            fK_Invoice_idLabel.TabIndex = 17;
-            fK_Invoice_idLabel.Text = "รหัสใบสั่งซื้อ";
-            // 
-            // incomeNameLabel
-            // 
-            incomeNameLabel.AutoSize = true;
-            incomeNameLabel.Location = new System.Drawing.Point(57, 136);
-            incomeNameLabel.Name = "incomeNameLabel";
-            incomeNameLabel.Size = new System.Drawing.Size(127, 32);
-            incomeNameLabel.TabIndex = 18;
-            incomeNameLabel.Text = "ชื่อรายการ";
-            // 
-            // incomeTotalpriceLabel
-            // 
-            incomeTotalpriceLabel.AutoSize = true;
-            incomeTotalpriceLabel.Location = new System.Drawing.Point(72, 238);
-            incomeTotalpriceLabel.Name = "incomeTotalpriceLabel";
-            incomeTotalpriceLabel.Size = new System.Drawing.Size(112, 32);
-            incomeTotalpriceLabel.TabIndex = 19;
-            incomeTotalpriceLabel.Text = "ราคารวม";
-            // 
-            // incomeDateLabel
-            // 
-            incomeDateLabel.AutoSize = true;
-            incomeDateLabel.Location = new System.Drawing.Point(64, 301);
-            incomeDateLabel.Name = "incomeDateLabel";
-            incomeDateLabel.Size = new System.Drawing.Size(120, 32);
-            incomeDateLabel.TabIndex = 20;
-            incomeDateLabel.Text = "วันที่สั่งซื้อ";
-            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "PK_PurchaseOrder_id";
@@ -488,15 +455,6 @@
             this.buttonQuery.UseVisualStyleBackColor = true;
             this.buttonQuery.Click += new System.EventHandler(this.buttonQuery_Click);
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(57, 189);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(127, 32);
-            label1.TabIndex = 24;
-            label1.Text = "ราคาสั่งซื้อ";
-            // 
             // priceTextBox
             // 
             this.priceTextBox.Location = new System.Drawing.Point(229, 189);
@@ -504,6 +462,47 @@
             this.priceTextBox.Size = new System.Drawing.Size(292, 39);
             this.priceTextBox.TabIndex = 25;
             this.priceTextBox.TextChanged += new System.EventHandler(this.priceTextBox_TextChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Expenses_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสรายจ่าย";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FK_PurchaseOrder_id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "รหัสใบขอซื้อ";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "expensesName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ชื่อรายการ";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "expensesTotalprice";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ราคารวม";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "expensesDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "วันที่สั่งซื้อ";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
             // FormExpress
             // 
@@ -567,11 +566,6 @@
         private System.Windows.Forms.ToolStripButton expensesBindingNavigatorSaveItem;
         private ITshopDB2DataSetTableAdapters.PurchaseOrderTableAdapter purchaseOrderTableAdapter;
         private System.Windows.Forms.DataGridView expensesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TextBox pK_Expenses_idTextBox;
         private System.Windows.Forms.TextBox fK_PurchaseOrder_idTextBox;
         private System.Windows.Forms.TextBox expensesNameTextBox;
@@ -588,5 +582,10 @@
         private System.Windows.Forms.TextBox txtboxOutputIncome;
         private System.Windows.Forms.Button buttonQuery;
         private System.Windows.Forms.TextBox priceTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
