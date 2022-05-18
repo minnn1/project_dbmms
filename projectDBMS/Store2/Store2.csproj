@@ -87,11 +87,41 @@
     <Compile Include="FormCategory.Designer.cs">
       <DependentUpon>FormCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClaims.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClaims.Designer.cs">
+      <DependentUpon>FormClaims.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEmployee.Designer.cs">
       <DependentUpon>FormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExpress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExpress.Designer.cs">
+      <DependentUpon>FormExpress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIncome.Designer.cs">
+      <DependentUpon>FormIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMember.cs">
       <SubType>Form</SubType>
@@ -123,6 +153,12 @@
     <Compile Include="FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPurchaseOrder.Designer.cs">
+      <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPurchaseRequisition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +170,12 @@
     </Compile>
     <Compile Include="FormReceipt.Designer.cs">
       <DependentUpon>FormReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSales.Designer.cs">
+      <DependentUpon>FormSales.cs</DependentUpon>
     </Compile>
     <Compile Include="ITshopDB2DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -148,8 +190,23 @@
     <EmbeddedResource Include="FormCategory.resx">
       <DependentUpon>FormCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormClaims.resx">
+      <DependentUpon>FormClaims.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEmployee.resx">
       <DependentUpon>FormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExpress.resx">
+      <DependentUpon>FormExpress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIncome.resx">
+      <DependentUpon>FormIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMember.resx">
       <DependentUpon>FormMember.cs</DependentUpon>
@@ -166,11 +223,17 @@
     <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPurchaseOrder.resx">
+      <DependentUpon>FormPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPurchaseRequisition.resx">
       <DependentUpon>FormPurchaseRequisition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReceipt.resx">
       <DependentUpon>FormReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSales.resx">
+      <DependentUpon>FormSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

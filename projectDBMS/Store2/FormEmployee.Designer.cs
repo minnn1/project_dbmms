@@ -36,6 +36,10 @@
             this.text_employeeFName = new System.Windows.Forms.TextBox();
             this.text_employeeLName = new System.Windows.Forms.TextBox();
             this.dataGrid_Employee = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@
             this.comboBox_Jobposition_id = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonPostion = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Employee)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -122,6 +122,7 @@
             // dataGrid_Employee
             // 
             this.dataGrid_Employee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrid_Employee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGrid_Employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_Employee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -136,6 +137,34 @@
             this.dataGrid_Employee.Size = new System.Drawing.Size(526, 282);
             this.dataGrid_Employee.TabIndex = 9;
             this.dataGrid_Employee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Employee_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "PK_Employee_id";
+            this.Column1.HeaderText = "รหัสพนักงาน";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "jobpositionName";
+            this.Column2.HeaderText = "ตำเเหน่งงาน";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "employeeFName";
+            this.Column3.HeaderText = "ชื่อ";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "employeeLName";
+            this.Column4.HeaderText = "นามสกุล";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
             // 
             // label2
             // 
@@ -206,34 +235,6 @@
             this.buttonPostion.Text = "ตำเเหน่งงาน";
             this.buttonPostion.UseVisualStyleBackColor = true;
             this.buttonPostion.Click += new System.EventHandler(this.buttonPostion_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "PK_Employee_id";
-            this.Column1.HeaderText = "รหัสพนักงาน";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "jobpositionName";
-            this.Column2.HeaderText = "ตำเเหน่งงาน";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "employeeFName";
-            this.Column3.HeaderText = "ชื่อ";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "employeeLName";
-            this.Column4.HeaderText = "นามสกุล";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
             // 
             // FormEmployee
             // 

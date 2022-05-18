@@ -62,6 +62,12 @@
             this.receiptDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.invoiceDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiptDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,12 +76,6 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             fK_Invoice_idLabel = new System.Windows.Forms.Label();
             receiptPnameLabel = new System.Windows.Forms.Label();
             receiptQTYLabel = new System.Windows.Forms.Label();
@@ -207,7 +207,7 @@
             this.receiptBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.receiptBindingNavigator.Name = "receiptBindingNavigator";
             this.receiptBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.receiptBindingNavigator.Size = new System.Drawing.Size(1422, 38);
+            this.receiptBindingNavigator.Size = new System.Drawing.Size(1422, 33);
             this.receiptBindingNavigator.TabIndex = 0;
             this.receiptBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -217,7 +217,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -311,6 +311,7 @@
             this.fK_Invoice_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "FK_Invoice_id", true));
             this.fK_Invoice_idTextBox.Location = new System.Drawing.Point(269, 107);
             this.fK_Invoice_idTextBox.Name = "fK_Invoice_idTextBox";
+            this.fK_Invoice_idTextBox.ReadOnly = true;
             this.fK_Invoice_idTextBox.Size = new System.Drawing.Size(200, 39);
             this.fK_Invoice_idTextBox.TabIndex = 4;
             // 
@@ -319,6 +320,7 @@
             this.receiptPnameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptPname", true));
             this.receiptPnameTextBox.Location = new System.Drawing.Point(269, 152);
             this.receiptPnameTextBox.Name = "receiptPnameTextBox";
+            this.receiptPnameTextBox.ReadOnly = true;
             this.receiptPnameTextBox.Size = new System.Drawing.Size(200, 39);
             this.receiptPnameTextBox.TabIndex = 6;
             // 
@@ -327,6 +329,7 @@
             this.receiptQTYTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptQTY", true));
             this.receiptQTYTextBox.Location = new System.Drawing.Point(269, 197);
             this.receiptQTYTextBox.Name = "receiptQTYTextBox";
+            this.receiptQTYTextBox.ReadOnly = true;
             this.receiptQTYTextBox.Size = new System.Drawing.Size(200, 39);
             this.receiptQTYTextBox.TabIndex = 8;
             // 
@@ -335,6 +338,7 @@
             this.receiptPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptPrice", true));
             this.receiptPriceTextBox.Location = new System.Drawing.Point(269, 242);
             this.receiptPriceTextBox.Name = "receiptPriceTextBox";
+            this.receiptPriceTextBox.ReadOnly = true;
             this.receiptPriceTextBox.Size = new System.Drawing.Size(200, 39);
             this.receiptPriceTextBox.TabIndex = 10;
             // 
@@ -343,6 +347,7 @@
             this.receiptTotalPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.receiptBindingSource, "receiptTotalPrice", true));
             this.receiptTotalPriceTextBox.Location = new System.Drawing.Point(269, 287);
             this.receiptTotalPriceTextBox.Name = "receiptTotalPriceTextBox";
+            this.receiptTotalPriceTextBox.ReadOnly = true;
             this.receiptTotalPriceTextBox.Size = new System.Drawing.Size(200, 39);
             this.receiptTotalPriceTextBox.TabIndex = 12;
             // 
@@ -362,6 +367,8 @@
             // invoiceDataGridView
             // 
             this.invoiceDataGridView.AutoGenerateColumns = false;
+            this.invoiceDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.invoiceDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.invoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.invoiceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -379,9 +386,54 @@
             this.invoiceDataGridView.TabIndex = 15;
             this.invoiceDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoiceDataGridView_CellClick);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Invoice_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสชำระเงิน";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "invoicePname";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ชื่อสินค้า";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "invoiceQTY";
+            this.dataGridViewTextBoxColumn5.HeaderText = "จำนวนสินค้า";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "invoicePrice";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ราคาสินค้า";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "invoiceTotalPrice";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ราคารวม";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "invoiceDate";
+            this.dataGridViewTextBoxColumn8.HeaderText = "วันที่ชำระ";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
             // receiptDataGridView
             // 
             this.receiptDataGridView.AutoGenerateColumns = false;
+            this.receiptDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.receiptDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.receiptDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.receiptDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
@@ -406,7 +458,6 @@
             this.dataGridViewTextBoxColumn10.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 150;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -414,15 +465,13 @@
             this.dataGridViewTextBoxColumn11.HeaderText = "รหัสชำระเงิน";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 150;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "receiptPname";
-            this.dataGridViewTextBoxColumn12.HeaderText = "ชื่อสินค้า";
+            this.dataGridViewTextBoxColumn12.HeaderText = "รายการชำระ";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 150;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -430,7 +479,6 @@
             this.dataGridViewTextBoxColumn13.HeaderText = "จำนวนสินค้า";
             this.dataGridViewTextBoxColumn13.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 150;
             // 
             // dataGridViewTextBoxColumn14
             // 
@@ -438,7 +486,6 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "ราคาสินค้า";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 150;
             // 
             // dataGridViewTextBoxColumn15
             // 
@@ -446,7 +493,6 @@
             this.dataGridViewTextBoxColumn15.HeaderText = "ราคารวม";
             this.dataGridViewTextBoxColumn15.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 150;
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -454,56 +500,6 @@
             this.dataGridViewTextBoxColumn16.HeaderText = "วันที่ออกใบเสร็จ";
             this.dataGridViewTextBoxColumn16.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Invoice_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสชำระเงิน";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "invoicePname";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ชื่อสินค้า";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "invoiceQTY";
-            this.dataGridViewTextBoxColumn5.HeaderText = "จำนวนสินค้า";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "invoicePrice";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ราคาสินค้า";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "invoiceTotalPrice";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ราคารวม";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "invoiceDate";
-            this.dataGridViewTextBoxColumn8.HeaderText = "วันที่ชำระ";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 150;
             // 
             // FormReceipt
             // 

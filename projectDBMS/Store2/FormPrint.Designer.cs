@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonExportPdf = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
@@ -45,7 +46,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textsqlcommand = new System.Windows.Forms.TextBox();
             this.buttonExport = new System.Windows.Forms.Button();
-            this.buttonExportPdf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,6 +93,17 @@
             this.panel1.Size = new System.Drawing.Size(1129, 302);
             this.panel1.TabIndex = 1;
             // 
+            // buttonExportPdf
+            // 
+            this.buttonExportPdf.Location = new System.Drawing.Point(893, 26);
+            this.buttonExportPdf.Margin = new System.Windows.Forms.Padding(5);
+            this.buttonExportPdf.Name = "buttonExportPdf";
+            this.buttonExportPdf.Size = new System.Drawing.Size(220, 59);
+            this.buttonExportPdf.TabIndex = 14;
+            this.buttonExportPdf.Text = "Export Pdf";
+            this.buttonExportPdf.UseVisualStyleBackColor = true;
+            this.buttonExportPdf.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(920, 162);
@@ -108,10 +120,11 @@
             this.checkBox12.Location = new System.Drawing.Point(682, 125);
             this.checkBox12.Margin = new System.Windows.Forms.Padding(5);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(195, 36);
+            this.checkBox12.Size = new System.Drawing.Size(171, 36);
             this.checkBox12.TabIndex = 12;
-            this.checkBox12.Text = "checkBox12";
+            this.checkBox12.Text = "ตำเเหน่งงาน";
             this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
             // 
             // checkBox11
             // 
@@ -123,6 +136,7 @@
             this.checkBox11.TabIndex = 11;
             this.checkBox11.Text = "ประเภทสินค้า";
             this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
             // 
             // checkBox10
             // 
@@ -134,6 +148,7 @@
             this.checkBox10.TabIndex = 10;
             this.checkBox10.Text = "ข้อมูลรายรับ";
             this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
             // 
             // checkBox9
             // 
@@ -145,6 +160,7 @@
             this.checkBox9.TabIndex = 9;
             this.checkBox9.Text = "ข้อมูลรายจ่าย";
             this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
             // 
             // checkBox8
             // 
@@ -156,6 +172,7 @@
             this.checkBox8.TabIndex = 8;
             this.checkBox8.Text = "ใบเคลมสินค้า";
             this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // checkBox7
             // 
@@ -167,6 +184,7 @@
             this.checkBox7.TabIndex = 7;
             this.checkBox7.Text = "ข้อมูลใบสั่งซื้อ";
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // checkBox6
             // 
@@ -178,6 +196,7 @@
             this.checkBox6.TabIndex = 6;
             this.checkBox6.Text = "ข้อมูลใบขอซื้อ";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -189,6 +208,7 @@
             this.checkBox5.TabIndex = 5;
             this.checkBox5.Text = "ข้อมูลใบเสร็จ";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -200,6 +220,7 @@
             this.checkBox4.TabIndex = 5;
             this.checkBox4.Text = "ข้อมูลชำระสินค้า";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -256,17 +277,6 @@
             this.buttonExport.Text = "Export Excel";
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
-            // 
-            // buttonExportPdf
-            // 
-            this.buttonExportPdf.Location = new System.Drawing.Point(893, 26);
-            this.buttonExportPdf.Margin = new System.Windows.Forms.Padding(5);
-            this.buttonExportPdf.Name = "buttonExportPdf";
-            this.buttonExportPdf.Size = new System.Drawing.Size(220, 59);
-            this.buttonExportPdf.TabIndex = 14;
-            this.buttonExportPdf.Text = "Export Pdf";
-            this.buttonExportPdf.UseVisualStyleBackColor = true;
-            this.buttonExportPdf.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormPrint
             // 

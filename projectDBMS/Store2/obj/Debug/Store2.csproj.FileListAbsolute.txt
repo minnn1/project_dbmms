@@ -26,3 +26,10 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\bin\Debug\G
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\bin\Debug\GemBox.Spreadsheet.xml
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\bin\Debug\Pkcs11Interop.xml
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.csproj.CopyComplete
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormPurchaseOrder.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormLogin.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormSales.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormManager.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormClaims.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormExpress.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormIncome.resources

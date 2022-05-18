@@ -50,9 +50,6 @@
             this.text_invoiceQTY = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.productDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iTshopDB2DataSet = new Store2.ITshopDB2DataSet();
             this.dataGrid_Employee = new System.Windows.Forms.DataGridView();
@@ -92,6 +89,10 @@
             this.productBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productInventory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
@@ -142,6 +143,7 @@
             // 
             this.textBox_Product.Location = new System.Drawing.Point(215, 40);
             this.textBox_Product.Name = "textBox_Product";
+            this.textBox_Product.ReadOnly = true;
             this.textBox_Product.Size = new System.Drawing.Size(180, 39);
             this.textBox_Product.TabIndex = 25;
             // 
@@ -216,6 +218,7 @@
             // 
             this.textBoxinvoicePrice.Location = new System.Drawing.Point(216, 271);
             this.textBoxinvoicePrice.Name = "textBoxinvoicePrice";
+            this.textBoxinvoicePrice.ReadOnly = true;
             this.textBoxinvoicePrice.Size = new System.Drawing.Size(179, 39);
             this.textBoxinvoicePrice.TabIndex = 19;
             // 
@@ -258,6 +261,7 @@
             // 
             this.text_invoicePname.Location = new System.Drawing.Point(216, 179);
             this.text_invoicePname.Name = "text_invoicePname";
+            this.text_invoicePname.ReadOnly = true;
             this.text_invoicePname.Size = new System.Drawing.Size(179, 39);
             this.text_invoicePname.TabIndex = 7;
             // 
@@ -284,11 +288,13 @@
             // 
             this.productDataGridView.AutoGenerateColumns = false;
             this.productDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.productDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.productDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.productDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn4,
+            this.productInventory});
             this.productDataGridView.DataSource = this.productBindingSource;
             this.productDataGridView.Location = new System.Drawing.Point(23, 273);
             this.productDataGridView.Name = "productDataGridView";
@@ -297,28 +303,6 @@
             this.productDataGridView.Size = new System.Drawing.Size(772, 152);
             this.productDataGridView.TabIndex = 24;
             this.productDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productDataGridView_CellClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Product_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PK_Product_id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "productName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "productName";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "productPrice";
-            this.dataGridViewTextBoxColumn4.HeaderText = "productPrice";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // productBindingSource
             // 
@@ -333,6 +317,7 @@
             // dataGrid_Employee
             // 
             this.dataGrid_Employee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrid_Employee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGrid_Employee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_Employee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -440,7 +425,7 @@
             this.buttonNew.Name = "buttonNew";
             this.buttonNew.Size = new System.Drawing.Size(167, 77);
             this.buttonNew.TabIndex = 20;
-            this.buttonNew.Text = "เพิ่มพนักงานใหม่";
+            this.buttonNew.Text = "เพิ่มรายการชำระใหม่";
             this.buttonNew.UseVisualStyleBackColor = true;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
             // 
@@ -462,7 +447,7 @@
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(167, 77);
             this.buttonDelete.TabIndex = 18;
-            this.buttonDelete.Text = "ลบพนักงาน";
+            this.buttonDelete.Text = "ลบรายการ";
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
@@ -473,7 +458,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(167, 77);
             this.buttonAdd.TabIndex = 17;
-            this.buttonAdd.Text = "เพิ่มพนักงาน";
+            this.buttonAdd.Text = "เพิ่มรายการชำระ";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -651,6 +636,35 @@
             this.employeeBindingSource.DataMember = "Employee";
             this.employeeBindingSource.DataSource = this.iTshopDB2DataSet;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Product_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสสินค้า";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "productName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ชื่อสินค้า";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "productPrice";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ราคาสินค้า";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // productInventory
+            // 
+            this.productInventory.DataPropertyName = "productInventory";
+            this.productInventory.HeaderText = "สินค้าคงเหลือ";
+            this.productInventory.MinimumWidth = 8;
+            this.productInventory.Name = "productInventory";
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
@@ -735,9 +749,6 @@
         private System.Windows.Forms.BindingSource membersBindingSource;
         private ITshopDB2DataSetTableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private System.Windows.Forms.BindingSource employeeBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView productDataGridView;
         private ITshopDB2DataSetTableAdapters.InvoiceTableAdapter invoiceTableAdapter;
         private System.Windows.Forms.BindingSource invoiceBindingSource;
@@ -751,5 +762,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productInventory;
     }
 }

@@ -38,23 +38,7 @@ namespace Store2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "PDF (*.pdf)|*.pdf|";
-            saveFileDialog.FilterIndex = 1;
 
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {//pdf
-                PdfDocument document = PdfDocument.Load("Print.pdf");
-                var pdfPage = document.Pages[0];
-
-                // From DataGridView to ExcelFile.
-                DataGridViewConverter.ImportFromDataGridView(
-                    document,
-                    this.dataGridView1,
-                    new ImportFromDataGridViewOptions() { ColumnHeaders = true });
-
-                document.Save(saveFileDialog.FileName);
-            }
         }
 
         private void buttonExport_Click(object sender, EventArgs e)
@@ -175,6 +159,216 @@ namespace Store2
                 {
                     conn.Open();
                     string sql = "SELECT * FROM Members";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Invoice";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Receipt";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM PurchaseRequisition";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox7.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM PurchaseOrder";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox8.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Claims";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Expenses";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox10.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Income";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox11.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Category";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    conn.Close();
+                }
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+        }
+
+        private void checkBox12_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox12.Checked)
+            {
+                SqlConnection conn = new SqlConnection(constring);
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                    string sql = "SELECT * FROM Category";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();

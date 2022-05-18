@@ -22,6 +22,7 @@ namespace Store2
             public int id;
             int qty;
             int price;
+            double updateqty;
         //ส่วนเพิ่มลบข้อมูล ลง database
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public void insert_data()
@@ -107,7 +108,7 @@ namespace Store2
                 if (conn.State == ConnectionState.Closed)
                 {
                     conn.Open();
-                    string sql_serch = "select A.PK_Invoice_id,B.productName,C.memberFname,D.employeeFName,A.invoicePname,A.invoiceQTY,A.invoicePrice,A.invoiceTotalPrice,A.invoiceDate from Invoice as A  INNER JOIN Product AS B ON B.PK_Product_id = A.FK_Product_id INNER JOIN Members AS C ON C.PK_Members_id = A.FK_Members_id INNER JOIN Employee AS D ON D.PK_Employee_id = A.FK_Employee_id where CONCAT(PK_Invoice_id)LIKE '%" + textSearch.Text + "%'", con;
+                    string sql_serch = "select A.PK_Invoice_id,B.productName,C.memberFname,D.employeeFName,A.invoicePname,A.invoiceQTY,A.invoicePrice,A.invoiceTotalPrice,A.invoiceDate from Invoice as A  INNER JOIN Product AS B ON B.PK_Product_id = A.FK_Product_id INNER JOIN Members AS C ON C.PK_Members_id = A.FK_Members_id INNER JOIN Employee AS D ON D.PK_Employee_id = A.FK_Employee_id where CONCAT(PK_Invoice_id,FK_Product_id,FK_Members_id,FK_Employee_id,invoicePname)LIKE '%" + textSearch.Text + "%'", con;
                 SqlCommand cmd = new SqlCommand(sql_serch, conn);
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
@@ -202,6 +203,7 @@ namespace Store2
                     dataGrid_Employee.AutoGenerateColumns = false;
                     dataGrid_Employee.DataSource = dt;
                     conn.Close();
+                 
                 }
             }
             //ส่วนคำสั่งของ form
@@ -213,8 +215,10 @@ namespace Store2
                 //comboBox_Product_load();
                 comboBox_Member_load();
                 comboBox_Employee_load();
-                datagrid_load();
-            }
+                 datagrid_load();
+                update_qty();
+
+             }
 
         private void dataGrid_Employee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -286,12 +290,30 @@ namespace Store2
             }
 
         }
-
+        public void update_qty()
+        {
+           updateqty =Convert.ToDouble(text_invoiceQTY.Text) ;
+            SqlConnection conn = new SqlConnection(constring);
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+                string sql = "UPDATE Product SET productQTY = productQTY - @updateqty WHERE PK_Product_id = @id";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                productDataGridView.AutoGenerateColumns = false;
+                productDataGridView.DataSource = dt;
+                conn.Close();
+            }
+        }
         private void productBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.productBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.iTshopDB2DataSet);
+            //update_qty();
 
         }
 

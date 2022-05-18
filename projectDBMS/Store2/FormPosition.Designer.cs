@@ -51,12 +51,12 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.jobPositionBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.jobPositionDataGridView = new System.Windows.Forms.DataGridView();
-            this.pK_JobPosition_idTextBox = new System.Windows.Forms.TextBox();
-            this.jobpositionNameTextBox = new System.Windows.Forms.TextBox();
-            this.jobpositionPassTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pK_JobPosition_idTextBox = new System.Windows.Forms.TextBox();
+            this.jobpositionNameTextBox = new System.Windows.Forms.TextBox();
+            this.jobpositionPassTextBox = new System.Windows.Forms.TextBox();
             pK_JobPosition_idLabel = new System.Windows.Forms.Label();
             jobpositionNameLabel = new System.Windows.Forms.Label();
             jobpositionPassLabel = new System.Windows.Forms.Label();
@@ -208,6 +208,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -254,6 +255,7 @@
             // 
             this.jobPositionDataGridView.AutoGenerateColumns = false;
             this.jobPositionDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.jobPositionDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.jobPositionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.jobPositionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -266,6 +268,28 @@
             this.jobPositionDataGridView.RowTemplate.Height = 28;
             this.jobPositionDataGridView.Size = new System.Drawing.Size(557, 220);
             this.jobPositionDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_JobPosition_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสตำเเหน่ง";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "jobpositionName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ชื่อตำเเนห่ง";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "jobpositionPass";
+            this.dataGridViewTextBoxColumn3.HeaderText = "รหัสผ่าน";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // pK_JobPosition_idTextBox
             // 
@@ -290,28 +314,6 @@
             this.jobpositionPassTextBox.Name = "jobpositionPassTextBox";
             this.jobpositionPassTextBox.Size = new System.Drawing.Size(268, 39);
             this.jobpositionPassTextBox.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_JobPosition_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสตำเเหน่ง";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "jobpositionName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ชื่อตำเเนห่ง";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "jobpositionPass";
-            this.dataGridViewTextBoxColumn3.HeaderText = "รหัสผ่าน";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // FormPosition
             // 
