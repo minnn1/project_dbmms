@@ -24,6 +24,14 @@ using GemBox.Spreadsheet.WinFormsUtilities;
 using GemBox.Pdf;
 using GemBox.Pdf.Content;
 using System.Printing;
+using System.Drawing.Printing;
+using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
+using System.Drawing.Text;
+using System.IO.Compression;
+using Dapper;
+using PdfSharp.Drawing;
+using DevExpress.XtraReports.UI;
 
 namespace Store2
 {
@@ -32,14 +40,16 @@ namespace Store2
         public FormPrint()
         {
             SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+            ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+            
             InitializeComponent();
         }
         public string constring = @"Data Source=LAPTOP-1SPFNIPG;Initial Catalog=ITshopDB2;Integrated Security=True";
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-        }
+            
+        }      
 
         private void buttonExport_Click(object sender, EventArgs e)
         {
@@ -81,6 +91,7 @@ namespace Store2
 
                 workbook.Save(saveFileDialog.FileName);
             }
+
         }
         private void button1_Click(object sender, EventArgs e)
         {   //เมื่อกดปุ่มนี้จะโหลดข้อมูลที่เรากรอกไว้ในtextbox เข้าไปในdatagridview
@@ -381,6 +392,16 @@ namespace Store2
             {
                 dataGridView1.DataSource = null;
             }
+        }
+
+        private void btnExport_pdf_Click(object sender, EventArgs e)
+        {
+            //xtrareport
+            XtraReport1 xtraReport1 = new XtraReport1();
+            xtraReport1.DataSource = dataGridView1.DataSource;
+            xtraReport1.ShowPreview();
+            
+
         }
     }
 }

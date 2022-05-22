@@ -102,11 +102,11 @@
             this.buttonExportPdf.TabIndex = 14;
             this.buttonExportPdf.Text = "Export Pdf";
             this.buttonExportPdf.UseVisualStyleBackColor = true;
-            this.buttonExportPdf.Click += new System.EventHandler(this.button2_Click);
+            this.buttonExportPdf.Click += new System.EventHandler(this.btnExport_pdf_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(920, 162);
+            this.button1.Location = new System.Drawing.Point(686, 162);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(167, 48);
             this.button1.TabIndex = 13;
@@ -263,7 +263,7 @@
             this.textsqlcommand.Location = new System.Drawing.Point(40, 171);
             this.textsqlcommand.Margin = new System.Windows.Forms.Padding(5);
             this.textsqlcommand.Name = "textsqlcommand";
-            this.textsqlcommand.Size = new System.Drawing.Size(837, 39);
+            this.textsqlcommand.Size = new System.Drawing.Size(606, 39);
             this.textsqlcommand.TabIndex = 1;
             this.textsqlcommand.TextChanged += new System.EventHandler(this.textsqlcommand_TextChanged);
             // 

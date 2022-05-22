@@ -33,3 +33,7 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\S
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormClaims.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormExpress.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\obj\Debug\Store2.FormIncome.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\bin\Debug\GemBox.Document.dll
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\bin\Debug\GemBox.Document.xml
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\bin\Debug\itextsharp.dll
+C:\Users\มิน\Documents\GitHub\project_dbmms\projectDBMS\Store2\bin\Debug\itextsharp.xml
