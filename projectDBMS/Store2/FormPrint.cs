@@ -187,7 +187,8 @@ namespace Store2
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox4.Checked)
-            {
+            {   //เเสดงข้อมูลในpdfviewer1
+                
                 SqlConnection conn = new SqlConnection(constring);
                 if (conn.State == ConnectionState.Closed)
                 {
@@ -396,11 +397,73 @@ namespace Store2
 
         private void btnExport_pdf_Click(object sender, EventArgs e)
         {
-            //xtrareport
-            XtraReport1 xtraReport1 = new XtraReport1();
-            xtraReport1.DataSource = dataGridView1.DataSource;
-            xtraReport1.ShowPreview();
-            
+            if (checkBox1.Checked)
+            {
+                Formreport1 frm = new Formreport1();
+                frm.Show();
+            }
+            else if (checkBox2.Checked)
+            {
+                Formreport2 frm2 = new Formreport2();
+                frm2.Show();
+            }
+            else if (checkBox3.Checked)
+            {
+                Formreport3 frm2 = new Formreport3();
+                frm2.Show();
+            }
+            else if (checkBox4.Checked)
+            {
+                Formreport4 frm2 = new Formreport4();
+                frm2.Show();
+            }
+            else if (checkBox5.Checked)
+            {
+                Formreport5 frm2 = new Formreport5();
+                frm2.Show();
+            }
+            else if (checkBox6.Checked)
+            {
+                Formreport6 frm2 = new Formreport6();
+                frm2.Show();
+            }
+            else if (checkBox7.Checked)
+            {
+                Formreport7 frm2 = new Formreport7();
+                frm2.Show();
+            }
+            else if (checkBox8.Checked)
+            {
+                Formreport8 frm2 = new Formreport8();
+                frm2.Show();
+            }
+            else if (checkBox9.Checked)
+            {
+                Formreport9 frm2 = new Formreport9();
+                frm2.Show();
+            }
+            else if (checkBox10.Checked)
+            {
+                Formreport10 frm2 = new Formreport10();
+                frm2.Show();
+            }
+            else if (checkBox11.Checked)
+            {
+                Formreport11 frm2 = new Formreport11();
+                frm2.Show();
+            }
+            else if (checkBox12.Checked)
+            {
+                Formreport12 frm2 = new Formreport12();
+                frm2.Show();
+            }
+
+        }
+
+        private void FormPrint_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'iTshopDB2DataSet.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter.Fill(this.iTshopDB2DataSet.Product);
 
         }
     }

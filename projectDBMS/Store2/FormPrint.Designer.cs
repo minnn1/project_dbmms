@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonExportPdf = new System.Windows.Forms.Button();
@@ -46,8 +47,15 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textsqlcommand = new System.Windows.Forms.TextBox();
             this.buttonExport = new System.Windows.Forms.Button();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iTshopDB2DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iTshopDB2DataSet = new Store2.ITshopDB2DataSet();
+            this.productTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.ProductTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTshopDB2DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTshopDB2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -98,9 +106,9 @@
             this.buttonExportPdf.Location = new System.Drawing.Point(893, 26);
             this.buttonExportPdf.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExportPdf.Name = "buttonExportPdf";
-            this.buttonExportPdf.Size = new System.Drawing.Size(220, 59);
+            this.buttonExportPdf.Size = new System.Drawing.Size(220, 82);
             this.buttonExportPdf.TabIndex = 14;
-            this.buttonExportPdf.Text = "Export Pdf";
+            this.buttonExportPdf.Text = "Export Pdf and Print";
             this.buttonExportPdf.UseVisualStyleBackColor = true;
             this.buttonExportPdf.Click += new System.EventHandler(this.btnExport_pdf_Click);
             // 
@@ -269,7 +277,7 @@
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(893, 95);
+            this.buttonExport.Location = new System.Drawing.Point(893, 113);
             this.buttonExport.Margin = new System.Windows.Forms.Padding(5);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(220, 59);
@@ -277,6 +285,25 @@
             this.buttonExport.Text = "Export Excel";
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            this.productBindingSource.DataSource = this.iTshopDB2DataSetBindingSource;
+            // 
+            // iTshopDB2DataSetBindingSource
+            // 
+            this.iTshopDB2DataSetBindingSource.DataSource = this.iTshopDB2DataSet;
+            this.iTshopDB2DataSetBindingSource.Position = 0;
+            // 
+            // iTshopDB2DataSet
+            // 
+            this.iTshopDB2DataSet.DataSetName = "ITshopDB2DataSet";
+            this.iTshopDB2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // FormPrint
             // 
@@ -289,9 +316,13 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormPrint";
             this.Text = "FormPrint";
+            this.Load += new System.EventHandler(this.FormPrint_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTshopDB2DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTshopDB2DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,5 +347,9 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonExportPdf;
+        private System.Windows.Forms.BindingSource iTshopDB2DataSetBindingSource;
+        private ITshopDB2DataSet iTshopDB2DataSet;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private ITshopDB2DataSetTableAdapters.ProductTableAdapter productTableAdapter;
     }
 }

@@ -56,6 +56,7 @@
     <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -66,12 +67,17 @@
     <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Xpo.21.2.7\lib\net452\DevExpress.Xpo.v21.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="GemBox.Document, Version=35.0.0.1000, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
       <HintPath>..\packages\GemBox.Document.35.0.1000\lib\net35\GemBox.Document.dll</HintPath>
     </Reference>
@@ -84,12 +90,27 @@
     <Reference Include="GLibSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.CrossPlatform.Printing.DrawingEngine.1.0.12\lib\netstandard2.0\GLibSharp.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PangoSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.CrossPlatform.Printing.DrawingEngine.1.0.12\lib\netstandard2.0\PangoSharp.dll</HintPath>
@@ -226,6 +247,78 @@
     <Compile Include="FormReceipt.Designer.cs">
       <DependentUpon>FormReceipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="formreport\Formreport10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport10.Designer.cs">
+      <DependentUpon>Formreport10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport11.Designer.cs">
+      <DependentUpon>Formreport11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport12.Designer.cs">
+      <DependentUpon>Formreport12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport2.Designer.cs">
+      <DependentUpon>Formreport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport3.Designer.cs">
+      <DependentUpon>Formreport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport4.Designer.cs">
+      <DependentUpon>Formreport4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport5.Designer.cs">
+      <DependentUpon>Formreport5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport6.Designer.cs">
+      <DependentUpon>Formreport6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport7.Designer.cs">
+      <DependentUpon>Formreport7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport8.Designer.cs">
+      <DependentUpon>Formreport8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport9.Designer.cs">
+      <DependentUpon>Formreport9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formreport\Formreport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formreport\Formreport1.Designer.cs">
+      <DependentUpon>Formreport1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,12 +332,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +381,42 @@
     <EmbeddedResource Include="FormReceipt.resx">
       <DependentUpon>FormReceipt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport1.resx">
+      <DependentUpon>Formreport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport10.resx">
+      <DependentUpon>Formreport10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport11.resx">
+      <DependentUpon>Formreport11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport12.resx">
+      <DependentUpon>Formreport12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport2.resx">
+      <DependentUpon>Formreport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport3.resx">
+      <DependentUpon>Formreport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport4.resx">
+      <DependentUpon>Formreport4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport5.resx">
+      <DependentUpon>Formreport5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport6.resx">
+      <DependentUpon>Formreport6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport7.resx">
+      <DependentUpon>Formreport7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport8.resx">
+      <DependentUpon>Formreport8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formreport\Formreport9.resx">
+      <DependentUpon>Formreport9.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSales.resx">
       <DependentUpon>FormSales.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,9 +431,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="Report12.rdlc" />
+    <EmbeddedResource Include="Report11.rdlc" />
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="ITshopDB2DataSet.xsc">
       <DependentUpon>ITshopDB2DataSet.xsd</DependentUpon>
     </None>
@@ -322,6 +455,7 @@
       <DependentUpon>ITshopDB2DataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FormPrint.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -394,6 +528,21 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\GemBox.Pdf.17.0.1149\build\netstandard2.0\GemBox.Pdf.targets" Condition="Exists('..\packages\GemBox.Pdf.17.0.1149\build\netstandard2.0\GemBox.Pdf.targets')" />
