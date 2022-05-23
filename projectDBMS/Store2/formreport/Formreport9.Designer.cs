@@ -30,19 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ITshopDB2DataSet = new Store2.ITshopDB2DataSet();
             this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ITshopDB2DataSet = new Store2.ITshopDB2DataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.EmployeeTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.EmployeeTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.ITshopDB2DataSet)).BeginInit();
+            this.ExpensesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ExpensesTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.ExpensesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ITshopDB2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpensesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // EmployeeBindingSource
+            // 
+            this.EmployeeBindingSource.DataMember = "Employee";
+            this.EmployeeBindingSource.DataSource = this.ITshopDB2DataSet;
+            // 
+            // ITshopDB2DataSet
+            // 
+            this.ITshopDB2DataSet.DataSetName = "ITshopDB2DataSet";
+            this.ITshopDB2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.EmployeeBindingSource;
+            reportDataSource1.Value = this.ExpensesBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Store2.Report9.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -51,19 +64,18 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ITshopDB2DataSet
-            // 
-            this.ITshopDB2DataSet.DataSetName = "ITshopDB2DataSet";
-            this.ITshopDB2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // EmployeeBindingSource
-            // 
-            this.EmployeeBindingSource.DataMember = "Employee";
-            this.EmployeeBindingSource.DataSource = this.ITshopDB2DataSet;
-            // 
             // EmployeeTableAdapter
             // 
             this.EmployeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // ExpensesBindingSource
+            // 
+            this.ExpensesBindingSource.DataMember = "Expenses";
+            this.ExpensesBindingSource.DataSource = this.ITshopDB2DataSet;
+            // 
+            // ExpensesTableAdapter
+            // 
+            this.ExpensesTableAdapter.ClearBeforeFill = true;
             // 
             // Formreport9
             // 
@@ -74,8 +86,9 @@
             this.Name = "Formreport9";
             this.Text = "Formreport9";
             this.Load += new System.EventHandler(this.Formreport9_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ITshopDB2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ITshopDB2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExpensesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,5 +99,7 @@
         private System.Windows.Forms.BindingSource EmployeeBindingSource;
         private ITshopDB2DataSet ITshopDB2DataSet;
         private ITshopDB2DataSetTableAdapters.EmployeeTableAdapter EmployeeTableAdapter;
+        private System.Windows.Forms.BindingSource ExpensesBindingSource;
+        private ITshopDB2DataSetTableAdapters.ExpensesTableAdapter ExpensesTableAdapter;
     }
 }

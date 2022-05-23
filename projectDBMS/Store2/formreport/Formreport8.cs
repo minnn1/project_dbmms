@@ -19,6 +19,8 @@ namespace Store2
 
         private void Formreport8_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ITshopDB2DataSet.Claims' table. You can move, or remove it, as needed.
+            this.ClaimsTableAdapter.Fill(this.ITshopDB2DataSet.Claims);
             // TODO: This line of code loads data into the 'ITshopDB2DataSet.Employee' table. You can move, or remove it, as needed.
             this.EmployeeTableAdapter.Fill(this.ITshopDB2DataSet.Employee);
 
