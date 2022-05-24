@@ -50,6 +50,10 @@
             this.text_invoiceQTY = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.productDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productInventory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iTshopDB2DataSet = new Store2.ITshopDB2DataSet();
             this.dataGrid_Employee = new System.Windows.Forms.DataGridView();
@@ -89,10 +93,6 @@
             this.productBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productInventory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
@@ -153,6 +153,7 @@
             this.dateTimePicker_invoiceDate.Name = "dateTimePicker_invoiceDate";
             this.dateTimePicker_invoiceDate.Size = new System.Drawing.Size(180, 39);
             this.dateTimePicker_invoiceDate.TabIndex = 27;
+            this.dateTimePicker_invoiceDate.ValueChanged += new System.EventHandler(this.dateTimePicker_invoiceDate_ValueChanged);
             // 
             // label8
             // 
@@ -303,6 +304,35 @@
             this.productDataGridView.Size = new System.Drawing.Size(772, 152);
             this.productDataGridView.TabIndex = 24;
             this.productDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productDataGridView_CellClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Product_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสสินค้า";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "productName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ชื่อสินค้า";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "productPrice";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ราคาสินค้า";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // productInventory
+            // 
+            this.productInventory.DataPropertyName = "productInventory";
+            this.productInventory.HeaderText = "สินค้าคงเหลือ";
+            this.productInventory.MinimumWidth = 8;
+            this.productInventory.Name = "productInventory";
             // 
             // productBindingSource
             // 
@@ -635,35 +665,6 @@
             // 
             this.employeeBindingSource.DataMember = "Employee";
             this.employeeBindingSource.DataSource = this.iTshopDB2DataSet;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_Product_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสสินค้า";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "productName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ชื่อสินค้า";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "productPrice";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ราคาสินค้า";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // productInventory
-            // 
-            this.productInventory.DataPropertyName = "productInventory";
-            this.productInventory.HeaderText = "สินค้าคงเหลือ";
-            this.productInventory.MinimumWidth = 8;
-            this.productInventory.Name = "productInventory";
             // 
             // FormOrder
             // 

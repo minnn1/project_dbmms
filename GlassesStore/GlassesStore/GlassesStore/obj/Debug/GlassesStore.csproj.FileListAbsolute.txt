@@ -139,3 +139,11 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\Glas
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormReport.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormCategory.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormMember.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormaddMember.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormLogin1.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormLogin2.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormLoign3.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormMainMember.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormOrder.resources

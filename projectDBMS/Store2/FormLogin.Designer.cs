@@ -62,6 +62,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(324, 39);
             this.textBoxPassword.TabIndex = 11;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // ButtonLogin
             // 
@@ -93,7 +94,7 @@
             this.Controls.Add(this.ButtonLogin);
             this.Controls.Add(this.textBoxUsername);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";

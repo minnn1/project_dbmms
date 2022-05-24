@@ -323,6 +323,11 @@ namespace Store2
             text_invoicePname.Text = productDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
             textBoxinvoicePrice.Text = productDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
+
+        private void dateTimePicker_invoiceDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

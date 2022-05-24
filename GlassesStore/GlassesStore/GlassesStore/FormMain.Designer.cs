@@ -31,51 +31,126 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.ButtonProduct = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.ButtonCategory = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.ButtonMember = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.ButtonOrder = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.ButtonPrint = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 38);
+            this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1244, 614);
+            this.panel1.Size = new System.Drawing.Size(1244, 619);
             this.panel1.TabIndex = 2;
             // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.ButtonProduct,
+            this.toolStripLabel1,
+            this.ButtonCategory,
+            this.toolStripLabel3,
+            this.ButtonMember,
+            this.toolStripLabel4,
+            this.ButtonOrder,
+            this.toolStripLabel5,
+            this.ButtonPrint,
+            this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1244, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1244, 33);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
-            // toolStripButton1
+            // ButtonProduct
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 33);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.ButtonProduct.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtonProduct.Image = ((System.Drawing.Image)(resources.GetObject("ButtonProduct.Image")));
+            this.ButtonProduct.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtonProduct.Name = "ButtonProduct";
+            this.ButtonProduct.Size = new System.Drawing.Size(34, 28);
+            this.ButtonProduct.Text = "toolStripButton1";
+            this.ButtonProduct.Click += new System.EventHandler(this.ButtonProduct_Click);
             // 
-            // toolStripButton2
+            // toolStripLabel1
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(51, 28);
+            this.toolStripLabel1.Text = "สินค้า";
+            // 
+            // ButtonCategory
+            // 
+            this.ButtonCategory.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtonCategory.Image = ((System.Drawing.Image)(resources.GetObject("ButtonCategory.Image")));
+            this.ButtonCategory.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtonCategory.Name = "ButtonCategory";
+            this.ButtonCategory.Size = new System.Drawing.Size(34, 28);
+            this.ButtonCategory.Text = "toolStripButton3";
+            this.ButtonCategory.Click += new System.EventHandler(this.ButtonCategory_Click);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(102, 28);
+            this.toolStripLabel3.Text = "ประเภทสินค้า";
+            // 
+            // ButtonMember
+            // 
+            this.ButtonMember.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtonMember.Image = ((System.Drawing.Image)(resources.GetObject("ButtonMember.Image")));
+            this.ButtonMember.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtonMember.Name = "ButtonMember";
+            this.ButtonMember.Size = new System.Drawing.Size(34, 28);
+            this.ButtonMember.Text = "toolStripButton4";
+            this.ButtonMember.Click += new System.EventHandler(this.ButtonMember_Click);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(61, 28);
+            this.toolStripLabel4.Text = "สมาชิก";
+            // 
+            // ButtonOrder
+            // 
+            this.ButtonOrder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtonOrder.Image = ((System.Drawing.Image)(resources.GetObject("ButtonOrder.Image")));
+            this.ButtonOrder.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtonOrder.Name = "ButtonOrder";
+            this.ButtonOrder.Size = new System.Drawing.Size(34, 28);
+            this.ButtonOrder.Text = "toolStripButton1";
+            this.ButtonOrder.Click += new System.EventHandler(this.ButtonOrder_Click);
+            // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(68, 28);
+            this.toolStripLabel5.Text = "ชำระเงิน";
+            // 
+            // ButtonPrint
+            // 
+            this.ButtonPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ButtonPrint.Image = ((System.Drawing.Image)(resources.GetObject("ButtonPrint.Image")));
+            this.ButtonPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ButtonPrint.Name = "ButtonPrint";
+            this.ButtonPrint.Size = new System.Drawing.Size(34, 28);
+            this.ButtonPrint.Text = "toolStripButton2";
+            this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(97, 28);
+            this.toolStripLabel2.Text = "พิมพ์รายงาน";
             // 
             // FormMain
             // 
@@ -99,7 +174,15 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton ButtonProduct;
+        private System.Windows.Forms.ToolStripButton ButtonPrint;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripButton ButtonCategory;
+        private System.Windows.Forms.ToolStripButton ButtonMember;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripButton ButtonOrder;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }

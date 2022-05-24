@@ -31,19 +31,31 @@ namespace GlassesStore
             childForm.Show();
 
         }
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void ButtonProduct_Click(object sender, EventArgs e)
         {
             openChildForm(new FormProduct());
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void ButtonCategory_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormReport());
+            openChildForm(new FormCategory());
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void ButtonMember_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new FormMember());
         }
+
+        private void ButtonOrder_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormOrder());
+        }
+
+        private void ButtonPrint_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormPrint());
+        }
+
+    
     }
 }
