@@ -24,5 +24,19 @@ namespace GlassesStore
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(textBox1.Text)==0)
+            {
+                this.View_perYearTableAdapter.Fill(this.GlassesStoreDataSet2.View_perYear);
+                this.reportViewer1.RefreshReport();
+            }
+            else
+            {
+                this.View_perYearTableAdapter.FillBy(this.GlassesStoreDataSet2.View_perYear, Convert.ToInt32(textBox1.Text));
+                this.reportViewer1.RefreshReport();
+            }
+        }
     }
 }

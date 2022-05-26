@@ -152,3 +152,8 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\Glas
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.exe
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.pdb
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportperYear.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportperWeek.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitDay.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitMonth.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitWeek.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitYear.resources

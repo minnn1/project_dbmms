@@ -158,6 +158,35 @@
     <Compile Include="FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlassesStoreDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlassesStoreDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlassesStoreDataSet4.cs">
+      <DependentUpon>GlassesStoreDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlassesStoreDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlassesStoreDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportperWeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportperWeek.Designer.cs">
+      <DependentUpon>ReportperWeek.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlassesStoreDataSet.cs">
       <DependentUpon>GlassesStoreDataSet.xsd</DependentUpon>
     </Compile>
@@ -181,6 +210,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GlassesStoreDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GlassesStoreDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportperDay.cs">
@@ -200,6 +234,30 @@
     </Compile>
     <Compile Include="ReportperYear.Designer.cs">
       <DependentUpon>ReportperYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportprofitDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportprofitDay.Designer.cs">
+      <DependentUpon>ReportprofitDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportprofitMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportprofitMonth.Designer.cs">
+      <DependentUpon>ReportprofitMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportprofitWeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportprofitWeek.Designer.cs">
+      <DependentUpon>ReportprofitWeek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportprofitYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportprofitYear.Designer.cs">
+      <DependentUpon>ReportprofitYear.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserControl1.cs">
@@ -244,6 +302,19 @@
     <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportprofitYear.rdlc" />
+    <EmbeddedResource Include="ReportprofitMonth.rdlc" />
+    <EmbeddedResource Include="ReportprofitDay.resx">
+      <DependentUpon>ReportprofitDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportprofitMonth.resx">
+      <DependentUpon>ReportprofitMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportprofitWeek.rdlc" />
+    <EmbeddedResource Include="ReportprofitDay.rdlc" />
+    <EmbeddedResource Include="ReportperWeek.resx">
+      <DependentUpon>ReportperWeek.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -262,9 +333,16 @@
     <EmbeddedResource Include="ReportperMonth.resx">
       <DependentUpon>ReportperMonth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportperWeek.rdlc" />
     <EmbeddedResource Include="ReportperYear.rdlc" />
     <EmbeddedResource Include="ReportperYear.resx">
       <DependentUpon>ReportperYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportprofitWeek.resx">
+      <DependentUpon>ReportprofitWeek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportprofitYear.resx">
+      <DependentUpon>ReportprofitYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
@@ -313,6 +391,61 @@
     </None>
     <None Include="GlassesStoreDataSet3.xss">
       <DependentUpon>GlassesStoreDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet4.xsc">
+      <DependentUpon>GlassesStoreDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet4.xss">
+      <DependentUpon>GlassesStoreDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet5.xsc">
+      <DependentUpon>GlassesStoreDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet5.xss">
+      <DependentUpon>GlassesStoreDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet6.xsc">
+      <DependentUpon>GlassesStoreDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet6.xss">
+      <DependentUpon>GlassesStoreDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet7.xsc">
+      <DependentUpon>GlassesStoreDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet7.xss">
+      <DependentUpon>GlassesStoreDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet8.xsc">
+      <DependentUpon>GlassesStoreDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet8.xss">
+      <DependentUpon>GlassesStoreDataSet8.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

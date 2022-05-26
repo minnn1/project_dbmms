@@ -34,5 +34,35 @@ namespace GlassesStore
             ReportperYear reportperYear = new ReportperYear();
             reportperYear.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ReportperWeek reportperWeek = new ReportperWeek();
+            reportperWeek.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ReportprofitDay reportprofitDay = new ReportprofitDay();
+            reportprofitDay.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ReportprofitWeek reportprofitWeek = new ReportprofitWeek();
+            reportprofitWeek.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ReportprofitMonth reportprofitMonth = new ReportprofitMonth();
+            reportprofitMonth.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ReportprofitYear reportprofitYear = new ReportprofitYear();
+            reportprofitYear.Show();
+        }
     }
 }

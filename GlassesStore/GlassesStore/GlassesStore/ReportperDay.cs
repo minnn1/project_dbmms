@@ -44,5 +44,21 @@ namespace GlassesStore
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //fillter per day
+            if (Convert.ToInt32(textBox1.Text)==0)
+            {
+                this.View_perDayTableAdapter.Fill(this.GlassesStoreDataSet3.View_perDay);
+                this.reportViewer1.RefreshReport();
+            }
+            else
+            {
+                this.View_perDayTableAdapter.FillBy(this.GlassesStoreDataSet3.View_perDay, Convert.ToInt32(textBox1.Text));
+                this.reportViewer1.RefreshReport(); 
+            }
+            
+        }
     }
 }
