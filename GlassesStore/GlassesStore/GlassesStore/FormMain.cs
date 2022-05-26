@@ -55,7 +55,5 @@ namespace GlassesStore
         {
             openChildForm(new FormPrint());
         }
-
-    
     }
 }

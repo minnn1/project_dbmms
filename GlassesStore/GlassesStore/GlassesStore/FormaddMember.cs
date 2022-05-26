@@ -32,7 +32,8 @@ namespace GlassesStore
             //text เพิ่มข้อมูลใหม่
             member_fnameTextEdit.Text = "";
             member_lnameTextEdit.Text = "";
-            member_adressTextEdit.Text = "";
+            member_adress1TextEdit.Text = "";
+            member_adress2TextEdit.Text = "";
             member_contactTextEdit.Text = "";
 
         }

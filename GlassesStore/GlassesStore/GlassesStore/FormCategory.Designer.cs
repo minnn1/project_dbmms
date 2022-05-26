@@ -29,45 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategory));
             System.Windows.Forms.Label category_idLabel;
             System.Windows.Forms.Label category_nameLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategory));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.glassesStoreDataSet = new GlassesStore.GlassesStoreDataSet();
+            this.categoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.glassesStoreDataSet = new GlassesStore.GlassesStoreDataSet();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.category_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.category_nameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.categoryTableAdapter = new GlassesStore.GlassesStoreDataSetTableAdapters.categoryTableAdapter();
             this.tableAdapterManager = new GlassesStore.GlassesStoreDataSetTableAdapters.TableAdapterManager();
             this.categoryBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.categoryBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.categoryDataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.category_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.category_nameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             category_idLabel = new System.Windows.Forms.Label();
             category_nameLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glassesStoreDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingNavigator)).BeginInit();
-            this.categoryBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glassesStoreDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.category_idSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.category_nameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingNavigator)).BeginInit();
+            this.categoryBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // category_idLabel
+            // 
+            category_idLabel.AutoSize = true;
+            category_idLabel.Location = new System.Drawing.Point(30, 62);
+            category_idLabel.Name = "category_idLabel";
+            category_idLabel.Size = new System.Drawing.Size(180, 29);
+            category_idLabel.TabIndex = 0;
+            category_idLabel.Text = "รหัสประเภทสินค้า";
+            // 
+            // category_nameLabel
+            // 
+            category_nameLabel.AutoSize = true;
+            category_nameLabel.Location = new System.Drawing.Point(30, 97);
+            category_nameLabel.Name = "category_nameLabel";
+            category_nameLabel.Size = new System.Drawing.Size(139, 29);
+            category_nameLabel.TabIndex = 2;
+            category_nameLabel.Text = "ประเภทสินค้า";
             // 
             // tableLayoutPanel1
             // 
@@ -86,15 +104,87 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1244, 619);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // glassesStoreDataSet
+            // categoryDataGridView
             // 
-            this.glassesStoreDataSet.DataSetName = "GlassesStoreDataSet";
-            this.glassesStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.categoryDataGridView.AutoGenerateColumns = false;
+            this.categoryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.categoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.categoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.categoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.categoryDataGridView.DataSource = this.categoryBindingSource;
+            this.categoryDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryDataGridView.Location = new System.Drawing.Point(625, 3);
+            this.categoryDataGridView.Name = "categoryDataGridView";
+            this.categoryDataGridView.RowHeadersWidth = 62;
+            this.categoryDataGridView.RowTemplate.Height = 28;
+            this.categoryDataGridView.Size = new System.Drawing.Size(616, 303);
+            this.categoryDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "category_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสประเภทสินค้า";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "category_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ประเภทสินค้า";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // categoryBindingSource
             // 
             this.categoryBindingSource.DataMember = "category";
             this.categoryBindingSource.DataSource = this.glassesStoreDataSet;
+            // 
+            // glassesStoreDataSet
+            // 
+            this.glassesStoreDataSet.DataSetName = "GlassesStoreDataSet";
+            this.glassesStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(category_idLabel);
+            this.groupBox1.Controls.Add(this.category_idSpinEdit);
+            this.groupBox1.Controls.Add(category_nameLabel);
+            this.groupBox1.Controls.Add(this.category_nameTextEdit);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(616, 303);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "รายการประเภทสินค้า";
+            // 
+            // category_idSpinEdit
+            // 
+            this.category_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryBindingSource, "category_id", true));
+            this.category_idSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.category_idSpinEdit.Location = new System.Drawing.Point(238, 62);
+            this.category_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.category_idSpinEdit.Name = "category_idSpinEdit";
+            this.category_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.category_idSpinEdit.Size = new System.Drawing.Size(151, 28);
+            this.category_idSpinEdit.TabIndex = 1;
+            // 
+            // category_nameTextEdit
+            // 
+            this.category_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryBindingSource, "category_name", true));
+            this.category_nameTextEdit.Location = new System.Drawing.Point(238, 98);
+            this.category_nameTextEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.category_nameTextEdit.Name = "category_nameTextEdit";
+            this.category_nameTextEdit.Size = new System.Drawing.Size(151, 26);
+            this.category_nameTextEdit.TabIndex = 3;
             // 
             // categoryTableAdapter
             // 
@@ -143,13 +233,38 @@
             this.categoryBindingNavigator.TabIndex = 1;
             this.categoryBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 20);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -158,13 +273,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 20);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -175,17 +290,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 25);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -207,125 +315,17 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // categoryBindingNavigatorSaveItem
             // 
             this.categoryBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.categoryBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("categoryBindingNavigatorSaveItem.Image")));
             this.categoryBindingNavigatorSaveItem.Name = "categoryBindingNavigatorSaveItem";
-            this.categoryBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.categoryBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.categoryBindingNavigatorSaveItem.Text = "Save Data";
             this.categoryBindingNavigatorSaveItem.Click += new System.EventHandler(this.categoryBindingNavigatorSaveItem_Click);
-            // 
-            // categoryDataGridView
-            // 
-            this.categoryDataGridView.AutoGenerateColumns = false;
-            this.categoryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.categoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.categoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.categoryDataGridView.DataSource = this.categoryBindingSource;
-            this.categoryDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryDataGridView.Location = new System.Drawing.Point(625, 3);
-            this.categoryDataGridView.Name = "categoryDataGridView";
-            this.categoryDataGridView.RowHeadersWidth = 62;
-            this.categoryDataGridView.RowTemplate.Height = 28;
-            this.categoryDataGridView.Size = new System.Drawing.Size(616, 303);
-            this.categoryDataGridView.TabIndex = 2;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(category_idLabel);
-            this.groupBox1.Controls.Add(this.category_idSpinEdit);
-            this.groupBox1.Controls.Add(category_nameLabel);
-            this.groupBox1.Controls.Add(this.category_nameTextEdit);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(616, 303);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "รายการประเภทสินค้า";
-            // 
-            // category_idLabel
-            // 
-            category_idLabel.AutoSize = true;
-            category_idLabel.Location = new System.Drawing.Point(30, 62);
-            category_idLabel.Name = "category_idLabel";
-            category_idLabel.Size = new System.Drawing.Size(180, 29);
-            category_idLabel.TabIndex = 0;
-            category_idLabel.Text = "รหัสประเภทสินค้า";
-            // 
-            // category_idSpinEdit
-            // 
-            this.category_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryBindingSource, "category_id", true));
-            this.category_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.category_idSpinEdit.Location = new System.Drawing.Point(238, 62);
-            this.category_idSpinEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.category_idSpinEdit.Name = "category_idSpinEdit";
-            this.category_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.category_idSpinEdit.Size = new System.Drawing.Size(151, 28);
-            this.category_idSpinEdit.TabIndex = 1;
-            // 
-            // category_nameLabel
-            // 
-            category_nameLabel.AutoSize = true;
-            category_nameLabel.Location = new System.Drawing.Point(30, 97);
-            category_nameLabel.Name = "category_nameLabel";
-            category_nameLabel.Size = new System.Drawing.Size(139, 29);
-            category_nameLabel.TabIndex = 2;
-            category_nameLabel.Text = "ประเภทสินค้า";
-            // 
-            // category_nameTextEdit
-            // 
-            this.category_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.categoryBindingSource, "category_name", true));
-            this.category_nameTextEdit.Location = new System.Drawing.Point(238, 98);
-            this.category_nameTextEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.category_nameTextEdit.Name = "category_nameTextEdit";
-            this.category_nameTextEdit.Size = new System.Drawing.Size(151, 26);
-            this.category_nameTextEdit.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "category_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "รหัสประเภทสินค้า";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "category_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ประเภทสินค้า";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // FormCategory
             // 
@@ -338,19 +338,19 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FormCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "FormCategory";
+            this.Text = "ประเภทสินค้า";
             this.Load += new System.EventHandler(this.FormCategory_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.glassesStoreDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingNavigator)).EndInit();
-            this.categoryBindingNavigator.ResumeLayout(false);
-            this.categoryBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glassesStoreDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.category_idSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.category_nameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingNavigator)).EndInit();
+            this.categoryBindingNavigator.ResumeLayout(false);
+            this.categoryBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

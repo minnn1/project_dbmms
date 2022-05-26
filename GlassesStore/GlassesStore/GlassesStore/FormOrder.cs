@@ -63,7 +63,7 @@ namespace GlassesStore
             product_idSpinEdit.Text = productDataGridView.CurrentRow.Cells[0].Value.ToString();
             order_priceSpinEdit.Text = productDataGridView.CurrentRow.Cells[3].Value.ToString();
         }
-
+        
         private void order_quantitySpinEdit_EditValueChanged(object sender, EventArgs e)
         {
             order_totalpriceSpinEdit.Text = (Convert.ToInt32(order_quantitySpinEdit.Text) * Convert.ToInt32(order_priceSpinEdit.Text)).ToString();
@@ -153,11 +153,20 @@ namespace GlassesStore
             }
 
         }
-        private void buttonViewOrder_Click(object sender, EventArgs e)
-        {
-            FormOrderview formOrderview = new FormOrderview();
-            formOrderview.Show();
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.Text = ( Convert.ToInt32(textBox1.Text)- Convert.ToInt32(order_totalpriceSpinEdit.Text)).ToString();
+        }
+
+        private void order_totalpriceSpinEdit_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            view view = new view();
+            view.Show();
         }
     }
 }

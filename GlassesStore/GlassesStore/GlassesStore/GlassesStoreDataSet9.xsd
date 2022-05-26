@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GlassesStoreDataSet9" targetNamespace="http://tempuri.org/GlassesStoreDataSet9.xsd" xmlns:mstns="http://tempuri.org/GlassesStoreDataSet9.xsd" xmlns="http://tempuri.org/GlassesStoreDataSet9.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GlassesStoreConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GlassesStoreConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GlassesStore.Properties.Settings.GlobalReference.Default.GlassesStoreConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_OrderTableAdapter" GeneratorDataComponentClassName="View_OrderTableAdapter" Name="View_Order" UserDataComponentName="View_OrderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GlassesStoreConnectionString (Settings)" DbObjectName="GlassesStore.dbo.View_Order" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT รหัสรายการ, รหัสรายการสินค้า, ชื่อสินค้า, รายละเอียด, ประเภทสินค้า, ราคาสินค้า, จำนวนสินค้า, จำนวนเงิน FROM dbo.View_Order</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="รหัสรายการ" DataSetColumn="รหัสรายการ" />
+              <Mapping SourceColumn="รหัสรายการสินค้า" DataSetColumn="รหัสรายการสินค้า" />
+              <Mapping SourceColumn="ชื่อสินค้า" DataSetColumn="ชื่อสินค้า" />
+              <Mapping SourceColumn="รายละเอียด" DataSetColumn="รายละเอียด" />
+              <Mapping SourceColumn="ประเภทสินค้า" DataSetColumn="ประเภทสินค้า" />
+              <Mapping SourceColumn="ราคาสินค้า" DataSetColumn="ราคาสินค้า" />
+              <Mapping SourceColumn="จำนวนสินค้า" DataSetColumn="จำนวนสินค้า" />
+              <Mapping SourceColumn="จำนวนเงิน" DataSetColumn="จำนวนเงิน" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GlassesStoreDataSet9" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GlassesStoreDataSet9" msprop:Generator_DataSetName="GlassesStoreDataSet9">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Order" msprop:Generator_RowEvHandlerName="View_OrderRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OrderRowDeleted" msprop:Generator_RowDeletingName="View_OrderRowDeleting" msprop:Generator_RowEvArgName="View_OrderRowChangeEvent" msprop:Generator_TablePropName="View_Order" msprop:Generator_RowChangedName="View_OrderRowChanged" msprop:Generator_RowChangingName="View_OrderRowChanging" msprop:Generator_TableClassName="View_OrderDataTable" msprop:Generator_RowClassName="View_OrderRow" msprop:Generator_TableVarName="tableView_Order" msprop:Generator_UserTableName="View_Order">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="รหัสรายการ" msprop:Generator_ColumnPropNameInRow="รหัสรายการ" msprop:Generator_ColumnPropNameInTable="รหัสรายการColumn" msprop:Generator_ColumnVarNameInTable="columnรหัสรายการ" msprop:Generator_UserColumnName="รหัสรายการ" type="xs:int" />
+              <xs:element name="รหัสรายการสินค้า" msprop:Generator_ColumnPropNameInRow="รหัสรายการสินค้า" msprop:Generator_ColumnPropNameInTable="รหัสรายการสินค้าColumn" msprop:Generator_ColumnVarNameInTable="columnรหัสรายการสินค้า" msprop:Generator_UserColumnName="รหัสรายการสินค้า" type="xs:int" />
+              <xs:element name="ชื่อสินค้า" msprop:Generator_ColumnPropNameInRow="ชื่อสินค้า" msprop:Generator_ColumnPropNameInTable="ชื่อสินค้าColumn" msprop:Generator_ColumnVarNameInTable="columnชื่อสินค้า" msprop:Generator_UserColumnName="ชื่อสินค้า" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="รายละเอียด" msprop:Generator_ColumnPropNameInRow="รายละเอียด" msprop:Generator_ColumnPropNameInTable="รายละเอียดColumn" msprop:Generator_ColumnVarNameInTable="columnรายละเอียด" msprop:Generator_UserColumnName="รายละเอียด" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ประเภทสินค้า" msprop:Generator_ColumnPropNameInRow="ประเภทสินค้า" msprop:Generator_ColumnPropNameInTable="ประเภทสินค้าColumn" msprop:Generator_ColumnVarNameInTable="columnประเภทสินค้า" msprop:Generator_UserColumnName="ประเภทสินค้า" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ราคาสินค้า" msprop:Generator_ColumnPropNameInRow="ราคาสินค้า" msprop:Generator_ColumnPropNameInTable="ราคาสินค้าColumn" msprop:Generator_ColumnVarNameInTable="columnราคาสินค้า" msprop:Generator_UserColumnName="ราคาสินค้า" type="xs:double" minOccurs="0" />
+              <xs:element name="จำนวนสินค้า" msprop:Generator_ColumnPropNameInRow="จำนวนสินค้า" msprop:Generator_ColumnPropNameInTable="จำนวนสินค้าColumn" msprop:Generator_ColumnVarNameInTable="columnจำนวนสินค้า" msprop:Generator_UserColumnName="จำนวนสินค้า" type="xs:int" minOccurs="0" />
+              <xs:element name="จำนวนเงิน" msprop:Generator_ColumnPropNameInRow="จำนวนเงิน" msprop:Generator_ColumnPropNameInTable="จำนวนเงินColumn" msprop:Generator_ColumnVarNameInTable="columnจำนวนเงิน" msprop:Generator_UserColumnName="จำนวนเงิน" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

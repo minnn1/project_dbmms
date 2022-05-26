@@ -138,7 +138,6 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\Glas
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormMain.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormaddMember.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormOrder.resources
-C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormOrderview.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormPrint.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormProduct.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.Properties.Resources.resources
@@ -157,3 +156,4 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\Glas
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitMonth.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitWeek.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitYear.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.view.resources
