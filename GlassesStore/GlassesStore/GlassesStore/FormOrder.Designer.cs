@@ -602,9 +602,9 @@
             // order_totalpriceSpinEdit
             // 
             this.order_totalpriceSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderdetailBindingSource, "order_totalprice", true));
-            this.order_totalpriceSpinEdit.Location = new System.Drawing.Point(337, 138);
+            this.order_totalpriceSpinEdit.Location = new System.Drawing.Point(213, 142);
             this.order_totalpriceSpinEdit.Name = "order_totalpriceSpinEdit";
-            this.order_totalpriceSpinEdit.Size = new System.Drawing.Size(225, 35);
+            this.order_totalpriceSpinEdit.Size = new System.Drawing.Size(224, 35);
             this.order_totalpriceSpinEdit.TabIndex = 18;
             // 
             // orderdetailBindingSource
@@ -614,17 +614,17 @@
             // 
             // order_priceSpinEdit
             // 
-            this.order_priceSpinEdit.Location = new System.Drawing.Point(337, 100);
+            this.order_priceSpinEdit.Location = new System.Drawing.Point(213, 104);
             this.order_priceSpinEdit.Name = "order_priceSpinEdit";
-            this.order_priceSpinEdit.Size = new System.Drawing.Size(225, 35);
+            this.order_priceSpinEdit.Size = new System.Drawing.Size(224, 35);
             this.order_priceSpinEdit.TabIndex = 17;
             // 
             // order_quantitySpinEdit
             // 
             this.order_quantitySpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderdetailBindingSource, "order_quantity", true));
-            this.order_quantitySpinEdit.Location = new System.Drawing.Point(337, 62);
+            this.order_quantitySpinEdit.Location = new System.Drawing.Point(213, 66);
             this.order_quantitySpinEdit.Name = "order_quantitySpinEdit";
-            this.order_quantitySpinEdit.Size = new System.Drawing.Size(225, 35);
+            this.order_quantitySpinEdit.Size = new System.Drawing.Size(224, 35);
             this.order_quantitySpinEdit.TabIndex = 0;
             this.order_quantitySpinEdit.TextChanged += new System.EventHandler(this.order_quantitySpinEdit_EditValueChanged);
             // 
@@ -636,26 +636,26 @@
             0,
             0,
             0});
-            this.orderline_idSpinEdit.Location = new System.Drawing.Point(337, 31);
+            this.orderline_idSpinEdit.Location = new System.Drawing.Point(213, 35);
             this.orderline_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
             this.orderline_idSpinEdit.Name = "orderline_idSpinEdit";
             this.orderline_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.orderline_idSpinEdit.Size = new System.Drawing.Size(225, 28);
+            this.orderline_idSpinEdit.Size = new System.Drawing.Size(224, 28);
             this.orderline_idSpinEdit.TabIndex = 1;
             // 
             // orderline_dateDateEdit
             // 
             this.orderline_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "orderline_date", true));
             this.orderline_dateDateEdit.EditValue = null;
-            this.orderline_dateDateEdit.Location = new System.Drawing.Point(337, 174);
+            this.orderline_dateDateEdit.Location = new System.Drawing.Point(213, 178);
             this.orderline_dateDateEdit.Margin = new System.Windows.Forms.Padding(4);
             this.orderline_dateDateEdit.Name = "orderline_dateDateEdit";
             this.orderline_dateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.orderline_dateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.orderline_dateDateEdit.Size = new System.Drawing.Size(225, 26);
+            this.orderline_dateDateEdit.Size = new System.Drawing.Size(224, 26);
             this.orderline_dateDateEdit.TabIndex = 7;
             // 
             // product_idSpinEdit
@@ -666,12 +666,12 @@
             0,
             0,
             0});
-            this.product_idSpinEdit.Location = new System.Drawing.Point(337, 208);
+            this.product_idSpinEdit.Location = new System.Drawing.Point(213, 212);
             this.product_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
             this.product_idSpinEdit.Name = "product_idSpinEdit";
             this.product_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.product_idSpinEdit.Size = new System.Drawing.Size(225, 28);
+            this.product_idSpinEdit.Size = new System.Drawing.Size(224, 28);
             this.product_idSpinEdit.TabIndex = 9;
             // 
             // order_idSpinEdit1
@@ -682,12 +682,12 @@
             0,
             0,
             0});
-            this.order_idSpinEdit1.Location = new System.Drawing.Point(337, 243);
+            this.order_idSpinEdit1.Location = new System.Drawing.Point(213, 247);
             this.order_idSpinEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.order_idSpinEdit1.Name = "order_idSpinEdit1";
             this.order_idSpinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.order_idSpinEdit1.Size = new System.Drawing.Size(225, 28);
+            this.order_idSpinEdit1.Size = new System.Drawing.Size(224, 28);
             this.order_idSpinEdit1.TabIndex = 11;
             // 
             // employee_idSpinEdit
@@ -698,12 +698,12 @@
             0,
             0,
             0});
-            this.employee_idSpinEdit.Location = new System.Drawing.Point(337, 278);
+            this.employee_idSpinEdit.Location = new System.Drawing.Point(213, 282);
             this.employee_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
             this.employee_idSpinEdit.Name = "employee_idSpinEdit";
             this.employee_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.employee_idSpinEdit.Size = new System.Drawing.Size(225, 28);
+            this.employee_idSpinEdit.Size = new System.Drawing.Size(224, 28);
             this.employee_idSpinEdit.TabIndex = 13;
             // 
             // memberBindingSource

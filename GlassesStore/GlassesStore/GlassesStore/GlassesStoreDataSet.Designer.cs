@@ -1102,8 +1102,6 @@ namespace GlassesStore {
             
             private global::System.Data.DataColumn columnmember_id;
             
-            private global::System.Data.DataColumn columnmember_adress;
-            
             private global::System.Data.DataColumn columnstatus;
             
             private global::System.Data.DataColumn columnmember_fname;
@@ -1111,6 +1109,10 @@ namespace GlassesStore {
             private global::System.Data.DataColumn columnmember_lname;
             
             private global::System.Data.DataColumn columnmember_contact;
+            
+            private global::System.Data.DataColumn columnmember_adress2;
+            
+            private global::System.Data.DataColumn columnmember_adress1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1155,14 +1157,6 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn member_adressColumn {
-                get {
-                    return this.columnmember_adress;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn statusColumn {
                 get {
                     return this.columnstatus;
@@ -1190,6 +1184,22 @@ namespace GlassesStore {
             public global::System.Data.DataColumn member_contactColumn {
                 get {
                     return this.columnmember_contact;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn member_adress2Column {
+                get {
+                    return this.columnmember_adress2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn member_adress1Column {
+                get {
+                    return this.columnmember_adress1;
                 }
             }
             
@@ -1230,15 +1240,16 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public memberRow AddmemberRow(string member_adress, string status, string member_fname, string member_lname, string member_contact) {
+            public memberRow AddmemberRow(string status, string member_fname, string member_lname, string member_contact, string member_adress2, string member_adress1) {
                 memberRow rowmemberRow = ((memberRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        member_adress,
                         status,
                         member_fname,
                         member_lname,
-                        member_contact};
+                        member_contact,
+                        member_adress2,
+                        member_adress1};
                 rowmemberRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowmemberRow);
                 return rowmemberRow;
@@ -1269,11 +1280,12 @@ namespace GlassesStore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnmember_id = base.Columns["member_id"];
-                this.columnmember_adress = base.Columns["member_adress"];
                 this.columnstatus = base.Columns["status"];
                 this.columnmember_fname = base.Columns["member_fname"];
                 this.columnmember_lname = base.Columns["member_lname"];
                 this.columnmember_contact = base.Columns["member_contact"];
+                this.columnmember_adress2 = base.Columns["member_adress2"];
+                this.columnmember_adress1 = base.Columns["member_adress1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1281,8 +1293,6 @@ namespace GlassesStore {
             private void InitClass() {
                 this.columnmember_id = new global::System.Data.DataColumn("member_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmember_id);
-                this.columnmember_adress = new global::System.Data.DataColumn("member_adress", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmember_adress);
                 this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstatus);
                 this.columnmember_fname = new global::System.Data.DataColumn("member_fname", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1291,6 +1301,10 @@ namespace GlassesStore {
                 base.Columns.Add(this.columnmember_lname);
                 this.columnmember_contact = new global::System.Data.DataColumn("member_contact", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmember_contact);
+                this.columnmember_adress2 = new global::System.Data.DataColumn("member_adress2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmember_adress2);
+                this.columnmember_adress1 = new global::System.Data.DataColumn("member_adress1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmember_adress1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnmember_id}, true));
                 this.columnmember_id.AutoIncrement = true;
@@ -1299,11 +1313,12 @@ namespace GlassesStore {
                 this.columnmember_id.AllowDBNull = false;
                 this.columnmember_id.ReadOnly = true;
                 this.columnmember_id.Unique = true;
-                this.columnmember_adress.MaxLength = 255;
                 this.columnstatus.MaxLength = 50;
                 this.columnmember_fname.MaxLength = 50;
                 this.columnmember_lname.MaxLength = 50;
                 this.columnmember_contact.MaxLength = 10;
+                this.columnmember_adress2.MaxLength = 100;
+                this.columnmember_adress1.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2904,22 +2919,6 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string member_adress {
-                get {
-                    try {
-                        return ((string)(this[this.tablemember.member_adressColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'member_adress\' in table \'member\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablemember.member_adressColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string status {
                 get {
                     try {
@@ -2984,14 +2983,34 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ismember_adressNull() {
-                return this.IsNull(this.tablemember.member_adressColumn);
+            public string member_adress2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablemember.member_adress2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'member_adress2\' in table \'member\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemember.member_adress2Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setmember_adressNull() {
-                this[this.tablemember.member_adressColumn] = global::System.Convert.DBNull;
+            public string member_adress1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablemember.member_adress1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'member_adress1\' in table \'member\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemember.member_adress1Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3040,6 +3059,30 @@ namespace GlassesStore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setmember_contactNull() {
                 this[this.tablemember.member_contactColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismember_adress2Null() {
+                return this.IsNull(this.tablemember.member_adress2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmember_adress2Null() {
+                this[this.tablemember.member_adress2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismember_adress1Null() {
+                return this.IsNull(this.tablemember.member_adress1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmember_adress1Null() {
+                this[this.tablemember.member_adress1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4751,19 +4794,18 @@ SELECT employee_id, employee_name, employee_passworld FROM employee WHERE (emplo
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "member";
             tableMapping.ColumnMappings.Add("member_id", "member_id");
-            tableMapping.ColumnMappings.Add("member_adress", "member_adress");
             tableMapping.ColumnMappings.Add("status", "status");
             tableMapping.ColumnMappings.Add("member_fname", "member_fname");
             tableMapping.ColumnMappings.Add("member_lname", "member_lname");
             tableMapping.ColumnMappings.Add("member_contact", "member_contact");
+            tableMapping.ColumnMappings.Add("member_adress2", "member_adress2");
+            tableMapping.ColumnMappings.Add("member_adress1", "member_adress1");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [member] WHERE (([member_id] = @Original_member_id) AND ((@IsNull_member_adress = 1 AND [member_adress] IS NULL) OR ([member_adress] = @Original_member_adress)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)) AND ((@IsNull_member_fname = 1 AND [member_fname] IS NULL) OR ([member_fname] = @Original_member_fname)) AND ((@IsNull_member_lname = 1 AND [member_lname] IS NULL) OR ([member_lname] = @Original_member_lname)) AND ((@IsNull_member_contact = 1 AND [member_contact] IS NULL) OR ([member_contact] = @Original_member_contact)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [member] WHERE (([member_id] = @Original_member_id) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)) AND ((@IsNull_member_fname = 1 AND [member_fname] IS NULL) OR ([member_fname] = @Original_member_fname)) AND ((@IsNull_member_lname = 1 AND [member_lname] IS NULL) OR ([member_lname] = @Original_member_lname)) AND ((@IsNull_member_contact = 1 AND [member_contact] IS NULL) OR ([member_contact] = @Original_member_contact)) AND ((@IsNull_member_adress2 = 1 AND [member_adress2] IS NULL) OR ([member_adress2] = @Original_member_adress2)) AND ((@IsNull_member_adress1 = 1 AND [member_adress1] IS NULL) OR ([member_adress1] = @Original_member_adress1)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_adress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_fname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_fname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4772,29 +4814,33 @@ SELECT employee_id, employee_name, employee_passworld FROM employee WHERE (emplo
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_lname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_lname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_contact", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_contact", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_contact", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_contact", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_adress2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_adress2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_adress1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_adress1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [member] ([member_adress], [status], [member_fname], [member_lname], [member_contact]) VALUES (@member_adress, @status, @member_fname, @member_lname, @member_contact);
-SELECT member_id, member_adress, status, member_fname, member_lname, member_contact FROM member WHERE (member_id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [member] ([status], [member_fname], [member_lname], [member_contact], [member_adress2], [member_adress1]) VALUES (@status, @member_fname, @member_lname, @member_contact, @member_adress2, @member_adress1);
+SELECT member_id, status, member_fname, member_lname, member_contact, member_adress2, member_adress1 FROM member WHERE (member_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_fname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_fname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_lname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_lname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_contact", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_contact", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_adress2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_adress1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [member] SET [member_adress] = @member_adress, [status] = @status, [member_fname] = @member_fname, [member_lname] = @member_lname, [member_contact] = @member_contact WHERE (([member_id] = @Original_member_id) AND ((@IsNull_member_adress = 1 AND [member_adress] IS NULL) OR ([member_adress] = @Original_member_adress)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)) AND ((@IsNull_member_fname = 1 AND [member_fname] IS NULL) OR ([member_fname] = @Original_member_fname)) AND ((@IsNull_member_lname = 1 AND [member_lname] IS NULL) OR ([member_lname] = @Original_member_lname)) AND ((@IsNull_member_contact = 1 AND [member_contact] IS NULL) OR ([member_contact] = @Original_member_contact)));
-SELECT member_id, member_adress, status, member_fname, member_lname, member_contact FROM member WHERE (member_id = @member_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [member] SET [status] = @status, [member_fname] = @member_fname, [member_lname] = @member_lname, [member_contact] = @member_contact, [member_adress2] = @member_adress2, [member_adress1] = @member_adress1 WHERE (([member_id] = @Original_member_id) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)) AND ((@IsNull_member_fname = 1 AND [member_fname] IS NULL) OR ([member_fname] = @Original_member_fname)) AND ((@IsNull_member_lname = 1 AND [member_lname] IS NULL) OR ([member_lname] = @Original_member_lname)) AND ((@IsNull_member_contact = 1 AND [member_contact] IS NULL) OR ([member_contact] = @Original_member_contact)) AND ((@IsNull_member_adress2 = 1 AND [member_adress2] IS NULL) OR ([member_adress2] = @Original_member_adress2)) AND ((@IsNull_member_adress1 = 1 AND [member_adress1] IS NULL) OR ([member_adress1] = @Original_member_adress1)));
+SELECT member_id, status, member_fname, member_lname, member_contact, member_adress2, member_adress1 FROM member WHERE (member_id = @member_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_fname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_fname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_lname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_lname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_contact", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_contact", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_adress2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_adress1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_adress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_fname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_fname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4803,6 +4849,10 @@ SELECT member_id, member_adress, status, member_fname, member_lname, member_cont
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_lname", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_lname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_contact", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_contact", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_contact", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_contact", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_adress2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_adress2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_member_adress1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_member_adress1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "member_adress1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@member_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "member_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4819,8 +4869,8 @@ SELECT member_id, member_adress, status, member_fname, member_lname, member_cont
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT member_id, member_adress, status, member_fname, member_lname, member_conta" +
-                "ct FROM member";
+            this._commandCollection[0].CommandText = "SELECT member_id, status, member_fname, member_lname, member_contact, member_adre" +
+                "ss2, member_adress1 FROM member";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4881,47 +4931,55 @@ SELECT member_id, member_adress, status, member_fname, member_lname, member_cont
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_member_id, string Original_member_adress, string Original_status, string Original_member_fname, string Original_member_lname, string Original_member_contact) {
+        public virtual int Delete(int Original_member_id, string Original_status, string Original_member_fname, string Original_member_lname, string Original_member_contact, string Original_member_adress2, string Original_member_adress1) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_member_id));
-            if ((Original_member_adress == null)) {
+            if ((Original_status == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_member_adress));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_status));
             }
-            if ((Original_status == null)) {
+            if ((Original_member_fname == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_status));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_member_fname));
             }
-            if ((Original_member_fname == null)) {
+            if ((Original_member_lname == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_member_fname));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_member_lname));
             }
-            if ((Original_member_lname == null)) {
+            if ((Original_member_contact == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_member_lname));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_member_contact));
             }
-            if ((Original_member_contact == null)) {
+            if ((Original_member_adress2 == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_member_contact));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_member_adress2));
+            }
+            if ((Original_member_adress1 == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_member_adress1));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4943,36 +5001,42 @@ SELECT member_id, member_adress, status, member_fname, member_lname, member_cont
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string member_adress, string status, string member_fname, string member_lname, string member_contact) {
-            if ((member_adress == null)) {
+        public virtual int Insert(string status, string member_fname, string member_lname, string member_contact, string member_adress2, string member_adress1) {
+            if ((status == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(member_adress));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(status));
             }
-            if ((status == null)) {
+            if ((member_fname == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(status));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(member_fname));
             }
-            if ((member_fname == null)) {
+            if ((member_lname == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(member_fname));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(member_lname));
             }
-            if ((member_lname == null)) {
+            if ((member_contact == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(member_lname));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(member_contact));
             }
-            if ((member_contact == null)) {
+            if ((member_adress2 == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(member_contact));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(member_adress2));
+            }
+            if ((member_adress1 == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(member_adress1));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4994,79 +5058,93 @@ SELECT member_id, member_adress, status, member_fname, member_lname, member_cont
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string member_adress, string status, string member_fname, string member_lname, string member_contact, int Original_member_id, string Original_member_adress, string Original_status, string Original_member_fname, string Original_member_lname, string Original_member_contact, int member_id) {
-            if ((member_adress == null)) {
+        public virtual int Update(string status, string member_fname, string member_lname, string member_contact, string member_adress2, string member_adress1, int Original_member_id, string Original_status, string Original_member_fname, string Original_member_lname, string Original_member_contact, string Original_member_adress2, string Original_member_adress1, int member_id) {
+            if ((status == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(member_adress));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(status));
             }
-            if ((status == null)) {
+            if ((member_fname == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(status));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(member_fname));
             }
-            if ((member_fname == null)) {
+            if ((member_lname == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(member_fname));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(member_lname));
             }
-            if ((member_lname == null)) {
+            if ((member_contact == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(member_lname));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(member_contact));
             }
-            if ((member_contact == null)) {
+            if ((member_adress2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(member_contact));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(member_adress2));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_member_id));
-            if ((Original_member_adress == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            if ((member_adress1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_member_adress));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(member_adress1));
             }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_member_id));
             if ((Original_status == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_status));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_status));
             }
             if ((Original_member_fname == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_member_fname));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_member_fname));
             }
             if ((Original_member_lname == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_member_lname));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_member_lname));
             }
             if ((Original_member_contact == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_member_contact));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_member_contact));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(member_id));
+            if ((Original_member_adress2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_member_adress2));
+            }
+            if ((Original_member_adress1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_member_adress1));
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(member_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5087,8 +5165,8 @@ SELECT member_id, member_adress, status, member_fname, member_lname, member_cont
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string member_adress, string status, string member_fname, string member_lname, string member_contact, int Original_member_id, string Original_member_adress, string Original_status, string Original_member_fname, string Original_member_lname, string Original_member_contact) {
-            return this.Update(member_adress, status, member_fname, member_lname, member_contact, Original_member_id, Original_member_adress, Original_status, Original_member_fname, Original_member_lname, Original_member_contact, Original_member_id);
+        public virtual int Update(string status, string member_fname, string member_lname, string member_contact, string member_adress2, string member_adress1, int Original_member_id, string Original_status, string Original_member_fname, string Original_member_lname, string Original_member_contact, string Original_member_adress2, string Original_member_adress1) {
+            return this.Update(status, member_fname, member_lname, member_contact, member_adress2, member_adress1, Original_member_id, Original_status, Original_member_fname, Original_member_lname, Original_member_contact, Original_member_adress2, Original_member_adress1, Original_member_id);
         }
     }
     
