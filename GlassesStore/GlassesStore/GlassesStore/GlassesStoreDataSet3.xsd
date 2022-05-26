@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GlassesStoreDataSet3" targetNamespace="http://tempuri.org/GlassesStoreDataSet3.xsd" xmlns:mstns="http://tempuri.org/GlassesStoreDataSet3.xsd" xmlns="http://tempuri.org/GlassesStoreDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GlassesStoreConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GlassesStoreConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GlassesStore.Properties.Settings.GlobalReference.Default.GlassesStoreConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_perDayTableAdapter" GeneratorDataComponentClassName="View_perDayTableAdapter" Name="View_perDay" UserDataComponentName="View_perDayTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GlassesStoreConnectionString (Settings)" DbObjectName="GlassesStore.dbo.View_perDay" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT วัน, รวมยอดขายรายวัน, เดือน FROM View_perDay</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="วัน" DataSetColumn="วัน" />
+              <Mapping SourceColumn="รวมยอดขายรายวัน" DataSetColumn="รวมยอดขายรายวัน" />
+              <Mapping SourceColumn="เดือน" DataSetColumn="เดือน" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GlassesStoreDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="GlassesStoreDataSet3" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GlassesStoreDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_perDay" msprop:Generator_RowClassName="View_perDayRow" msprop:Generator_RowEvHandlerName="View_perDayRowChangeEventHandler" msprop:Generator_RowDeletedName="View_perDayRowDeleted" msprop:Generator_RowDeletingName="View_perDayRowDeleting" msprop:Generator_RowEvArgName="View_perDayRowChangeEvent" msprop:Generator_TablePropName="View_perDay" msprop:Generator_RowChangedName="View_perDayRowChanged" msprop:Generator_UserTableName="View_perDay" msprop:Generator_RowChangingName="View_perDayRowChanging" msprop:Generator_TableClassName="View_perDayDataTable" msprop:Generator_TableVarName="tableView_perDay">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="วัน" msprop:Generator_UserColumnName="วัน" msprop:Generator_ColumnPropNameInTable="วันColumn" msprop:Generator_ColumnPropNameInRow="วัน" msprop:Generator_ColumnVarNameInTable="columnวัน" type="xs:int" minOccurs="0" />
+              <xs:element name="รวมยอดขายรายวัน" msprop:Generator_UserColumnName="รวมยอดขายรายวัน" msprop:Generator_ColumnPropNameInTable="รวมยอดขายรายวันColumn" msprop:Generator_ColumnPropNameInRow="รวมยอดขายรายวัน" msprop:Generator_ColumnVarNameInTable="columnรวมยอดขายรายวัน" type="xs:double" minOccurs="0" />
+              <xs:element name="เดือน" msprop:Generator_ColumnPropNameInRow="เดือน" msprop:Generator_ColumnPropNameInTable="เดือนColumn" msprop:Generator_ColumnVarNameInTable="columnเดือน" msprop:Generator_UserColumnName="เดือน" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

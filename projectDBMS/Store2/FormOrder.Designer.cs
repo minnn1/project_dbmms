@@ -93,6 +93,7 @@
             this.productBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
@@ -441,7 +442,7 @@
             // 
             // textSearch
             // 
-            this.textSearch.Location = new System.Drawing.Point(45, 507);
+            this.textSearch.Location = new System.Drawing.Point(45, 469);
             this.textSearch.Margin = new System.Windows.Forms.Padding(5);
             this.textSearch.Name = "textSearch";
             this.textSearch.Size = new System.Drawing.Size(395, 39);
@@ -666,11 +667,25 @@
             this.employeeBindingSource.DataMember = "Employee";
             this.employeeBindingSource.DataSource = this.iTshopDB2DataSet;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(267, 518);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 66);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "พิมพ์ใบเสร็จ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1462, 893);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.productBindingNavigator);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -767,5 +782,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn productInventory;
+        private System.Windows.Forms.Button button1;
     }
 }

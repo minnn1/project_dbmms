@@ -43,5 +43,11 @@ namespace Store2
             receiptTotalPriceTextBox.Text = invoiceDataGridView.CurrentRow.Cells[4].Value.ToString();
             receiptDateDateTimePicker.Text = invoiceDataGridView.CurrentRow.Cells[5].Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Formreport5 formreport5 = new Formreport5();
+            formreport5.Show();
+        }
     }
 }

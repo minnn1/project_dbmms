@@ -87,6 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(664, 383);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -97,7 +98,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLogin";
+            this.Text = "เข้าสู่ระบบ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

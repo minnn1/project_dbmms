@@ -328,6 +328,12 @@ namespace Store2
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Formreport5 formreport5 = new Formreport5();
+            formreport5.Show();
+        }
     }
 }
 

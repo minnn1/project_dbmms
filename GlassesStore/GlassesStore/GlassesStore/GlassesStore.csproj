@@ -140,6 +140,12 @@
     <Compile Include="FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOrderview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderview.Designer.cs">
+      <DependentUpon>FormOrderview.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,12 +158,6 @@
     <Compile Include="FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReport.Designer.cs">
-      <DependentUpon>FormReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="GlassesStoreDataSet.cs">
       <DependentUpon>GlassesStoreDataSet.xsd</DependentUpon>
     </Compile>
@@ -166,9 +166,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GlassesStoreDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GlassesStoreDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlassesStoreDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlassesStoreDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassesStoreDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportperDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportperDay.Designer.cs">
+      <DependentUpon>ReportperDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportperMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportperMonth.Designer.cs">
+      <DependentUpon>ReportperMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportperYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportperYear.Designer.cs">
+      <DependentUpon>ReportperYear.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormLogin1.resx">
       <DependentUpon>FormLogin1.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,11 +235,14 @@
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderview.resx">
+      <DependentUpon>FormOrderview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrint.resx">
+      <DependentUpon>FormPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormReport.resx">
-      <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -212,6 +254,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportperDay.rdlc" />
+    <EmbeddedResource Include="ReportperMonth.rdlc" />
+    <EmbeddedResource Include="ReportperDay.resx">
+      <DependentUpon>ReportperDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportperMonth.resx">
+      <DependentUpon>ReportperMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportperYear.rdlc" />
+    <EmbeddedResource Include="ReportperYear.resx">
+      <DependentUpon>ReportperYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="GlassesStoreDataSet.xsc">
       <DependentUpon>GlassesStoreDataSet.xsd</DependentUpon>
     </None>
@@ -222,6 +280,39 @@
     </None>
     <None Include="GlassesStoreDataSet.xss">
       <DependentUpon>GlassesStoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet1.xsc">
+      <DependentUpon>GlassesStoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet1.xss">
+      <DependentUpon>GlassesStoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet2.xsc">
+      <DependentUpon>GlassesStoreDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet2.xss">
+      <DependentUpon>GlassesStoreDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet3.xsc">
+      <DependentUpon>GlassesStoreDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GlassesStoreDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassesStoreDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GlassesStoreDataSet3.xss">
+      <DependentUpon>GlassesStoreDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -251,6 +342,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

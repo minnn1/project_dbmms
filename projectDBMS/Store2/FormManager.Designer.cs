@@ -112,7 +112,7 @@
             // toolStripLabel12
             // 
             this.toolStripLabel12.Name = "toolStripLabel12";
-            this.toolStripLabel12.Size = new System.Drawing.Size(96, 25);
+            this.toolStripLabel12.Size = new System.Drawing.Size(96, 28);
             this.toolStripLabel12.Text = "ข้อมูลรายรับ";
             // 
             // toolStripButton12
@@ -128,11 +128,12 @@
             // toolStripLabel13
             // 
             this.toolStripLabel13.Name = "toolStripLabel13";
-            this.toolStripLabel13.Size = new System.Drawing.Size(97, 25);
+            this.toolStripLabel13.Size = new System.Drawing.Size(97, 28);
             this.toolStripLabel13.Text = "พิมพ์รายงาน";
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel1.Location = new System.Drawing.Point(-316, -102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1924, 687);

@@ -76,6 +76,7 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             fK_Invoice_idLabel = new System.Windows.Forms.Label();
             receiptPnameLabel = new System.Windows.Forms.Label();
             receiptQTYLabel = new System.Windows.Forms.Label();
@@ -501,11 +502,24 @@
             this.dataGridViewTextBoxColumn16.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(315, 399);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 66);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "พิมพ์ใบเสร็จ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 720);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.receiptDataGridView);
             this.Controls.Add(this.invoiceDataGridView);
             this.Controls.Add(fK_Invoice_idLabel);
@@ -581,5 +595,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.Button button1;
     }
 }

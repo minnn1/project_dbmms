@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GlassesStoreDataSet1" targetNamespace="http://tempuri.org/GlassesStoreDataSet1.xsd" xmlns:mstns="http://tempuri.org/GlassesStoreDataSet1.xsd" xmlns="http://tempuri.org/GlassesStoreDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GlassesStoreConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GlassesStoreConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GlassesStore.Properties.Settings.GlobalReference.Default.GlassesStoreConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_permonthTableAdapter" GeneratorDataComponentClassName="View_permonthTableAdapter" Name="View_permonth" UserDataComponentName="View_permonthTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GlassesStoreConnectionString (Settings)" DbObjectName="GlassesStore.dbo.View_permonth" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ปี, เดือน, ยอดรายรวมรายเดือน FROM dbo.View_permonth</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ปี" DataSetColumn="ปี" />
+              <Mapping SourceColumn="เดือน" DataSetColumn="เดือน" />
+              <Mapping SourceColumn="ยอดรายรวมรายเดือน" DataSetColumn="ยอดรายรวมรายเดือน" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GlassesStoreDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="GlassesStoreDataSet1" msprop:Generator_DataSetName="GlassesStoreDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_permonth" msprop:Generator_RowEvHandlerName="View_permonthRowChangeEventHandler" msprop:Generator_RowDeletedName="View_permonthRowDeleted" msprop:Generator_RowDeletingName="View_permonthRowDeleting" msprop:Generator_RowEvArgName="View_permonthRowChangeEvent" msprop:Generator_TablePropName="View_permonth" msprop:Generator_RowChangedName="View_permonthRowChanged" msprop:Generator_RowChangingName="View_permonthRowChanging" msprop:Generator_TableClassName="View_permonthDataTable" msprop:Generator_RowClassName="View_permonthRow" msprop:Generator_TableVarName="tableView_permonth" msprop:Generator_UserTableName="View_permonth">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ปี" msprop:Generator_ColumnPropNameInRow="ปี" msprop:Generator_ColumnPropNameInTable="ปีColumn" msprop:Generator_ColumnVarNameInTable="columnปี" msprop:Generator_UserColumnName="ปี" type="xs:int" minOccurs="0" />
+              <xs:element name="เดือน" msprop:Generator_ColumnPropNameInRow="เดือน" msprop:Generator_ColumnPropNameInTable="เดือนColumn" msprop:Generator_ColumnVarNameInTable="columnเดือน" msprop:Generator_UserColumnName="เดือน" type="xs:int" minOccurs="0" />
+              <xs:element name="ยอดรายรวมรายเดือน" msprop:Generator_ColumnPropNameInRow="ยอดรายรวมรายเดือน" msprop:Generator_ColumnPropNameInTable="ยอดรายรวมรายเดือนColumn" msprop:Generator_ColumnVarNameInTable="columnยอดรายรวมรายเดือน" msprop:Generator_UserColumnName="ยอดรายรวมรายเดือน" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

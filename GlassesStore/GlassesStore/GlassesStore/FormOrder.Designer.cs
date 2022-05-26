@@ -66,6 +66,8 @@
             this.order_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.order_dateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonViewOrder = new System.Windows.Forms.Button();
+            this.buttonNew = new System.Windows.Forms.Button();
             this.payment_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.member_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -96,8 +98,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.productDataGridView = new System.Windows.Forms.DataGridView();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonNew = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             order_idLabel = new System.Windows.Forms.Label();
             order_dateLabel = new System.Windows.Forms.Label();
             member_idLabel = new System.Windows.Forms.Label();
@@ -422,7 +422,7 @@
             0,
             0,
             0});
-            this.order_idSpinEdit.Location = new System.Drawing.Point(292, 31);
+            this.order_idSpinEdit.Location = new System.Drawing.Point(353, 27);
             this.order_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
             this.order_idSpinEdit.Name = "order_idSpinEdit";
             this.order_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -435,7 +435,7 @@
             // 
             this.order_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "order_date", true));
             this.order_dateDateEdit.EditValue = null;
-            this.order_dateDateEdit.Location = new System.Drawing.Point(292, 67);
+            this.order_dateDateEdit.Location = new System.Drawing.Point(353, 63);
             this.order_dateDateEdit.Margin = new System.Windows.Forms.Padding(4);
             this.order_dateDateEdit.Name = "order_dateDateEdit";
             this.order_dateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -448,7 +448,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonViewOrder);
             this.groupBox1.Controls.Add(this.buttonNew);
             this.groupBox1.Controls.Add(this.payment_idSpinEdit);
             this.groupBox1.Controls.Add(this.member_idSpinEdit);
@@ -470,6 +470,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ชำระสินค้า";
             // 
+            // buttonViewOrder
+            // 
+            this.buttonViewOrder.Location = new System.Drawing.Point(175, 259);
+            this.buttonViewOrder.Name = "buttonViewOrder";
+            this.buttonViewOrder.Size = new System.Drawing.Size(167, 34);
+            this.buttonViewOrder.TabIndex = 19;
+            this.buttonViewOrder.Text = "ดูรายการสั่งซื้อ";
+            this.buttonViewOrder.UseVisualStyleBackColor = true;
+            this.buttonViewOrder.Click += new System.EventHandler(this.buttonViewOrder_Click);
+            // 
+            // buttonNew
+            // 
+            this.buttonNew.Location = new System.Drawing.Point(353, 259);
+            this.buttonNew.Name = "buttonNew";
+            this.buttonNew.Size = new System.Drawing.Size(211, 37);
+            this.buttonNew.TabIndex = 18;
+            this.buttonNew.Text = "เพิ่มสินค้าที่ซื้อใหม่";
+            this.buttonNew.UseVisualStyleBackColor = true;
+            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
+            // 
             // payment_idSpinEdit
             // 
             this.payment_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "payment_id", true));
@@ -478,7 +498,7 @@
             0,
             0,
             0});
-            this.payment_idSpinEdit.Location = new System.Drawing.Point(292, 139);
+            this.payment_idSpinEdit.Location = new System.Drawing.Point(353, 135);
             this.payment_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
             this.payment_idSpinEdit.Name = "payment_idSpinEdit";
             this.payment_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -494,7 +514,7 @@
             0,
             0,
             0});
-            this.member_idSpinEdit.Location = new System.Drawing.Point(292, 101);
+            this.member_idSpinEdit.Location = new System.Drawing.Point(353, 97);
             this.member_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
             this.member_idSpinEdit.Name = "member_idSpinEdit";
             this.member_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -537,7 +557,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(292, 177);
+            this.buttonSave.Location = new System.Drawing.Point(353, 173);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(127, 37);
             this.buttonSave.TabIndex = 11;
@@ -547,7 +567,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(292, 220);
+            this.buttonEdit.Location = new System.Drawing.Point(353, 216);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(211, 37);
             this.buttonEdit.TabIndex = 12;
@@ -821,26 +841,6 @@
             this.productBindingSource.DataMember = "product";
             this.productBindingSource.DataSource = this.glassesStoreDataSet;
             // 
-            // buttonNew
-            // 
-            this.buttonNew.Location = new System.Drawing.Point(292, 263);
-            this.buttonNew.Name = "buttonNew";
-            this.buttonNew.Size = new System.Drawing.Size(211, 37);
-            this.buttonNew.TabIndex = 18;
-            this.buttonNew.Text = "เพิ่มสินค้าที่ซื้อใหม่";
-            this.buttonNew.UseVisualStyleBackColor = true;
-            this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(170, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 42);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -947,6 +947,6 @@
         private DevExpress.XtraEditors.SpinEdit payment_idSpinEdit;
         private DevExpress.XtraEditors.SpinEdit member_idSpinEdit;
         private System.Windows.Forms.Button buttonNew;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonViewOrder;
     }
 }

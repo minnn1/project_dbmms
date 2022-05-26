@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPurchaseOrder));
             System.Windows.Forms.Label pK_PurchaseRequisition_idLabel;
             System.Windows.Forms.Label fK_Product_IDLabel;
             System.Windows.Forms.Label purchaserequisitionNameLabel;
             System.Windows.Forms.Label purchaserequisitionQTYLabel;
             System.Windows.Forms.Label purchaserequisitionPriceLabel;
             System.Windows.Forms.Label purchaserequisitionDateLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPurchaseOrder));
             this.iTshopDB2DataSet = new Store2.ITshopDB2DataSet();
             this.purchaseOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchaseOrderTableAdapter = new Store2.ITshopDB2DataSetTableAdapters.PurchaseOrderTableAdapter();
@@ -62,7 +62,6 @@
             this.purchaseorderDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.purchaseRequisitionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.purchaseRequisitionDataGridView = new System.Windows.Forms.DataGridView();
-            this.purchaseOrderDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +69,7 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purchaseOrderDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +90,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.purchaseRequisitionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseOrderDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pK_PurchaseRequisition_idLabel
+            // 
+            pK_PurchaseRequisition_idLabel.AutoSize = true;
+            pK_PurchaseRequisition_idLabel.Location = new System.Drawing.Point(12, 70);
+            pK_PurchaseRequisition_idLabel.Name = "pK_PurchaseRequisition_idLabel";
+            pK_PurchaseRequisition_idLabel.Size = new System.Drawing.Size(147, 32);
+            pK_PurchaseRequisition_idLabel.TabIndex = 15;
+            pK_PurchaseRequisition_idLabel.Text = "รหัสใบสั่งซื้อ";
+            // 
+            // fK_Product_IDLabel
+            // 
+            fK_Product_IDLabel.AutoSize = true;
+            fK_Product_IDLabel.Location = new System.Drawing.Point(12, 122);
+            fK_Product_IDLabel.Name = "fK_Product_IDLabel";
+            fK_Product_IDLabel.Size = new System.Drawing.Size(151, 32);
+            fK_Product_IDLabel.TabIndex = 17;
+            fK_Product_IDLabel.Text = "รหัสใบขอซื้อ";
+            // 
+            // purchaserequisitionNameLabel
+            // 
+            purchaserequisitionNameLabel.AutoSize = true;
+            purchaserequisitionNameLabel.Location = new System.Drawing.Point(12, 167);
+            purchaserequisitionNameLabel.Name = "purchaserequisitionNameLabel";
+            purchaserequisitionNameLabel.Size = new System.Drawing.Size(154, 32);
+            purchaserequisitionNameLabel.TabIndex = 18;
+            purchaserequisitionNameLabel.Text = "รายการสั่งซื้อ";
+            // 
+            // purchaserequisitionQTYLabel
+            // 
+            purchaserequisitionQTYLabel.AutoSize = true;
+            purchaserequisitionQTYLabel.Location = new System.Drawing.Point(12, 212);
+            purchaserequisitionQTYLabel.Name = "purchaserequisitionQTYLabel";
+            purchaserequisitionQTYLabel.Size = new System.Drawing.Size(147, 32);
+            purchaserequisitionQTYLabel.TabIndex = 19;
+            purchaserequisitionQTYLabel.Text = "จำนวนสั่งซื้อ";
+            // 
+            // purchaserequisitionPriceLabel
+            // 
+            purchaserequisitionPriceLabel.AutoSize = true;
+            purchaserequisitionPriceLabel.Location = new System.Drawing.Point(12, 257);
+            purchaserequisitionPriceLabel.Name = "purchaserequisitionPriceLabel";
+            purchaserequisitionPriceLabel.Size = new System.Drawing.Size(127, 32);
+            purchaserequisitionPriceLabel.TabIndex = 20;
+            purchaserequisitionPriceLabel.Text = "ราคาสั่งซื้อ";
+            // 
+            // purchaserequisitionDateLabel
+            // 
+            purchaserequisitionDateLabel.AutoSize = true;
+            purchaserequisitionDateLabel.Location = new System.Drawing.Point(12, 303);
+            purchaserequisitionDateLabel.Name = "purchaserequisitionDateLabel";
+            purchaserequisitionDateLabel.Size = new System.Drawing.Size(120, 32);
+            purchaserequisitionDateLabel.TabIndex = 21;
+            purchaserequisitionDateLabel.Text = "วันที่สั่งซื้อ";
             // 
             // iTshopDB2DataSet
             // 
@@ -333,27 +387,6 @@
             this.purchaseRequisitionDataGridView.TabIndex = 13;
             this.purchaseRequisitionDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.purchaseRequisitionDataGridView_CellClick);
             // 
-            // purchaseOrderDataGridView
-            // 
-            this.purchaseOrderDataGridView.AutoGenerateColumns = false;
-            this.purchaseOrderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.purchaseOrderDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.purchaseOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.purchaseOrderDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-            this.purchaseOrderDataGridView.DataSource = this.purchaseOrderBindingSource;
-            this.purchaseOrderDataGridView.Location = new System.Drawing.Point(544, 36);
-            this.purchaseOrderDataGridView.Name = "purchaseOrderDataGridView";
-            this.purchaseOrderDataGridView.RowHeadersWidth = 62;
-            this.purchaseOrderDataGridView.RowTemplate.Height = 28;
-            this.purchaseOrderDataGridView.Size = new System.Drawing.Size(688, 220);
-            this.purchaseOrderDataGridView.TabIndex = 14;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "PK_PurchaseRequisition_id";
@@ -404,6 +437,27 @@
             this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
+            // purchaseOrderDataGridView
+            // 
+            this.purchaseOrderDataGridView.AutoGenerateColumns = false;
+            this.purchaseOrderDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.purchaseOrderDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.purchaseOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.purchaseOrderDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.purchaseOrderDataGridView.DataSource = this.purchaseOrderBindingSource;
+            this.purchaseOrderDataGridView.Location = new System.Drawing.Point(544, 36);
+            this.purchaseOrderDataGridView.Name = "purchaseOrderDataGridView";
+            this.purchaseOrderDataGridView.RowHeadersWidth = 62;
+            this.purchaseOrderDataGridView.RowTemplate.Height = 28;
+            this.purchaseOrderDataGridView.Size = new System.Drawing.Size(688, 220);
+            this.purchaseOrderDataGridView.TabIndex = 14;
+            // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "PK_PurchaseOrder_id";
@@ -447,64 +501,11 @@
             this.dataGridViewTextBoxColumn13.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // pK_PurchaseRequisition_idLabel
-            // 
-            pK_PurchaseRequisition_idLabel.AutoSize = true;
-            pK_PurchaseRequisition_idLabel.Location = new System.Drawing.Point(12, 70);
-            pK_PurchaseRequisition_idLabel.Name = "pK_PurchaseRequisition_idLabel";
-            pK_PurchaseRequisition_idLabel.Size = new System.Drawing.Size(147, 32);
-            pK_PurchaseRequisition_idLabel.TabIndex = 15;
-            pK_PurchaseRequisition_idLabel.Text = "รหัสใบสั่งซื้อ";
-            // 
-            // fK_Product_IDLabel
-            // 
-            fK_Product_IDLabel.AutoSize = true;
-            fK_Product_IDLabel.Location = new System.Drawing.Point(12, 122);
-            fK_Product_IDLabel.Name = "fK_Product_IDLabel";
-            fK_Product_IDLabel.Size = new System.Drawing.Size(151, 32);
-            fK_Product_IDLabel.TabIndex = 17;
-            fK_Product_IDLabel.Text = "รหัสใบขอซื้อ";
-            // 
-            // purchaserequisitionNameLabel
-            // 
-            purchaserequisitionNameLabel.AutoSize = true;
-            purchaserequisitionNameLabel.Location = new System.Drawing.Point(12, 167);
-            purchaserequisitionNameLabel.Name = "purchaserequisitionNameLabel";
-            purchaserequisitionNameLabel.Size = new System.Drawing.Size(154, 32);
-            purchaserequisitionNameLabel.TabIndex = 18;
-            purchaserequisitionNameLabel.Text = "รายการสั่งซื้อ";
-            // 
-            // purchaserequisitionQTYLabel
-            // 
-            purchaserequisitionQTYLabel.AutoSize = true;
-            purchaserequisitionQTYLabel.Location = new System.Drawing.Point(12, 212);
-            purchaserequisitionQTYLabel.Name = "purchaserequisitionQTYLabel";
-            purchaserequisitionQTYLabel.Size = new System.Drawing.Size(147, 32);
-            purchaserequisitionQTYLabel.TabIndex = 19;
-            purchaserequisitionQTYLabel.Text = "จำนวนสั่งซื้อ";
-            // 
-            // purchaserequisitionPriceLabel
-            // 
-            purchaserequisitionPriceLabel.AutoSize = true;
-            purchaserequisitionPriceLabel.Location = new System.Drawing.Point(12, 257);
-            purchaserequisitionPriceLabel.Name = "purchaserequisitionPriceLabel";
-            purchaserequisitionPriceLabel.Size = new System.Drawing.Size(127, 32);
-            purchaserequisitionPriceLabel.TabIndex = 20;
-            purchaserequisitionPriceLabel.Text = "ราคาสั่งซื้อ";
-            // 
-            // purchaserequisitionDateLabel
-            // 
-            purchaserequisitionDateLabel.AutoSize = true;
-            purchaserequisitionDateLabel.Location = new System.Drawing.Point(12, 303);
-            purchaserequisitionDateLabel.Name = "purchaserequisitionDateLabel";
-            purchaserequisitionDateLabel.Size = new System.Drawing.Size(120, 32);
-            purchaserequisitionDateLabel.TabIndex = 21;
-            purchaserequisitionDateLabel.Text = "วันที่สั่งซื้อ";
-            // 
             // FormPurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1422, 720);
             this.Controls.Add(pK_PurchaseRequisition_idLabel);
             this.Controls.Add(fK_Product_IDLabel);
