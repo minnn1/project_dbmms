@@ -53,24 +53,42 @@
             this.orderdetailTableAdapter = new GlassesStore.GlassesStoreDataSetTableAdapters.orderdetailTableAdapter();
             this.productTableAdapter = new GlassesStore.GlassesStoreDataSetTableAdapters.productTableAdapter();
             this.orderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.orderBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonNew = new System.Windows.Forms.Button();
+            this.payment_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.member_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
+            this.order_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.order_dateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.order_totalpriceSpinEdit = new System.Windows.Forms.TextBox();
+            this.orderdetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.order_priceSpinEdit = new System.Windows.Forms.TextBox();
             this.order_quantitySpinEdit = new System.Windows.Forms.TextBox();
+            this.orderline_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.orderline_dateDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.product_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
+            this.order_idSpinEdit1 = new DevExpress.XtraEditors.SpinEdit();
+            this.employee_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.memberDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,24 +102,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.productDataGridView = new System.Windows.Forms.DataGridView();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.orderdetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderline_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.orderline_dateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.product_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.order_idSpinEdit1 = new DevExpress.XtraEditors.SpinEdit();
-            this.employee_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.payment_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.member_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.order_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
-            this.order_dateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.orderBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             รหัสOrder = new System.Windows.Forms.Label();
             order_dateLabel = new System.Windows.Forms.Label();
             member_idLabel = new System.Windows.Forms.Label();
@@ -121,7 +121,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).BeginInit();
             this.orderBindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payment_idSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.member_idSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderdetailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderline_idSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.product_idSpinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_idSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).BeginInit();
             this.พนักงานขาย.SuspendLayout();
@@ -130,18 +142,6 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderdetailBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_idSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.product_idSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employee_idSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.payment_idSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.member_idSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // รหัสOrder
@@ -203,45 +203,45 @@
             order_totalpriceLabel.AutoSize = true;
             order_totalpriceLabel.Location = new System.Drawing.Point(24, 132);
             order_totalpriceLabel.Name = "order_totalpriceLabel";
-            order_totalpriceLabel.Size = new System.Drawing.Size(182, 29);
+            order_totalpriceLabel.Size = new System.Drawing.Size(104, 29);
             order_totalpriceLabel.TabIndex = 4;
-            order_totalpriceLabel.Text = "order totalprice:";
+            order_totalpriceLabel.Text = "ราคารวม:";
             // 
             // orderline_dateLabel
             // 
             orderline_dateLabel.AutoSize = true;
             orderline_dateLabel.Location = new System.Drawing.Point(24, 167);
             orderline_dateLabel.Name = "orderline_dateLabel";
-            orderline_dateLabel.Size = new System.Drawing.Size(169, 29);
+            orderline_dateLabel.Size = new System.Drawing.Size(61, 29);
             orderline_dateLabel.TabIndex = 6;
-            orderline_dateLabel.Text = "orderline date:";
+            orderline_dateLabel.Text = "วันที่:";
             // 
             // product_idLabel
             // 
             product_idLabel.AutoSize = true;
             product_idLabel.Location = new System.Drawing.Point(24, 202);
             product_idLabel.Name = "product_idLabel";
-            product_idLabel.Size = new System.Drawing.Size(126, 29);
+            product_idLabel.Size = new System.Drawing.Size(106, 29);
             product_idLabel.TabIndex = 8;
-            product_idLabel.Text = "product id:";
+            product_idLabel.Text = "รหัสสินค้า";
             // 
             // order_idLabel1
             // 
             order_idLabel1.AutoSize = true;
             order_idLabel1.Location = new System.Drawing.Point(24, 237);
             order_idLabel1.Name = "order_idLabel1";
-            order_idLabel1.Size = new System.Drawing.Size(103, 29);
+            order_idLabel1.Size = new System.Drawing.Size(98, 29);
             order_idLabel1.TabIndex = 10;
-            order_idLabel1.Text = "order id:";
+            order_idLabel1.Text = "รายการที่";
             // 
             // employee_idLabel
             // 
             employee_idLabel.AutoSize = true;
             employee_idLabel.Location = new System.Drawing.Point(24, 272);
             employee_idLabel.Name = "employee_idLabel";
-            employee_idLabel.Size = new System.Drawing.Size(152, 29);
+            employee_idLabel.Size = new System.Drawing.Size(135, 29);
             employee_idLabel.TabIndex = 12;
-            employee_idLabel.Text = "employee id:";
+            employee_idLabel.Text = "รหัสพนักงาน";
             // 
             // label1
             // 
@@ -339,27 +339,62 @@
             this.orderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.orderBindingNavigator.Name = "orderBindingNavigator";
             this.orderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.orderBindingNavigator.Size = new System.Drawing.Size(1265, 38);
+            this.orderBindingNavigator.Size = new System.Drawing.Size(1265, 33);
             this.orderBindingNavigator.TabIndex = 0;
             this.orderBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -368,12 +403,39 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // orderBindingNavigatorSaveItem
+            // 
+            this.orderBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.orderBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("orderBindingNavigatorSaveItem.Image")));
+            this.orderBindingNavigatorSaveItem.Name = "orderBindingNavigatorSaveItem";
+            this.orderBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.orderBindingNavigatorSaveItem.Text = "Save Data";
+            this.orderBindingNavigatorSaveItem.Click += new System.EventHandler(this.orderBindingNavigatorSaveItem_Click);
             // 
             // groupBox1
             // 
@@ -399,6 +461,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ชำระสินค้า";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(175, 259);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 37);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "ดูการสั่งซื้อ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // buttonNew
             // 
             this.buttonNew.Location = new System.Drawing.Point(353, 259);
@@ -408,6 +480,38 @@
             this.buttonNew.Text = "เพิ่มสินค้าที่ซื้อใหม่";
             this.buttonNew.UseVisualStyleBackColor = true;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
+            // 
+            // payment_idSpinEdit
+            // 
+            this.payment_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "payment_id", true));
+            this.payment_idSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.payment_idSpinEdit.Location = new System.Drawing.Point(353, 135);
+            this.payment_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.payment_idSpinEdit.Name = "payment_idSpinEdit";
+            this.payment_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.payment_idSpinEdit.Size = new System.Drawing.Size(225, 28);
+            this.payment_idSpinEdit.TabIndex = 17;
+            // 
+            // member_idSpinEdit
+            // 
+            this.member_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "member_id", true));
+            this.member_idSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.member_idSpinEdit.Location = new System.Drawing.Point(353, 97);
+            this.member_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.member_idSpinEdit.Name = "member_idSpinEdit";
+            this.member_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.member_idSpinEdit.Size = new System.Drawing.Size(225, 28);
+            this.member_idSpinEdit.TabIndex = 16;
             // 
             // checkBox3
             // 
@@ -461,6 +565,38 @@
             this.buttonEdit.Text = "เเก้ไขรายการชำระ";
             this.buttonEdit.UseVisualStyleBackColor = true;
             // 
+            // order_idSpinEdit
+            // 
+            this.order_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "order_id", true));
+            this.order_idSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.order_idSpinEdit.Location = new System.Drawing.Point(353, 27);
+            this.order_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.order_idSpinEdit.Name = "order_idSpinEdit";
+            this.order_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.order_idSpinEdit.Size = new System.Drawing.Size(225, 28);
+            this.order_idSpinEdit.TabIndex = 2;
+            this.order_idSpinEdit.EditValueChanged += new System.EventHandler(this.order_idSpinEdit_EditValueChanged);
+            // 
+            // order_dateDateEdit
+            // 
+            this.order_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "order_date", true));
+            this.order_dateDateEdit.EditValue = null;
+            this.order_dateDateEdit.Location = new System.Drawing.Point(353, 63);
+            this.order_dateDateEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.order_dateDateEdit.Name = "order_dateDateEdit";
+            this.order_dateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.order_dateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.order_dateDateEdit.Size = new System.Drawing.Size(225, 26);
+            this.order_dateDateEdit.TabIndex = 4;
+            this.order_dateDateEdit.EditValueChanged += new System.EventHandler(this.order_dateDateEdit_EditValueChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox2);
@@ -513,6 +649,11 @@
             this.order_totalpriceSpinEdit.Size = new System.Drawing.Size(162, 35);
             this.order_totalpriceSpinEdit.TabIndex = 18;
             // 
+            // orderdetailBindingSource
+            // 
+            this.orderdetailBindingSource.DataMember = "orderdetail$orderorderdetail";
+            this.orderdetailBindingSource.DataSource = this.orderBindingSource;
+            // 
             // order_priceSpinEdit
             // 
             this.order_priceSpinEdit.Location = new System.Drawing.Point(213, 104);
@@ -528,6 +669,84 @@
             this.order_quantitySpinEdit.Size = new System.Drawing.Size(162, 35);
             this.order_quantitySpinEdit.TabIndex = 0;
             this.order_quantitySpinEdit.TextChanged += new System.EventHandler(this.order_quantitySpinEdit_EditValueChanged);
+            // 
+            // orderline_idSpinEdit
+            // 
+            this.orderline_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "orderline_id", true));
+            this.orderline_idSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.orderline_idSpinEdit.Location = new System.Drawing.Point(213, 35);
+            this.orderline_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.orderline_idSpinEdit.Name = "orderline_idSpinEdit";
+            this.orderline_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.orderline_idSpinEdit.Size = new System.Drawing.Size(162, 28);
+            this.orderline_idSpinEdit.TabIndex = 1;
+            // 
+            // orderline_dateDateEdit
+            // 
+            this.orderline_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "orderline_date", true));
+            this.orderline_dateDateEdit.EditValue = null;
+            this.orderline_dateDateEdit.Location = new System.Drawing.Point(213, 178);
+            this.orderline_dateDateEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.orderline_dateDateEdit.Name = "orderline_dateDateEdit";
+            this.orderline_dateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.orderline_dateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.orderline_dateDateEdit.Size = new System.Drawing.Size(162, 26);
+            this.orderline_dateDateEdit.TabIndex = 7;
+            // 
+            // product_idSpinEdit
+            // 
+            this.product_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "product_id", true));
+            this.product_idSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.product_idSpinEdit.Location = new System.Drawing.Point(213, 212);
+            this.product_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.product_idSpinEdit.Name = "product_idSpinEdit";
+            this.product_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.product_idSpinEdit.Size = new System.Drawing.Size(162, 28);
+            this.product_idSpinEdit.TabIndex = 9;
+            // 
+            // order_idSpinEdit1
+            // 
+            this.order_idSpinEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "order_id", true));
+            this.order_idSpinEdit1.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.order_idSpinEdit1.Location = new System.Drawing.Point(213, 247);
+            this.order_idSpinEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.order_idSpinEdit1.Name = "order_idSpinEdit1";
+            this.order_idSpinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.order_idSpinEdit1.Size = new System.Drawing.Size(162, 28);
+            this.order_idSpinEdit1.TabIndex = 11;
+            // 
+            // employee_idSpinEdit
+            // 
+            this.employee_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "employee_id", true));
+            this.employee_idSpinEdit.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.employee_idSpinEdit.Location = new System.Drawing.Point(213, 282);
+            this.employee_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.employee_idSpinEdit.Name = "employee_idSpinEdit";
+            this.employee_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.employee_idSpinEdit.Size = new System.Drawing.Size(162, 28);
+            this.employee_idSpinEdit.TabIndex = 13;
             // 
             // memberBindingSource
             // 
@@ -664,226 +883,6 @@
             this.productBindingSource.DataMember = "product";
             this.productBindingSource.DataSource = this.glassesStoreDataSet;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(228, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 37);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // orderdetailBindingSource
-            // 
-            this.orderdetailBindingSource.DataMember = "orderdetail$orderorderdetail";
-            this.orderdetailBindingSource.DataSource = this.orderBindingSource;
-            // 
-            // orderline_idSpinEdit
-            // 
-            this.orderline_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "orderline_id", true));
-            this.orderline_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.orderline_idSpinEdit.Location = new System.Drawing.Point(213, 35);
-            this.orderline_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.orderline_idSpinEdit.Name = "orderline_idSpinEdit";
-            this.orderline_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.orderline_idSpinEdit.Size = new System.Drawing.Size(162, 28);
-            this.orderline_idSpinEdit.TabIndex = 1;
-            // 
-            // orderline_dateDateEdit
-            // 
-            this.orderline_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "orderline_date", true));
-            this.orderline_dateDateEdit.EditValue = null;
-            this.orderline_dateDateEdit.Location = new System.Drawing.Point(213, 178);
-            this.orderline_dateDateEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.orderline_dateDateEdit.Name = "orderline_dateDateEdit";
-            this.orderline_dateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.orderline_dateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.orderline_dateDateEdit.Size = new System.Drawing.Size(162, 26);
-            this.orderline_dateDateEdit.TabIndex = 7;
-            // 
-            // product_idSpinEdit
-            // 
-            this.product_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "product_id", true));
-            this.product_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.product_idSpinEdit.Location = new System.Drawing.Point(213, 212);
-            this.product_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.product_idSpinEdit.Name = "product_idSpinEdit";
-            this.product_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.product_idSpinEdit.Size = new System.Drawing.Size(162, 28);
-            this.product_idSpinEdit.TabIndex = 9;
-            // 
-            // order_idSpinEdit1
-            // 
-            this.order_idSpinEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "order_id", true));
-            this.order_idSpinEdit1.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.order_idSpinEdit1.Location = new System.Drawing.Point(213, 247);
-            this.order_idSpinEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.order_idSpinEdit1.Name = "order_idSpinEdit1";
-            this.order_idSpinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.order_idSpinEdit1.Size = new System.Drawing.Size(162, 28);
-            this.order_idSpinEdit1.TabIndex = 11;
-            // 
-            // employee_idSpinEdit
-            // 
-            this.employee_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "employee_id", true));
-            this.employee_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.employee_idSpinEdit.Location = new System.Drawing.Point(213, 282);
-            this.employee_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.employee_idSpinEdit.Name = "employee_idSpinEdit";
-            this.employee_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.employee_idSpinEdit.Size = new System.Drawing.Size(162, 28);
-            this.employee_idSpinEdit.TabIndex = 13;
-            // 
-            // payment_idSpinEdit
-            // 
-            this.payment_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "payment_id", true));
-            this.payment_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.payment_idSpinEdit.Location = new System.Drawing.Point(353, 135);
-            this.payment_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.payment_idSpinEdit.Name = "payment_idSpinEdit";
-            this.payment_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.payment_idSpinEdit.Size = new System.Drawing.Size(225, 28);
-            this.payment_idSpinEdit.TabIndex = 17;
-            // 
-            // member_idSpinEdit
-            // 
-            this.member_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "member_id", true));
-            this.member_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.member_idSpinEdit.Location = new System.Drawing.Point(353, 97);
-            this.member_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.member_idSpinEdit.Name = "member_idSpinEdit";
-            this.member_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.member_idSpinEdit.Size = new System.Drawing.Size(225, 28);
-            this.member_idSpinEdit.TabIndex = 16;
-            // 
-            // order_idSpinEdit
-            // 
-            this.order_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "order_id", true));
-            this.order_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.order_idSpinEdit.Location = new System.Drawing.Point(353, 27);
-            this.order_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.order_idSpinEdit.Name = "order_idSpinEdit";
-            this.order_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.order_idSpinEdit.Size = new System.Drawing.Size(225, 28);
-            this.order_idSpinEdit.TabIndex = 2;
-            this.order_idSpinEdit.EditValueChanged += new System.EventHandler(this.order_idSpinEdit_EditValueChanged);
-            // 
-            // order_dateDateEdit
-            // 
-            this.order_dateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderBindingSource, "order_date", true));
-            this.order_dateDateEdit.EditValue = null;
-            this.order_dateDateEdit.Location = new System.Drawing.Point(353, 63);
-            this.order_dateDateEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.order_dateDateEdit.Name = "order_dateDateEdit";
-            this.order_dateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.order_dateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.order_dateDateEdit.Size = new System.Drawing.Size(225, 26);
-            this.order_dateDateEdit.TabIndex = 4;
-            this.order_dateDateEdit.EditValueChanged += new System.EventHandler(this.order_dateDateEdit_EditValueChanged);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // orderBindingNavigatorSaveItem
-            // 
-            this.orderBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.orderBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("orderBindingNavigatorSaveItem.Image")));
-            this.orderBindingNavigatorSaveItem.Name = "orderBindingNavigatorSaveItem";
-            this.orderBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
-            this.orderBindingNavigatorSaveItem.Text = "Save Data";
-            this.orderBindingNavigatorSaveItem.Click += new System.EventHandler(this.orderBindingNavigatorSaveItem_Click);
-            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -906,8 +905,20 @@
             this.orderBindingNavigator.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payment_idSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.member_idSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderdetailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderline_idSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.product_idSpinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employee_idSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).EndInit();
             this.พนักงานขาย.ResumeLayout(false);
@@ -916,18 +927,6 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderdetailBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_idSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.product_idSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employee_idSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.payment_idSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.member_idSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_idSpinEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
