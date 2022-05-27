@@ -44,6 +44,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -198,11 +200,32 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(427, 200);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(198, 29);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "ดูรายงานสินค้าที่ขาย";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(680, 200);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(93, 41);
+            this.button9.TabIndex = 17;
+            this.button9.Text = "เรียกดู";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // FormPrint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1244, 652);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
@@ -246,5 +269,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button9;
     }
 }

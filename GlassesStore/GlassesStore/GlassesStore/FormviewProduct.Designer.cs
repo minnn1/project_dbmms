@@ -1,6 +1,6 @@
 ﻿namespace GlassesStore
 {
-    partial class view
+    partial class FormviewProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -30,22 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.View_OrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.view_OrderTableAdapter1 = new GlassesStore.GlassesStoreDataSet9TableAdapters.View_OrderTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.View_OrderBindingSource)).BeginInit();
+            this.GlassesStoreDataSet10 = new GlassesStore.GlassesStoreDataSet10();
+            this.View_productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.View_productTableAdapter = new GlassesStore.GlassesStoreDataSet10TableAdapters.View_productTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.GlassesStoreDataSet10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.View_productBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // View_OrderBindingSource
-            // 
-            this.View_OrderBindingSource.DataMember = "View_Order";
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.View_OrderBindingSource;
+            reportDataSource1.Value = this.View_productBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "GlassesStore.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 26);
@@ -61,22 +59,34 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(800, 26);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // view_OrderTableAdapter1
+            // GlassesStoreDataSet10
             // 
-            this.view_OrderTableAdapter1.ClearBeforeFill = true;
+            this.GlassesStoreDataSet10.DataSetName = "GlassesStoreDataSet10";
+            this.GlassesStoreDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // view
+            // View_productBindingSource
+            // 
+            this.View_productBindingSource.DataMember = "View_product";
+            this.View_productBindingSource.DataSource = this.GlassesStoreDataSet10;
+            // 
+            // View_productTableAdapter
+            // 
+            this.View_productTableAdapter.ClearBeforeFill = true;
+            // 
+            // FormviewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.textBox1);
-            this.Name = "view";
-            this.Text = "view";
-            this.Load += new System.EventHandler(this.view_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.View_OrderBindingSource)).EndInit();
+            this.Name = "FormviewProduct";
+            this.Text = "FormviewProduct";
+            this.Load += new System.EventHandler(this.FormviewProduct_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GlassesStoreDataSet10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.View_productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,8 +96,8 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.BindingSource View_OrderBindingSource;
-        private GlassesStoreDataSet9 GlassesStoreDataSet9;
-        private GlassesStoreDataSet9TableAdapters.View_OrderTableAdapter view_OrderTableAdapter1;
+        private System.Windows.Forms.BindingSource View_productBindingSource;
+        private GlassesStoreDataSet10 GlassesStoreDataSet10;
+        private GlassesStoreDataSet10TableAdapters.View_productTableAdapter View_productTableAdapter;
     }
 }

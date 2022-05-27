@@ -64,5 +64,11 @@ namespace GlassesStore
             ReportprofitYear reportprofitYear = new ReportprofitYear();
             reportprofitYear.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FormviewProduct formviewProduct = new FormviewProduct();
+            formviewProduct.Show();
+        }
     }
 }

@@ -63,12 +63,18 @@ namespace GlassesStore
             product_idSpinEdit.Text = productDataGridView.CurrentRow.Cells[0].Value.ToString();
             order_priceSpinEdit.Text = productDataGridView.CurrentRow.Cells[3].Value.ToString();
         }
-        
+
         private void order_quantitySpinEdit_EditValueChanged(object sender, EventArgs e)
         {
-            order_totalpriceSpinEdit.Text = (Convert.ToInt32(order_quantitySpinEdit.Text) * Convert.ToInt32(order_priceSpinEdit.Text)).ToString();
+            try
+            {
+                order_totalpriceSpinEdit.Text = (Convert.ToInt32(order_quantitySpinEdit.Text) * Convert.ToInt32(order_priceSpinEdit.Text)).ToString();
+            }
+            catch (Exception)
+            {
+                order_totalpriceSpinEdit.Text = "0";
+            }
         }
-
         private void employeeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             employee_idSpinEdit.Text = employeeDataGridView.CurrentRow.Cells[0].Value.ToString();
@@ -108,29 +114,31 @@ namespace GlassesStore
             //orderdetial save
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-            SqlCommand cmd1 = new SqlCommand("select [order].order_id,orderdetail.orderline_id,product.product_items,product.product_description,category.category_name,product.product_cost_price,[orderdetail].order_quantity,orderdetail.order_totalprice,[order].order_date from [order] inner join orderdetail on[order].order_id = orderdetail.order_id inner join payment on  payment.payment_id =[order].payment_id inner join product on product.product_id = [orderdetail].product_id inner join  category on category.category_id = product.category_id inner join member on member.member_id =[order].member_id inner join employee on employee.employee_id = orderdetail.employee_id ", con);
+            SqlCommand cmd1 = new SqlCommand("select [order].order_id, orderdetail.orderline_id, product.product_items, product.product_description, category.category_name, product.product_cost_price,[orderdetail].order_quantity, orderdetail.order_totalprice,[order].order_date from[order] inner join orderdetail on[order].order_id = orderdetail.order_id inner join payment on  payment.payment_id =[order].payment_id inner join product on product.product_id = [orderdetail].product_id inner join  category on category.category_id = product.category_id inner join member on member.member_id =[order].member_id inner join employee on employee.employee_id = orderdetail.employee_id where [order].order_id = '" + order_idSpinEdit.Text + "'", con);
             SqlDataReader dr = cmd1.ExecuteReader();
-            while (dr.Read())
+            while (dr.Read())                             
             {
                 DialogResult dialogResult = MessageBox.Show("คำสั่งซื้อของคุณคือ: Order" + dr["order_id"].ToString() + "\n" + "สินค้า: " + dr["product_items"].ToString() + "\n" + "จำนวน " + dr["order_quantity"].ToString() + " ชิ้น " + "\n" + "ราคารวม " + dr["order_totalprice"].ToString() + " บาท");
                 if (dialogResult == DialogResult.OK)
                 {
-                    SqlConnection con1 = new SqlConnection(constring);
-                    con1.Open();
-                    SqlCommand cmd = new SqlCommand("insert into orderdetail(orderline_id,order_quantity,order_totalprice,orderline_date,product_id,order_id,employee_id) values(@orderline_id,@order_quantity,@order_totalprice,@orderline_date,@product_id,@order_id,@employee_id)", con1);
-                    cmd.Parameters.AddWithValue("@orderline_id", orderline_idSpinEdit.Text);
-                    cmd.Parameters.AddWithValue("@order_quantity", order_quantitySpinEdit.Text);
-                    cmd.Parameters.AddWithValue("@order_totalprice", order_totalpriceSpinEdit.Text);
-                    cmd.Parameters.AddWithValue("@orderline_date", Convert.ToDateTime(orderline_dateDateEdit.Text));
-                    cmd.Parameters.AddWithValue("@product_id", product_idSpinEdit.Text);
-                    cmd.Parameters.AddWithValue("@order_id", order_idSpinEdit.Text);
-                    cmd.Parameters.AddWithValue("@employee_id", employee_idSpinEdit.Text);
-                    cmd.ExecuteNonQuery();
-
-                }
-                else if (dialogResult == DialogResult.Cancel)
-                {
-                    
+                    try
+                    {
+                        SqlConnection con1 = new SqlConnection(constring);
+                        con1.Open();
+                        SqlCommand cmd = new SqlCommand("insert into orderdetail(orderline_id,order_quantity,order_totalprice,orderline_date,product_id,order_id,employee_id) values(@orderline_id,@order_quantity,@order_totalprice,@orderline_date,@product_id,@order_id,@employee_id)", con1);
+                        cmd.Parameters.AddWithValue("@orderline_id", orderline_idSpinEdit.Text);
+                        cmd.Parameters.AddWithValue("@order_quantity", order_quantitySpinEdit.Text);
+                        cmd.Parameters.AddWithValue("@order_totalprice", order_totalpriceSpinEdit.Text);
+                        cmd.Parameters.AddWithValue("@orderline_date", Convert.ToDateTime(orderline_dateDateEdit.Text));
+                        cmd.Parameters.AddWithValue("@product_id", product_idSpinEdit.Text);
+                        cmd.Parameters.AddWithValue("@order_id", order_idSpinEdit.Text);
+                        cmd.Parameters.AddWithValue("@employee_id", employee_idSpinEdit.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("ยกเลิกการสั่งซื้อเเล้ว");
+                    }
                 }
             }
             dr.Close();
@@ -165,7 +173,7 @@ namespace GlassesStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            view view = new view();
+            FormView view = new FormView();
             view.Show();
         }
     }

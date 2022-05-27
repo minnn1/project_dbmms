@@ -20,17 +20,17 @@ namespace GlassesStore {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GlassesStoreDataSet9")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GlassesStoreDataSet10")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GlassesStoreDataSet9 : global::System.Data.DataSet {
+    public partial class GlassesStoreDataSet10 : global::System.Data.DataSet {
         
-        private View_1DataTable tableView_1;
+        private View_productDataTable tableView_product;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public GlassesStoreDataSet9() {
+        public GlassesStoreDataSet10() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace GlassesStore {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected GlassesStoreDataSet9(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GlassesStoreDataSet10(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace GlassesStore {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["View_1"] != null)) {
-                    base.Tables.Add(new View_1DataTable(ds.Tables["View_1"]));
+                if ((ds.Tables["View_product"] != null)) {
+                    base.Tables.Add(new View_productDataTable(ds.Tables["View_product"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace GlassesStore {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_1DataTable View_1 {
+        public View_productDataTable View_product {
             get {
-                return this.tableView_1;
+                return this.tableView_product;
             }
         }
         
@@ -127,7 +127,7 @@ namespace GlassesStore {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GlassesStoreDataSet9 cln = ((GlassesStoreDataSet9)(base.Clone()));
+            GlassesStoreDataSet10 cln = ((GlassesStoreDataSet10)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace GlassesStore {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["View_1"] != null)) {
-                    base.Tables.Add(new View_1DataTable(ds.Tables["View_1"]));
+                if ((ds.Tables["View_product"] != null)) {
+                    base.Tables.Add(new View_productDataTable(ds.Tables["View_product"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace GlassesStore {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableView_1 = ((View_1DataTable)(base.Tables["View_1"]));
+            this.tableView_product = ((View_productDataTable)(base.Tables["View_product"]));
             if ((initTable == true)) {
-                if ((this.tableView_1 != null)) {
-                    this.tableView_1.InitVars();
+                if ((this.tableView_product != null)) {
+                    this.tableView_product.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace GlassesStore {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GlassesStoreDataSet9";
+            this.DataSetName = "GlassesStoreDataSet10";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GlassesStoreDataSet9.xsd";
+            this.Namespace = "http://tempuri.org/GlassesStoreDataSet10.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableView_1 = new View_1DataTable();
-            base.Tables.Add(this.tableView_1);
+            this.tableView_product = new View_productDataTable();
+            base.Tables.Add(this.tableView_product);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_1() {
+        private bool ShouldSerializeView_product() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace GlassesStore {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GlassesStoreDataSet9 ds = new GlassesStoreDataSet9();
+            GlassesStoreDataSet10 ds = new GlassesStoreDataSet10();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,33 +270,29 @@ namespace GlassesStore {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_1RowChangeEventHandler(object sender, View_1RowChangeEvent e);
+        public delegate void View_productRowChangeEventHandler(object sender, View_productRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_1DataTable : global::System.Data.TypedTableBase<View_1Row> {
+        public partial class View_productDataTable : global::System.Data.TypedTableBase<View_productRow> {
             
-            private global::System.Data.DataColumn columnรหัสรายการ;
+            private global::System.Data.DataColumn columnรหัสสินค้า;
             
             private global::System.Data.DataColumn columnชื่อสินค้า;
             
             private global::System.Data.DataColumn columnรายละเอียด;
             
-            private global::System.Data.DataColumn columnราคาต่อหน่วย;
+            private global::System.Data.DataColumn columnราคาขาย;
             
-            private global::System.Data.DataColumn columnจำนวน;
-            
-            private global::System.Data.DataColumn columnราคารวม;
-            
-            private global::System.Data.DataColumn columnวันที่ซื้อ;
+            private global::System.Data.DataColumn columnประเภทสินค้า;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1DataTable() {
-                this.TableName = "View_1";
+            public View_productDataTable() {
+                this.TableName = "View_product";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +300,7 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_1DataTable(global::System.Data.DataTable table) {
+            internal View_productDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,16 +317,16 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected View_productDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn รหัสรายการColumn {
+            public global::System.Data.DataColumn รหัสสินค้าColumn {
                 get {
-                    return this.columnรหัสรายการ;
+                    return this.columnรหัสสินค้า;
                 }
             }
             
@@ -352,33 +348,17 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ราคาต่อหน่วยColumn {
+            public global::System.Data.DataColumn ราคาขายColumn {
                 get {
-                    return this.columnราคาต่อหน่วย;
+                    return this.columnราคาขาย;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn จำนวนColumn {
+            public global::System.Data.DataColumn ประเภทสินค้าColumn {
                 get {
-                    return this.columnจำนวน;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ราคารวมColumn {
-                get {
-                    return this.columnราคารวม;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn วันที่ซื้อColumn {
-                get {
-                    return this.columnวันที่ซื้อ;
+                    return this.columnประเภทสินค้า;
                 }
             }
             
@@ -393,51 +373,56 @@ namespace GlassesStore {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row this[int index] {
+            public View_productRow this[int index] {
                 get {
-                    return ((View_1Row)(this.Rows[index]));
+                    return ((View_productRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowChanging;
+            public event View_productRowChangeEventHandler View_productRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowChanged;
+            public event View_productRowChangeEventHandler View_productRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowDeleting;
+            public event View_productRowChangeEventHandler View_productRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_1RowChangeEventHandler View_1RowDeleted;
+            public event View_productRowChangeEventHandler View_productRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_1Row(View_1Row row) {
+            public void AddView_productRow(View_productRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row AddView_1Row(int รหัสรายการ, string ชื่อสินค้า, string รายละเอียด, double ราคาต่อหน่วย, int จำนวน, double ราคารวม, System.DateTime วันที่ซื้อ) {
-                View_1Row rowView_1Row = ((View_1Row)(this.NewRow()));
+            public View_productRow AddView_productRow(int รหัสสินค้า, string ชื่อสินค้า, string รายละเอียด, double ราคาขาย, string ประเภทสินค้า) {
+                View_productRow rowView_productRow = ((View_productRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        รหัสรายการ,
+                        รหัสสินค้า,
                         ชื่อสินค้า,
                         รายละเอียด,
-                        ราคาต่อหน่วย,
-                        จำนวน,
-                        ราคารวม,
-                        วันที่ซื้อ};
-                rowView_1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_1Row);
-                return rowView_1Row;
+                        ราคาขาย,
+                        ประเภทสินค้า};
+                rowView_productRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowView_productRow);
+                return rowView_productRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public View_productRow FindByรหัสสินค้า(int รหัสสินค้า) {
+                return ((View_productRow)(this.Rows.Find(new object[] {
+                            รหัสสินค้า})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_1DataTable cln = ((View_1DataTable)(base.Clone()));
+                View_productDataTable cln = ((View_productDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -445,66 +430,65 @@ namespace GlassesStore {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_1DataTable();
+                return new View_productDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnรหัสรายการ = base.Columns["รหัสรายการ"];
+                this.columnรหัสสินค้า = base.Columns["รหัสสินค้า"];
                 this.columnชื่อสินค้า = base.Columns["ชื่อสินค้า"];
                 this.columnรายละเอียด = base.Columns["รายละเอียด"];
-                this.columnราคาต่อหน่วย = base.Columns["ราคาต่อหน่วย"];
-                this.columnจำนวน = base.Columns["จำนวน"];
-                this.columnราคารวม = base.Columns["ราคารวม"];
-                this.columnวันที่ซื้อ = base.Columns["วันที่ซื้อ"];
+                this.columnราคาขาย = base.Columns["ราคาขาย"];
+                this.columnประเภทสินค้า = base.Columns["ประเภทสินค้า"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnรหัสรายการ = new global::System.Data.DataColumn("รหัสรายการ", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnรหัสรายการ);
+                this.columnรหัสสินค้า = new global::System.Data.DataColumn("รหัสสินค้า", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnรหัสสินค้า);
                 this.columnชื่อสินค้า = new global::System.Data.DataColumn("ชื่อสินค้า", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnชื่อสินค้า);
                 this.columnรายละเอียด = new global::System.Data.DataColumn("รายละเอียด", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnรายละเอียด);
-                this.columnราคาต่อหน่วย = new global::System.Data.DataColumn("ราคาต่อหน่วย", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnราคาต่อหน่วย);
-                this.columnจำนวน = new global::System.Data.DataColumn("จำนวน", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnจำนวน);
-                this.columnราคารวม = new global::System.Data.DataColumn("ราคารวม", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnราคารวม);
-                this.columnวันที่ซื้อ = new global::System.Data.DataColumn("วันที่ซื้อ", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnวันที่ซื้อ);
+                this.columnราคาขาย = new global::System.Data.DataColumn("ราคาขาย", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnราคาขาย);
+                this.columnประเภทสินค้า = new global::System.Data.DataColumn("ประเภทสินค้า", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnประเภทสินค้า);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnรหัสสินค้า}, true));
+                this.columnรหัสสินค้า.AllowDBNull = false;
+                this.columnรหัสสินค้า.Unique = true;
                 this.columnชื่อสินค้า.MaxLength = 50;
                 this.columnรายละเอียด.MaxLength = 50;
+                this.columnประเภทสินค้า.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row NewView_1Row() {
-                return ((View_1Row)(this.NewRow()));
+            public View_productRow NewView_productRow() {
+                return ((View_productRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_1Row(builder);
+                return new View_productRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_1Row);
+                return typeof(View_productRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_1RowChanged != null)) {
-                    this.View_1RowChanged(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.View_productRowChanged != null)) {
+                    this.View_productRowChanged(this, new View_productRowChangeEvent(((View_productRow)(e.Row)), e.Action));
                 }
             }
             
@@ -512,8 +496,8 @@ namespace GlassesStore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_1RowChanging != null)) {
-                    this.View_1RowChanging(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.View_productRowChanging != null)) {
+                    this.View_productRowChanging(this, new View_productRowChangeEvent(((View_productRow)(e.Row)), e.Action));
                 }
             }
             
@@ -521,8 +505,8 @@ namespace GlassesStore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_1RowDeleted != null)) {
-                    this.View_1RowDeleted(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.View_productRowDeleted != null)) {
+                    this.View_productRowDeleted(this, new View_productRowChangeEvent(((View_productRow)(e.Row)), e.Action));
                 }
             }
             
@@ -530,14 +514,14 @@ namespace GlassesStore {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_1RowDeleting != null)) {
-                    this.View_1RowDeleting(this, new View_1RowChangeEvent(((View_1Row)(e.Row)), e.Action));
+                if ((this.View_productRowDeleting != null)) {
+                    this.View_productRowDeleting(this, new View_productRowChangeEvent(((View_productRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_1Row(View_1Row row) {
+            public void RemoveView_productRow(View_productRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -546,7 +530,7 @@ namespace GlassesStore {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GlassesStoreDataSet9 ds = new GlassesStoreDataSet9();
+                GlassesStoreDataSet10 ds = new GlassesStoreDataSet10();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -564,7 +548,7 @@ namespace GlassesStore {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_1DataTable";
+                attribute2.FixedValue = "View_productDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -608,30 +592,25 @@ namespace GlassesStore {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_1Row : global::System.Data.DataRow {
+        public partial class View_productRow : global::System.Data.DataRow {
             
-            private View_1DataTable tableView_1;
+            private View_productDataTable tableView_product;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_1Row(global::System.Data.DataRowBuilder rb) : 
+            internal View_productRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_1 = ((View_1DataTable)(this.Table));
+                this.tableView_product = ((View_productDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int รหัสรายการ {
+            public int รหัสสินค้า {
                 get {
-                    try {
-                        return ((int)(this[this.tableView_1.รหัสรายการColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'รหัสรายการ\' in table \'View_1\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableView_product.รหัสสินค้าColumn]));
                 }
                 set {
-                    this[this.tableView_1.รหัสรายการColumn] = value;
+                    this[this.tableView_product.รหัสสินค้าColumn] = value;
                 }
             }
             
@@ -640,14 +619,14 @@ namespace GlassesStore {
             public string ชื่อสินค้า {
                 get {
                     try {
-                        return ((string)(this[this.tableView_1.ชื่อสินค้าColumn]));
+                        return ((string)(this[this.tableView_product.ชื่อสินค้าColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ชื่อสินค้า\' in table \'View_1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ชื่อสินค้า\' in table \'View_product\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_1.ชื่อสินค้าColumn] = value;
+                    this[this.tableView_product.ชื่อสินค้าColumn] = value;
                 }
             }
             
@@ -656,163 +635,95 @@ namespace GlassesStore {
             public string รายละเอียด {
                 get {
                     try {
-                        return ((string)(this[this.tableView_1.รายละเอียดColumn]));
+                        return ((string)(this[this.tableView_product.รายละเอียดColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'รายละเอียด\' in table \'View_1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'รายละเอียด\' in table \'View_product\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_1.รายละเอียดColumn] = value;
+                    this[this.tableView_product.รายละเอียดColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double ราคาต่อหน่วย {
+            public double ราคาขาย {
                 get {
                     try {
-                        return ((double)(this[this.tableView_1.ราคาต่อหน่วยColumn]));
+                        return ((double)(this[this.tableView_product.ราคาขายColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ราคาต่อหน่วย\' in table \'View_1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ราคาขาย\' in table \'View_product\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_1.ราคาต่อหน่วยColumn] = value;
+                    this[this.tableView_product.ราคาขายColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int จำนวน {
+            public string ประเภทสินค้า {
                 get {
                     try {
-                        return ((int)(this[this.tableView_1.จำนวนColumn]));
+                        return ((string)(this[this.tableView_product.ประเภทสินค้าColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'จำนวน\' in table \'View_1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ประเภทสินค้า\' in table \'View_product\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_1.จำนวนColumn] = value;
+                    this[this.tableView_product.ประเภทสินค้าColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double ราคารวม {
-                get {
-                    try {
-                        return ((double)(this[this.tableView_1.ราคารวมColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ราคารวม\' in table \'View_1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_1.ราคารวมColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime วันที่ซื้อ {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableView_1.วันที่ซื้อColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'วันที่ซื้อ\' in table \'View_1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_1.วันที่ซื้อColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsรหัสรายการNull() {
-                return this.IsNull(this.tableView_1.รหัสรายการColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetรหัสรายการNull() {
-                this[this.tableView_1.รหัสรายการColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isชื่อสินค้าNull() {
-                return this.IsNull(this.tableView_1.ชื่อสินค้าColumn);
+                return this.IsNull(this.tableView_product.ชื่อสินค้าColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setชื่อสินค้าNull() {
-                this[this.tableView_1.ชื่อสินค้าColumn] = global::System.Convert.DBNull;
+                this[this.tableView_product.ชื่อสินค้าColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsรายละเอียดNull() {
-                return this.IsNull(this.tableView_1.รายละเอียดColumn);
+                return this.IsNull(this.tableView_product.รายละเอียดColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetรายละเอียดNull() {
-                this[this.tableView_1.รายละเอียดColumn] = global::System.Convert.DBNull;
+                this[this.tableView_product.รายละเอียดColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isราคาต่อหน่วยNull() {
-                return this.IsNull(this.tableView_1.ราคาต่อหน่วยColumn);
+            public bool IsราคาขายNull() {
+                return this.IsNull(this.tableView_product.ราคาขายColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setราคาต่อหน่วยNull() {
-                this[this.tableView_1.ราคาต่อหน่วยColumn] = global::System.Convert.DBNull;
+            public void SetราคาขายNull() {
+                this[this.tableView_product.ราคาขายColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsจำนวนNull() {
-                return this.IsNull(this.tableView_1.จำนวนColumn);
+            public bool Isประเภทสินค้าNull() {
+                return this.IsNull(this.tableView_product.ประเภทสินค้าColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetจำนวนNull() {
-                this[this.tableView_1.จำนวนColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsราคารวมNull() {
-                return this.IsNull(this.tableView_1.ราคารวมColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetราคารวมNull() {
-                this[this.tableView_1.ราคารวมColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isวันที่ซื้อNull() {
-                return this.IsNull(this.tableView_1.วันที่ซื้อColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setวันที่ซื้อNull() {
-                this[this.tableView_1.วันที่ซื้อColumn] = global::System.Convert.DBNull;
+            public void Setประเภทสินค้าNull() {
+                this[this.tableView_product.ประเภทสินค้าColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -820,22 +731,22 @@ namespace GlassesStore {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_1RowChangeEvent : global::System.EventArgs {
+        public class View_productRowChangeEvent : global::System.EventArgs {
             
-            private View_1Row eventRow;
+            private View_productRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1RowChangeEvent(View_1Row row, global::System.Data.DataRowAction action) {
+            public View_productRowChangeEvent(View_productRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_1Row Row {
+            public View_productRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -851,7 +762,7 @@ namespace GlassesStore {
         }
     }
 }
-namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
+namespace GlassesStore.GlassesStoreDataSet10TableAdapters {
     
     
     /// <summary>
@@ -863,7 +774,7 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_1TableAdapter : global::System.ComponentModel.Component {
+    public partial class View_productTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -877,7 +788,7 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_1TableAdapter() {
+        public View_productTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -974,14 +885,12 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_1";
-            tableMapping.ColumnMappings.Add("รหัสรายการ", "รหัสรายการ");
+            tableMapping.DataSetTable = "View_product";
+            tableMapping.ColumnMappings.Add("รหัสสินค้า", "รหัสสินค้า");
             tableMapping.ColumnMappings.Add("ชื่อสินค้า", "ชื่อสินค้า");
             tableMapping.ColumnMappings.Add("รายละเอียด", "รายละเอียด");
-            tableMapping.ColumnMappings.Add("ราคาต่อหน่วย", "ราคาต่อหน่วย");
-            tableMapping.ColumnMappings.Add("จำนวน", "จำนวน");
-            tableMapping.ColumnMappings.Add("ราคารวม", "ราคารวม");
-            tableMapping.ColumnMappings.Add("วันที่ซื้อ", "วันที่ซื้อ");
+            tableMapping.ColumnMappings.Add("ราคาขาย", "ราคาขาย");
+            tableMapping.ColumnMappings.Add("ประเภทสินค้า", "ประเภทสินค้า");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -998,22 +907,22 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT รหัสรายการ, ชื่อสินค้า, รายละเอียด, ราคาต่อหน่วย, จำนวน, ราคารวม, วันที่ซื" +
-                "้อ FROM dbo.View_1";
+            this._commandCollection[0].CommandText = "SELECT รหัสสินค้า, ชื่อสินค้า, รายละเอียด, ราคาขาย, ประเภทสินค้า FROM dbo.View_pr" +
+                "oduct";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT รหัสรายการ, ชื่อสินค้า, รายละเอียด, ราคาต่อหน่วย, จำนวน, ราคารวม, วันที่ซื" +
-                "้อ\r\nFROM   View_1\r\nWHERE (รหัสรายการ = @ID)";
+            this._commandCollection[1].CommandText = "SELECT รหัสสินค้า, ชื่อสินค้า, รายละเอียด, ราคาขาย, ประเภทสินค้า\r\nFROM   View_pro" +
+                "duct\r\nWHERE (รหัสสินค้า = @ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "รหัสรายการ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "รหัสสินค้า", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GlassesStoreDataSet9.View_1DataTable dataTable) {
+        public virtual int Fill(GlassesStoreDataSet10.View_productDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1026,9 +935,9 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GlassesStoreDataSet9.View_1DataTable GetData() {
+        public virtual GlassesStoreDataSet10.View_productDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GlassesStoreDataSet9.View_1DataTable dataTable = new GlassesStoreDataSet9.View_1DataTable();
+            GlassesStoreDataSet10.View_productDataTable dataTable = new GlassesStoreDataSet10.View_productDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1037,14 +946,9 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(GlassesStoreDataSet9.View_1DataTable dataTable, global::System.Nullable<int> ID) {
+        public virtual int FillBy(GlassesStoreDataSet10.View_productDataTable dataTable, int ID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((ID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1056,15 +960,10 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual GlassesStoreDataSet9.View_1DataTable GetDataBy(global::System.Nullable<int> ID) {
+        public virtual GlassesStoreDataSet10.View_productDataTable GetDataBy(int ID) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((ID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            GlassesStoreDataSet9.View_1DataTable dataTable = new GlassesStoreDataSet9.View_1DataTable();
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID));
+            GlassesStoreDataSet10.View_productDataTable dataTable = new GlassesStoreDataSet10.View_productDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1138,7 +1037,7 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(GlassesStoreDataSet9 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GlassesStoreDataSet10 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1148,7 +1047,7 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(GlassesStoreDataSet9 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GlassesStoreDataSet10 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1158,7 +1057,7 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(GlassesStoreDataSet9 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GlassesStoreDataSet10 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1192,7 +1091,7 @@ namespace GlassesStore.GlassesStoreDataSet9TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(GlassesStoreDataSet9 dataSet) {
+        public virtual int UpdateAll(GlassesStoreDataSet10 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
