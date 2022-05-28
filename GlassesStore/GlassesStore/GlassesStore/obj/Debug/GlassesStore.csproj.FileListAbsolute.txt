@@ -158,3 +158,9 @@ C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\Glas
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.ReportprofitYear.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormView.resources
 C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\obj\Debug\GlassesStore.FormviewProduct.resources
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\DevExpress.Xpo.v21.2.dll
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\DevExpress.Xpo.v21.2.xml
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\de\DevExpress.Xpo.v21.2.resources.dll
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\es\DevExpress.Xpo.v21.2.resources.dll
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\ja\DevExpress.Xpo.v21.2.resources.dll
+C:\Users\มิน\Documents\GitHub\project_dbmms\GlassesStore\GlassesStore\GlassesStore\bin\Debug\ru\DevExpress.Xpo.v21.2.resources.dll

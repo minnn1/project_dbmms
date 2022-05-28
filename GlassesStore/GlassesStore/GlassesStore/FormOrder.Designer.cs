@@ -33,7 +33,6 @@
             System.Windows.Forms.Label order_dateLabel;
             System.Windows.Forms.Label member_idLabel;
             System.Windows.Forms.Label payment_idLabel;
-            System.Windows.Forms.Label orderline_idLabel;
             System.Windows.Forms.Label order_quantityLabel;
             System.Windows.Forms.Label order_totalpriceLabel;
             System.Windows.Forms.Label orderline_dateLabel;
@@ -44,6 +43,7 @@
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrder));
+            System.Windows.Forms.Label orderline_idLabel1;
             this.glassesStoreDataSet = new GlassesStore.GlassesStoreDataSet();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderTableAdapter = new GlassesStore.GlassesStoreDataSetTableAdapters.orderTableAdapter();
@@ -84,7 +84,6 @@
             this.orderdetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.order_priceSpinEdit = new System.Windows.Forms.TextBox();
             this.order_quantitySpinEdit = new System.Windows.Forms.TextBox();
-            this.orderline_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.orderline_dateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.product_idSpinEdit = new DevExpress.XtraEditors.SpinEdit();
             this.order_idSpinEdit1 = new DevExpress.XtraEditors.SpinEdit();
@@ -102,11 +101,24 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.productDataGridView = new System.Windows.Forms.DataGridView();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.orderline_idTextBox = new System.Windows.Forms.TextBox();
             รหัสOrder = new System.Windows.Forms.Label();
             order_dateLabel = new System.Windows.Forms.Label();
             member_idLabel = new System.Windows.Forms.Label();
             payment_idLabel = new System.Windows.Forms.Label();
-            orderline_idLabel = new System.Windows.Forms.Label();
             order_quantityLabel = new System.Windows.Forms.Label();
             order_totalpriceLabel = new System.Windows.Forms.Label();
             orderline_dateLabel = new System.Windows.Forms.Label();
@@ -116,6 +128,7 @@
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
+            orderline_idLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.glassesStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).BeginInit();
@@ -128,7 +141,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.order_dateDateEdit.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderdetailBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_idSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product_idSpinEdit.Properties)).BeginInit();
@@ -142,6 +154,8 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // รหัสOrder
@@ -179,15 +193,6 @@
             payment_idLabel.Size = new System.Drawing.Size(164, 29);
             payment_idLabel.TabIndex = 7;
             payment_idLabel.Text = "รหัสการจ่ายเงิน:";
-            // 
-            // orderline_idLabel
-            // 
-            orderline_idLabel.AutoSize = true;
-            orderline_idLabel.Location = new System.Drawing.Point(24, 31);
-            orderline_idLabel.Name = "orderline_idLabel";
-            orderline_idLabel.Size = new System.Drawing.Size(156, 29);
-            orderline_idLabel.TabIndex = 0;
-            orderline_idLabel.Text = "รายการสินค้าที่:";
             // 
             // order_quantityLabel
             // 
@@ -339,7 +344,7 @@
             this.orderBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.orderBindingNavigator.Name = "orderBindingNavigator";
             this.orderBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.orderBindingNavigator.Size = new System.Drawing.Size(1265, 33);
+            this.orderBindingNavigator.Size = new System.Drawing.Size(1327, 33);
             this.orderBindingNavigator.TabIndex = 0;
             this.orderBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -601,6 +606,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(orderline_idLabel1);
+            this.groupBox2.Controls.Add(this.orderline_idTextBox);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(label3);
             this.groupBox2.Controls.Add(this.textBox1);
@@ -609,8 +616,6 @@
             this.groupBox2.Controls.Add(this.order_priceSpinEdit);
             this.groupBox2.Controls.Add(this.order_quantitySpinEdit);
             this.groupBox2.Controls.Add(label1);
-            this.groupBox2.Controls.Add(orderline_idLabel);
-            this.groupBox2.Controls.Add(this.orderline_idSpinEdit);
             this.groupBox2.Controls.Add(order_quantityLabel);
             this.groupBox2.Controls.Add(order_totalpriceLabel);
             this.groupBox2.Controls.Add(orderline_dateLabel);
@@ -623,7 +628,7 @@
             this.groupBox2.Controls.Add(this.employee_idSpinEdit);
             this.groupBox2.Location = new System.Drawing.Point(625, 310);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(620, 314);
+            this.groupBox2.Size = new System.Drawing.Size(702, 330);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "รายละเอียดชำระสินค้า";
@@ -671,22 +676,6 @@
             this.order_quantitySpinEdit.Size = new System.Drawing.Size(162, 35);
             this.order_quantitySpinEdit.TabIndex = 0;
             this.order_quantitySpinEdit.TextChanged += new System.EventHandler(this.order_quantitySpinEdit_EditValueChanged);
-            // 
-            // orderline_idSpinEdit
-            // 
-            this.orderline_idSpinEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.orderdetailBindingSource, "orderline_id", true));
-            this.orderline_idSpinEdit.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.orderline_idSpinEdit.Location = new System.Drawing.Point(213, 35);
-            this.orderline_idSpinEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.orderline_idSpinEdit.Name = "orderline_idSpinEdit";
-            this.orderline_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.orderline_idSpinEdit.Size = new System.Drawing.Size(162, 28);
-            this.orderline_idSpinEdit.TabIndex = 1;
             // 
             // orderline_dateDateEdit
             // 
@@ -856,6 +845,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.bindingNavigator1);
             this.groupBox3.Controls.Add(this.productDataGridView);
             this.groupBox3.Location = new System.Drawing.Point(625, 36);
             this.groupBox3.Name = "groupBox3";
@@ -869,27 +859,170 @@
             this.productDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.productDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productDataGridView.Location = new System.Drawing.Point(3, 31);
+            this.productDataGridView.Location = new System.Drawing.Point(3, 86);
             this.productDataGridView.Name = "productDataGridView";
             this.productDataGridView.ReadOnly = true;
             this.productDataGridView.RowHeadersWidth = 62;
             this.productDataGridView.RowTemplate.Height = 28;
             this.productDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productDataGridView.Size = new System.Drawing.Size(614, 242);
+            this.productDataGridView.Size = new System.Drawing.Size(614, 187);
             this.productDataGridView.TabIndex = 0;
             this.productDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productDataGridView_CellClick);
+            this.productDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productDataGridView_CellContentClick);
             // 
             // productBindingSource
             // 
             this.productBindingSource.DataMember = "product";
             this.productBindingSource.DataSource = this.glassesStoreDataSet;
             // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem1;
+            this.bindingNavigator1.BindingSource = this.orderdetailBindingSource;
+            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem1;
+            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem1;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem1,
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorMoveLastItem1,
+            this.bindingNavigatorSeparator5,
+            this.bindingNavigatorAddNewItem1,
+            this.bindingNavigatorDeleteItem1,
+            this.toolStripButton1});
+            this.bindingNavigator1.Location = new System.Drawing.Point(3, 31);
+            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
+            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem1;
+            this.bindingNavigator1.Size = new System.Drawing.Size(614, 33);
+            this.bindingNavigator1.TabIndex = 1;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem1
+            // 
+            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem1
+            // 
+            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator3
+            // 
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorPositionItem1
+            // 
+            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Leelawadee UI", 9F);
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator4
+            // 
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorMoveNextItem1
+            // 
+            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem1.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem1
+            // 
+            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem1.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator5
+            // 
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 33);
+            // 
+            // bindingNavigatorAddNewItem1
+            // 
+            this.bindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
+            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem1.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem1
+            // 
+            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
+            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem1.Text = "Delete";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton1.Text = "Save Data";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // orderline_idLabel1
+            // 
+            orderline_idLabel1.AutoSize = true;
+            orderline_idLabel1.Location = new System.Drawing.Point(23, 34);
+            orderline_idLabel1.Name = "orderline_idLabel1";
+            orderline_idLabel1.Size = new System.Drawing.Size(136, 29);
+            orderline_idLabel1.TabIndex = 22;
+            orderline_idLabel1.Text = "รายการสินค้า";
+            // 
+            // orderline_idTextBox
+            // 
+            this.orderline_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderdetailBindingSource, "orderline_id", true));
+            this.orderline_idTextBox.Location = new System.Drawing.Point(213, 24);
+            this.orderline_idTextBox.Name = "orderline_idTextBox";
+            this.orderline_idTextBox.Size = new System.Drawing.Size(162, 35);
+            this.orderline_idTextBox.TabIndex = 23;
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 652);
+            this.ClientSize = new System.Drawing.Size(1327, 652);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.พนักงานขาย);
             this.Controls.Add(this.groupBox2);
@@ -915,7 +1048,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderdetailBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderline_idSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderline_dateDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.product_idSpinEdit.Properties)).EndInit();
@@ -927,8 +1059,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -959,7 +1095,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.BindingSource orderdetailBindingSource;
-        private DevExpress.XtraEditors.SpinEdit orderline_idSpinEdit;
         private DevExpress.XtraEditors.DateEdit orderline_dateDateEdit;
         private DevExpress.XtraEditors.SpinEdit product_idSpinEdit;
         private DevExpress.XtraEditors.SpinEdit order_idSpinEdit1;
@@ -994,5 +1129,19 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem1;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.TextBox orderline_idTextBox;
     }
 }

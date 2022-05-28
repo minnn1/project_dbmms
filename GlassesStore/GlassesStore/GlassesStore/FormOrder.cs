@@ -44,6 +44,7 @@ namespace GlassesStore
             this.orderdetailTableAdapter.Fill(this.glassesStoreDataSet.orderdetail);
             // TODO: This line of code loads data into the 'glassesStoreDataSet.order' table. You can move, or remove it, as needed.
             this.orderTableAdapter.Fill(this.glassesStoreDataSet.order);
+            
             order_dateDateEdit.DateTime = DateTime.Now;
             product_datagridview_load();
         }
@@ -108,32 +109,50 @@ namespace GlassesStore
         {
             member_idSpinEdit.Text = memberDataGridView.CurrentRow.Cells[0].Value.ToString();
         }
+        public void insert_data()
+        {
+            SqlConnection conn = new SqlConnection(constring);
+            if (conn.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    conn.Open();
+                    string sql_insert = ("insert into [orderdetail]([orderline_id],[order_quantity],[order_totalprice],[orderline_date],[product_id],[order_id],[employee_id])values(@orderline_id,@order_quantity,@order_totalprice,@orderline_date,@product_id,@order_id,@employee_id)");
+                    SqlCommand cmd = new SqlCommand(sql_insert, conn);
+                    //cmd.Parameters.AddWithValue("@PK_Employee_id", text_employee_id.Text);
+                    //cmd.Parameters.AddWithValue(@);
+                    cmd.Parameters.AddWithValue("@orderline_id", Convert.ToInt32(orderline_idTextBox.Text));
+                    cmd.Parameters.AddWithValue("@order_quantity", Convert.ToInt32(order_quantitySpinEdit.Text));
+                    cmd.Parameters.AddWithValue("@order_totalprice", Convert.ToInt32(order_totalpriceSpinEdit.Text));
+                    cmd.Parameters.AddWithValue("@orderline_date", orderline_dateDateEdit.Text);
+                    cmd.Parameters.AddWithValue("@product_id", product_idSpinEdit.Text);
+                    cmd.Parameters.AddWithValue("@order_id", Convert.ToInt32(order_idSpinEdit.Text));
+                    cmd.Parameters.AddWithValue("@employee_id", Convert.ToInt32(employee_idSpinEdit.Text));
 
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("บันทึกข้อมูลเรียบร้อยแล้ว");
+                    conn.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("บันทึกข้อมูลเรียบร้อยแล้ว");
+                }
+            }
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            //orderdetial save
             SqlConnection con = new SqlConnection(constring);
             con.Open();
             SqlCommand cmd1 = new SqlCommand("select [order].order_id, orderdetail.orderline_id, product.product_items, product.product_description, category.category_name, product.product_cost_price,[orderdetail].order_quantity, orderdetail.order_totalprice,[order].order_date from[order] inner join orderdetail on[order].order_id = orderdetail.order_id inner join payment on  payment.payment_id =[order].payment_id inner join product on product.product_id = [orderdetail].product_id inner join  category on category.category_id = product.category_id inner join member on member.member_id =[order].member_id inner join employee on employee.employee_id = orderdetail.employee_id where [order].order_id = '" + order_idSpinEdit.Text + "'", con);
             SqlDataReader dr = cmd1.ExecuteReader();
-            while (dr.Read())                             
+            while (dr.Read())
             {
                 DialogResult dialogResult = MessageBox.Show("คำสั่งซื้อของคุณคือ: Order" + dr["order_id"].ToString() + "\n" + "สินค้า: " + dr["product_items"].ToString() + "\n" + "จำนวน " + dr["order_quantity"].ToString() + " ชิ้น " + "\n" + "ราคารวม " + dr["order_totalprice"].ToString() + " บาท");
                 if (dialogResult == DialogResult.OK)
                 {
                     try
                     {
-                        SqlConnection con1 = new SqlConnection(constring);
-                        con1.Open();
-                        SqlCommand cmd = new SqlCommand("insert into orderdetail(orderline_id,order_quantity,order_totalprice,orderline_date,product_id,order_id,employee_id) values(@orderline_id,@order_quantity,@order_totalprice,@orderline_date,@product_id,@order_id,@employee_id)", con1);
-                        cmd.Parameters.AddWithValue("@orderline_id", orderline_idSpinEdit.Text);
-                        cmd.Parameters.AddWithValue("@order_quantity", order_quantitySpinEdit.Text);
-                        cmd.Parameters.AddWithValue("@order_totalprice", order_totalpriceSpinEdit.Text);
-                        cmd.Parameters.AddWithValue("@orderline_date", Convert.ToDateTime(orderline_dateDateEdit.Text));
-                        cmd.Parameters.AddWithValue("@product_id", product_idSpinEdit.Text);
-                        cmd.Parameters.AddWithValue("@order_id", order_idSpinEdit.Text);
-                        cmd.Parameters.AddWithValue("@employee_id", employee_idSpinEdit.Text);
-                        cmd.ExecuteNonQuery();
+                        insert_data();
                     }
                     catch (Exception)
                     {
@@ -150,7 +169,7 @@ namespace GlassesStore
             try
             {
                 //reset detailorder
-                orderline_idSpinEdit.Text = "";
+                orderline_idTextBox.Text = "";
                 order_quantitySpinEdit.Text = "";
                 order_totalpriceSpinEdit.Text = "";
                 product_idSpinEdit.Text = null;
@@ -180,6 +199,18 @@ namespace GlassesStore
         private void buttonEdit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void productDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.orderdetailBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.glassesStoreDataSet);
         }
     }
 }
