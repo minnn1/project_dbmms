@@ -176,5 +176,10 @@ namespace GlassesStore
             FormView view = new FormView();
             view.Show();
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,5 +37,10 @@ namespace GlassesStore
             member_contactTextEdit.Text = "";
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label statusLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMember));
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label member_idLabel;
             System.Windows.Forms.Label member_adressLabel;
             System.Windows.Forms.Label member_lnameLabel;
             System.Windows.Forms.Label member_contactLabel;
             System.Windows.Forms.Label member_fnameLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMember));
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.glassesStoreDataSet = new GlassesStore.GlassesStoreDataSet();
             this.memberDataGridView = new System.Windows.Forms.DataGridView();
@@ -100,12 +100,72 @@
             // statusLabel
             // 
             statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(107, 255);
+            statusLabel.Location = new System.Drawing.Point(9, 253);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new System.Drawing.Size(81, 29);
             statusLabel.TabIndex = 2;
             statusLabel.Text = "status:";
             statusLabel.Visible = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.CausesValidation = false;
+            label1.Location = new System.Drawing.Point(9, 210);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(99, 29);
+            label1.TabIndex = 32;
+            label1.Text = "ที่อยู่จัดส่ง";
+            // 
+            // member_idLabel
+            // 
+            member_idLabel.AutoSize = true;
+            member_idLabel.CausesValidation = false;
+            member_idLabel.Location = new System.Drawing.Point(9, 42);
+            member_idLabel.Name = "member_idLabel";
+            member_idLabel.Size = new System.Drawing.Size(117, 29);
+            member_idLabel.TabIndex = 31;
+            member_idLabel.Text = "รหัสสมาชิก";
+            // 
+            // member_adressLabel
+            // 
+            member_adressLabel.AutoSize = true;
+            member_adressLabel.CausesValidation = false;
+            member_adressLabel.Location = new System.Drawing.Point(9, 179);
+            member_adressLabel.Name = "member_adressLabel";
+            member_adressLabel.Size = new System.Drawing.Size(52, 29);
+            member_adressLabel.TabIndex = 28;
+            member_adressLabel.Text = "ที่อยู่";
+            // 
+            // member_lnameLabel
+            // 
+            member_lnameLabel.AutoSize = true;
+            member_lnameLabel.CausesValidation = false;
+            member_lnameLabel.Location = new System.Drawing.Point(9, 112);
+            member_lnameLabel.Name = "member_lnameLabel";
+            member_lnameLabel.Size = new System.Drawing.Size(91, 29);
+            member_lnameLabel.TabIndex = 29;
+            member_lnameLabel.Text = "นามสกุล";
+            // 
+            // member_contactLabel
+            // 
+            member_contactLabel.AutoSize = true;
+            member_contactLabel.CausesValidation = false;
+            member_contactLabel.Location = new System.Drawing.Point(9, 141);
+            member_contactLabel.Name = "member_contactLabel";
+            member_contactLabel.Size = new System.Drawing.Size(114, 29);
+            member_contactLabel.TabIndex = 30;
+            member_contactLabel.Text = "เบอร์ติดต่อ";
+            // 
+            // member_fnameLabel
+            // 
+            member_fnameLabel.AutoSize = true;
+            member_fnameLabel.CausesValidation = false;
+            member_fnameLabel.Location = new System.Drawing.Point(9, 71);
+            member_fnameLabel.Name = "member_fnameLabel";
+            member_fnameLabel.Size = new System.Drawing.Size(39, 29);
+            member_fnameLabel.TabIndex = 33;
+            member_fnameLabel.Text = "ชื่อ";
             // 
             // memberBindingSource
             // 
@@ -272,6 +332,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ข้อมูลสมาชิก";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // member_idSpinEdit
             // 
@@ -281,7 +342,7 @@
             0,
             0,
             0});
-            this.member_idSpinEdit.Location = new System.Drawing.Point(230, 45);
+            this.member_idSpinEdit.Location = new System.Drawing.Point(132, 45);
             this.member_idSpinEdit.Name = "member_idSpinEdit";
             this.member_idSpinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -291,16 +352,15 @@
             // statusTextBox
             // 
             this.statusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "status", true));
-            this.statusTextBox.Location = new System.Drawing.Point(230, 252);
+            this.statusTextBox.Location = new System.Drawing.Point(132, 252);
             this.statusTextBox.Name = "statusTextBox";
             this.statusTextBox.Size = new System.Drawing.Size(150, 35);
             this.statusTextBox.TabIndex = 3;
-            this.statusTextBox.Visible = false;
             // 
             // member_fnameTextEdit
             // 
             this.member_fnameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "member_fname", true));
-            this.member_fnameTextEdit.Location = new System.Drawing.Point(230, 76);
+            this.member_fnameTextEdit.Location = new System.Drawing.Point(132, 76);
             this.member_fnameTextEdit.Name = "member_fnameTextEdit";
             this.member_fnameTextEdit.Size = new System.Drawing.Size(150, 26);
             this.member_fnameTextEdit.TabIndex = 5;
@@ -308,7 +368,7 @@
             // member_lnameTextEdit
             // 
             this.member_lnameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "member_lname", true));
-            this.member_lnameTextEdit.Location = new System.Drawing.Point(230, 111);
+            this.member_lnameTextEdit.Location = new System.Drawing.Point(132, 111);
             this.member_lnameTextEdit.Name = "member_lnameTextEdit";
             this.member_lnameTextEdit.Size = new System.Drawing.Size(150, 26);
             this.member_lnameTextEdit.TabIndex = 7;
@@ -316,7 +376,7 @@
             // member_contactTextEdit
             // 
             this.member_contactTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "member_contact", true));
-            this.member_contactTextEdit.Location = new System.Drawing.Point(230, 146);
+            this.member_contactTextEdit.Location = new System.Drawing.Point(132, 146);
             this.member_contactTextEdit.Name = "member_contactTextEdit";
             this.member_contactTextEdit.Size = new System.Drawing.Size(150, 26);
             this.member_contactTextEdit.TabIndex = 9;
@@ -324,7 +384,7 @@
             // member_adress2TextEdit
             // 
             this.member_adress2TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "member_adress2", true));
-            this.member_adress2TextEdit.Location = new System.Drawing.Point(230, 216);
+            this.member_adress2TextEdit.Location = new System.Drawing.Point(132, 216);
             this.member_adress2TextEdit.Name = "member_adress2TextEdit";
             this.member_adress2TextEdit.Size = new System.Drawing.Size(150, 26);
             this.member_adress2TextEdit.TabIndex = 11;
@@ -332,7 +392,7 @@
             // member_adress1TextEdit
             // 
             this.member_adress1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.memberBindingSource, "member_adress1", true));
-            this.member_adress1TextEdit.Location = new System.Drawing.Point(230, 178);
+            this.member_adress1TextEdit.Location = new System.Drawing.Point(132, 178);
             this.member_adress1TextEdit.Name = "member_adress1TextEdit";
             this.member_adress1TextEdit.Size = new System.Drawing.Size(150, 26);
             this.member_adress1TextEdit.TabIndex = 13;
@@ -380,7 +440,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -478,66 +537,6 @@
             this.memberBindingNavigator.Size = new System.Drawing.Size(1244, 33);
             this.memberBindingNavigator.TabIndex = 0;
             this.memberBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.CausesValidation = false;
-            label1.Location = new System.Drawing.Point(72, 212);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(99, 29);
-            label1.TabIndex = 32;
-            label1.Text = "ที่อยู่จัดส่ง";
-            // 
-            // member_idLabel
-            // 
-            member_idLabel.AutoSize = true;
-            member_idLabel.CausesValidation = false;
-            member_idLabel.Location = new System.Drawing.Point(46, 42);
-            member_idLabel.Name = "member_idLabel";
-            member_idLabel.Size = new System.Drawing.Size(117, 29);
-            member_idLabel.TabIndex = 31;
-            member_idLabel.Text = "รหัสสมาชิก";
-            // 
-            // member_adressLabel
-            // 
-            member_adressLabel.AutoSize = true;
-            member_adressLabel.CausesValidation = false;
-            member_adressLabel.Location = new System.Drawing.Point(111, 181);
-            member_adressLabel.Name = "member_adressLabel";
-            member_adressLabel.Size = new System.Drawing.Size(52, 29);
-            member_adressLabel.TabIndex = 28;
-            member_adressLabel.Text = "ที่อยู่";
-            // 
-            // member_lnameLabel
-            // 
-            member_lnameLabel.AutoSize = true;
-            member_lnameLabel.CausesValidation = false;
-            member_lnameLabel.Location = new System.Drawing.Point(72, 102);
-            member_lnameLabel.Name = "member_lnameLabel";
-            member_lnameLabel.Size = new System.Drawing.Size(91, 29);
-            member_lnameLabel.TabIndex = 29;
-            member_lnameLabel.Text = "นามสกุล";
-            // 
-            // member_contactLabel
-            // 
-            member_contactLabel.AutoSize = true;
-            member_contactLabel.CausesValidation = false;
-            member_contactLabel.Location = new System.Drawing.Point(49, 143);
-            member_contactLabel.Name = "member_contactLabel";
-            member_contactLabel.Size = new System.Drawing.Size(114, 29);
-            member_contactLabel.TabIndex = 30;
-            member_contactLabel.Text = "เบอร์ติดต่อ";
-            // 
-            // member_fnameLabel
-            // 
-            member_fnameLabel.AutoSize = true;
-            member_fnameLabel.CausesValidation = false;
-            member_fnameLabel.Location = new System.Drawing.Point(124, 73);
-            member_fnameLabel.Name = "member_fnameLabel";
-            member_fnameLabel.Size = new System.Drawing.Size(39, 29);
-            member_fnameLabel.TabIndex = 33;
-            member_fnameLabel.Text = "ชื่อ";
             // 
             // FormMember
             // 

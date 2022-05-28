@@ -395,6 +395,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Leelawadee UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -467,7 +468,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 37);
             this.button1.TabIndex = 19;
-            this.button1.Text = "ดูการสั่งซื้อ";
+            this.button1.Text = "ดูรายการสั่งซื้อ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -562,8 +563,9 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(211, 37);
             this.buttonEdit.TabIndex = 12;
-            this.buttonEdit.Text = "เเก้ไขรายการชำระ";
+            this.buttonEdit.Text = "เเก้ไขรายการสินค้า";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // order_idSpinEdit
             // 

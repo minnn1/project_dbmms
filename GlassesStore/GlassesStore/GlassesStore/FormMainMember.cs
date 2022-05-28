@@ -35,5 +35,10 @@ namespace GlassesStore
         {
             openChildForm(new FormviewProduct());
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormOrder());
+        }
     }
 }
