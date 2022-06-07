@@ -42,7 +42,7 @@ namespace SaveMoney
             }
             else
             {
-                MessageBox.Show("กรุณากรอกตัวเลข");
+                MessageBox.Show("กรุณากรอกตัวเลขให้ถูกต้อง");
             }
         }
     }
